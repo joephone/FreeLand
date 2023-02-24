@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.transcendence.freeland">
+
+    <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 外部存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+       android:name=".main.app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_app_green_star"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_app_green_star"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Freeland">
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+
+        <activity android:name=".main.ArouterAc"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".crash.CrashActivity" />
+
+        <activity
+            android:name=".main.image.SaveImageActivity" />
+
+        <activity
+            android:name=".main.image.SaveZfPicAc" />
+
+        <activity
+            android:name=".main.image.LubanActivity" />
+
+        <activity
+            android:name=".main.BlockListActivity" />
+
+        <activity
+            android:name=".main.blankj.AcReadSMS" />
+
+        <activity
+            android:name=".main.blankj.AcDevice" />
+    </application>
+
+</manifest>

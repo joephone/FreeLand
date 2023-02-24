@@ -1,0 +1,60 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+apply from: '../basic.gradle'
+def config = rootProject.ext
+
+android {
+    defaultConfig {
+        applicationId "com.transcendence.freeland"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            // 压缩对齐开关
+            zipAlignEnabled true
+            // 移除无用的资源
+            shrinkResources true
+            // 代码混淆开关
+            minifyEnabled true
+            // 混淆文件的位置
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        dataBinding = true
+    }
+}
+
+dependencies {
+    annotationProcessor config.dependencies.arouterCompiler
+    api config.dependencies.arouterApi
+
+    api config.dependencies.ktx
+    api config.dependencies.kotlinxJdk
+    api config.dependencies.appcompat
+    api config.dependencies.material
+    api config.dependencies.constraintlayout
+
+
+
+    implementation project(path: ':lib_core')
+    implementation project(path: ':lib_gallery')
+    if(!config.isMusicApplication){
+        implementation project(path: ':module_music')
+    }
+    if(!config.isGreenStarApplication){
+        implementation project(path: ':module_greenstar')
+    }
+
+    api 'me.shaohui.advancedluban:library:1.3.5'
+    api 'com.github.lovetuzitong:MultiImageSelector:1.2'
+}
