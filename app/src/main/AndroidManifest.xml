@@ -50,17 +50,8 @@
         <activity
             android:name=".main.image.SaveZfPicAc" />
 
-        <activity
-            android:name=".main.image.LubanActivity" />
 
-        <activity
-            android:name=".main.BlockListActivity" />
 
-        <activity
-            android:name=".main.blankj.AcReadSMS" />
-
-        <activity
-            android:name=".main.blankj.AcDevice" />
     </application>
 
 </manifest>

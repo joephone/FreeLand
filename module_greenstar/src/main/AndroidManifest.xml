@@ -21,20 +21,15 @@
         android:roundIcon="@mipmap/ic_app_green_star"
         android:supportsRtl="true"
         android:theme="@style/Theme.Freeland">
+
         <activity
             android:name=".main.GreenStarMainActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
         </activity>
 
         <activity
-
-            android:name=".demo.allapp.AllAppActivity"
-            android:theme="@style/SplashThemePlus">
+            android:name=".main.index.DemoIndexActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,8 +37,20 @@
             </intent-filter>
         </activity>
 
+
+        <activity
+            android:name=".demo.allapp.AllAppMainAc"
+            android:launchMode="singleTask"
+            />
+
+        <activity
+            android:name=".demo.allapp.AllAppActivity"
+            android:launchMode="singleTask"
+            />
+
         <activity
             android:name=".demo.wuwei.WuweiActivity"
+            android:launchMode="singleTask"
             tools:ignore="MissingClass" />
 
         <provider

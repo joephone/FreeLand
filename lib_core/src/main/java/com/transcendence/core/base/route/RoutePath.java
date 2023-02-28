@@ -48,12 +48,13 @@ public class RoutePath {
      */
     public static class Image {
         public static final String Main = "/module_image";
-        public static final String PAGER_LUBAN = Main + "/Luban";
+
     }
 
     public static class Gallery {
         public static final String Main = "/lib_gallery";
         public static final String PAGER_MAIN = Main + "/Main";
+        public static final String PAGER_LUBAN = Main + "/Luban";
     }
 
     public static class Demo {

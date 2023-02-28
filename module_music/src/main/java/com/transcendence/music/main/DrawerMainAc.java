@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -31,7 +32,7 @@ import com.transcendence.music.main.adapter.MenuItemAdapter;
  */
 
 @Route(path = RoutePath.Music.PAGER_MAIN,name = "其实这里还有一个参数")
-public class DrawerMainAc extends BaseAc implements CardPickerDialog.ClickListener {
+public class DrawerMainAc extends AppCompatActivity implements CardPickerDialog.ClickListener {
 
     ActivityMainDrawerBinding dataBinding;
     ImageView mIvLeft;

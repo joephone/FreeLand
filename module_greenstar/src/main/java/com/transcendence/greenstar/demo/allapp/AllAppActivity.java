@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment;
 
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.demo.allapp.fragment.AllAppFragment;
+import com.transcendence.greenstar.demo.allapp.fragment.SingleFragmentActivity;
 
 /**
  * @author Joephone on 2019/8/27 17:13

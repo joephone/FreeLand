@@ -3,6 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Github/joephone/FreeLand/app/src/main/res/layout/activity_arouter.xml" value="0.13125" />
+        <entry key="..\:/Github/joephone/FreeLand/lib_core/src/main/res/drawable/shape_round_grey_inner_white.xml" value="0.19791666666666666" />
+        <entry key="..\:/Github/joephone/FreeLand/lib_core/src/main/res/layout/activity_index.xml" value="0.18125" />
+        <entry key="..\:/Github/joephone/FreeLand/lib_core/src/main/res/layout/circle_menu_item_center.xml" value="0.19895833333333332" />
+        <entry key="..\:/Github/joephone/FreeLand/lib_core/src/main/res/layout/title.xml" value="0.1703125" />
+        <entry key="..\:/Github/joephone/FreeLand/lib_gallery/src/main/res/layout/activity_main_gallery.xml" value="0.24909420289855072" />
+        <entry key="..\:/Github/joephone/FreeLand/lib_gallery/src/main/res/layout/activity_picture_luban.xml" value="0.21920289855072464" />
+        <entry key="..\:/Github/joephone/FreeLand/module_greenstar/src/main/res/drawable/all_app_side_nav_bar.xml" value="0.2015625" />
+        <entry key="..\:/Github/joephone/FreeLand/module_greenstar/src/main/res/layout/activity_main_all_app.xml" value="0.18541666666666667" />
+        <entry key="..\:/Github/joephone/FreeLand/module_greenstar/src/main/res/layout/activity_main_all_app_bar_nav_header.xml" value="0.18541666666666667" />
+        <entry key="..\:/Github/joephone/FreeLand/module_greenstar/src/main/res/menu/nav_drawer.xml" value="0.18541666666666667" />
+        <entry key="..\:/Github/joephone/FreeLand/module_music/src/main/res/layout/activity_main_drawer.xml" value="0.2015625" />
+        <entry key="..\:/Github/joephone/FreeLand/module_music/src/main/res/layout/activity_main_music.xml" value="0.11666666666666667" />
+        <entry key="..\:/Github/joephone/FreeLand/module_music/src/main/res/layout/design_drawer_item.xml" value="0.2015625" />
+        <entry key="..\:/Github/joephone/FreeLand/module_music/src/main/res/layout/design_drawer_item_separator.xml" value="0.2015625" />
+        <entry key="..\:/Github/joephone/FreeLand/module_music/src/main/res/layout/design_drawer_item_subheader.xml" value="0.2015625" />
         <entry key="..\:/Github/joephone/Freeland/app/src/main/res/layout/activity_about_me_coffee.xml" value="0.17291666666666666" />
         <entry key="..\:/Github/joephone/Freeland/app/src/main/res/layout/activity_arouter.xml" value="0.3553956834532374" />
         <entry key="..\:/Github/joephone/Freeland/app/src/main/res/layout/activity_block_list.xml" value="0.171875" />

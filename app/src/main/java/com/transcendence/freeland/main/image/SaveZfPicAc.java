@@ -3,7 +3,9 @@ package com.transcendence.freeland.main.image;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.freeland.R;
 
@@ -12,7 +14,7 @@ import com.transcendence.freeland.R;
  * @date 2023/2/3
  * @desc
  */
-public class SaveZfPicAc extends BaseAc {
+public class SaveZfPicAc extends AppCompatActivity {
 
 
     @Override

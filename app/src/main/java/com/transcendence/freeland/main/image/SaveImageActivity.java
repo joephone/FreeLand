@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -37,7 +38,7 @@ import java.io.OutputStream;
  * intent.setData(uri);
  * sendBroadcast(intent);
  */
-public class SaveImageActivity extends BaseAc implements View.OnClickListener {
+public class SaveImageActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView btn_saveImage;
     private ImageView iv;
 

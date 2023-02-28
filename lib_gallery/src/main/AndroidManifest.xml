@@ -24,6 +24,9 @@
 
         <activity android:name=".activity.FiveActivity" />
 
+        <activity
+            android:name="com.transcendence.picture.luban.LubanActivity" />
+
     </application>
 
 </manifest>

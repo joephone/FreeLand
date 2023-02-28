@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">GreenStar</string>
+
+    <!-- all app start-->
+    <string name="all_app_tips">获取手机、应用信息, 并且支持导出、复制分享等快捷操作</string>
+    <string name="user_apps">我的应用</string>
+    <string name="system_apps">系统应用</string>
+    <string name="phone_info">手机信息</string>
+    <string name="screen_info">屏幕信息</string>
+    <string name="query_apk">扫描APK</string>
+    <string name="other">其他</string>
+    <!-- end app start-->
 </resources>

@@ -11,7 +11,7 @@
     </data>
 
     <LinearLayout
-        android:id="@+id/topbar"
+        android:id="@+id/ll_top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/main"
@@ -48,7 +48,7 @@
                 tools:text="标题"
                 android:maxLines="1"
                 android:textColor="@color/white"
-                android:textSize="20sp" />
+                android:textSize="@dimen/size_title" />
 
             <ImageView
                 android:id="@+id/iv_right"

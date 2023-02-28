@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.widget.ListAdapter;
 
 import com.transcendence.core.R;
+import com.transcendence.core.utils.log.LogUtils;
 
 /**
  * Created by wanghao on 2015/11/25.
@@ -279,12 +280,10 @@ public class CircleMenuGroup extends ViewGroup {
 
                 break;
             case MotionEvent.ACTION_MOVE:
-
                 /**
                  * 获得开始的角度
                  */
                 float start = (float) (180 / Math.PI * Math.atan2((double) (mLastY - mRadius / 2f), (double) (mLastX - mRadius / 2f)));
-
                 /**
                  * 获得当前的角度
                  */
@@ -340,6 +339,22 @@ public class CircleMenuGroup extends ViewGroup {
                 break;
         }
         return super.dispatchTouchEvent(event);
+    }
+
+    public void autoCycle(){
+        float anglePerSecond = mTmpAngle * 1000
+                / (System.currentTimeMillis() - mDownTime);
+        LogUtils.e("CurrentVelocity = " + mCurrentVelocity+"  anglePerSecond = "+Math.abs(anglePerSecond));
+        //防止滑动速度过快，用户体验更好
+        int mark = (int) (anglePerSecond / Math.abs(anglePerSecond));
+        anglePerSecond = Math.abs(anglePerSecond) > 900 ? 900 * mark : anglePerSecond;
+        //最后滑动的速度，大于一定值判断为快速滑动
+        if (mCurrentVelocity > 50 && !isFling) {
+            // post一个任务，去自动滚动
+            post(mFlingRunnable = new AutoFlingRunnable(anglePerSecond));
+        }
+
+
     }
 
     @Override

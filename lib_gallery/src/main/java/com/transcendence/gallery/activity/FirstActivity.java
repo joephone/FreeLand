@@ -12,13 +12,15 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.base.activity.BaseAc;
+import com.transcendence.core.base.activity.TitleBarAc;
 import com.transcendence.gallery.R;
 import com.transcendence.gallery.animations.EnterScreenAnimations;
 import com.transcendence.gallery.animations.ExitScreenAnimations;
 import com.transcendence.gallery.lib.GalleryImageView;
 
-public class FirstActivity extends BaseAc {
+public class FirstActivity extends AppAc {
 
     private GalleryImageView scrollGalleryView;
     private ImageView mTransitionImage;
@@ -26,33 +28,9 @@ public class FirstActivity extends BaseAc {
     private ExitScreenAnimations mExitScreenAnimations;
     private TextView tag;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
-        scrollGalleryView = findViewById(R.id.scroll_gallery_view);
-        final RelativeLayout mainContainer = findViewById(R.id.main_container);
-        tag = findViewById(R.id.tag);
-        FrameLayout androidContent = getWindow().getDecorView().findViewById(android.R.id.content);
-        mTransitionImage = new ImageView(this);
-        androidContent.addView(mTransitionImage);
-
-        mEnterScreenAnimations = new EnterScreenAnimations(mTransitionImage, scrollGalleryView, mainContainer);
-        mExitScreenAnimations = new ExitScreenAnimations(mTransitionImage, scrollGalleryView, mainContainer);
-
-
-        final int[] finalLocationOnTheScreen = new int[2];
-        scrollGalleryView.getLocationOnScreen(finalLocationOnTheScreen);
-        init();
-        mEnterScreenAnimations.playEnteringAnimation(
-                finalLocationOnTheScreen[0], // left
-                finalLocationOnTheScreen[1], // top
-                scrollGalleryView.getWidth(),
-                scrollGalleryView.getHeight());
-    }
 
     @SuppressLint("SetTextI18n")
-    private void init(){
+    private void initThis(){
         tag.setText(1+  "/" + 16);
         scrollGalleryView
                 //设置viewPager底部缩略图大小尺寸
@@ -101,6 +79,34 @@ public class FirstActivity extends BaseAc {
                 .addBitmap(toBitmap(R.drawable.beauty07))
                 .addBitmap(toBitmap(R.drawable.beauty08))
                 .addBitmap(toBitmap(R.drawable.beauty09));
+    }
+
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_first;
+    }
+
+    @Override
+    protected void initView() {
+        scrollGalleryView = findViewById(R.id.scroll_gallery_view);
+        final RelativeLayout mainContainer = findViewById(R.id.main_container);
+        tag = findViewById(R.id.tag);
+        FrameLayout androidContent = getWindow().getDecorView().findViewById(android.R.id.content);
+        mTransitionImage = new ImageView(this);
+        androidContent.addView(mTransitionImage);
+
+        mEnterScreenAnimations = new EnterScreenAnimations(mTransitionImage, scrollGalleryView, mainContainer);
+        mExitScreenAnimations = new ExitScreenAnimations(mTransitionImage, scrollGalleryView, mainContainer);
+
+
+        final int[] finalLocationOnTheScreen = new int[2];
+        scrollGalleryView.getLocationOnScreen(finalLocationOnTheScreen);
+        initThis();
+        mEnterScreenAnimations.playEnteringAnimation(
+                finalLocationOnTheScreen[0], // left
+                finalLocationOnTheScreen[1], // top
+                scrollGalleryView.getWidth(),
+                scrollGalleryView.getHeight());
     }
 
     private Bitmap toBitmap(int image) {

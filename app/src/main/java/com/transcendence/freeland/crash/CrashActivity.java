@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -52,7 +53,7 @@ import java.util.regex.Pattern;
  * @Edition 1.0
  * @EditionHistory
  */
-public class CrashActivity extends BaseAc implements ActivityAction, BundleAction, ClickAction, HandlerAction {
+public class CrashActivity extends AppCompatActivity implements ActivityAction, BundleAction, ClickAction, HandlerAction {
 
 
     /** 报错代码行数正则表达式 */

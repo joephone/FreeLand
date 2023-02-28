@@ -30,14 +30,20 @@
         </activity>
 
         <activity
-            android:name=".ui.SplashAc"
-            android:theme="@style/SplashThemePlus">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".main.index.DemoIndexActivity"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity
+            android:name=".demo.allapp.AllAppMainAc"
+            android:launchMode="singleTask"
+            />
+
+        <activity
+            android:name=".demo.allapp.AllAppActivity"
+            android:launchMode="singleTask"
+            />
+
+        <activity
+            android:name=".demo.wuwei.WuweiActivity" />
     </application>
 
 </manifest>

@@ -9,8 +9,8 @@ import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.greenstar.R;
 
-@Route(path = RoutePath.GreenStar.PAGER_MAIN)
-public class GreenStarMainActivity extends BaseAc {
+
+public class GreenStarMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

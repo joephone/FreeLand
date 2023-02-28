@@ -15,7 +15,7 @@ import com.transcendence.gallery.viewpager.ScrollGalleryView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FourActivity extends BaseAc {
+public class FourActivity extends AppCompatActivity {
 
     private ScrollGalleryView scrollGalleryView;
 

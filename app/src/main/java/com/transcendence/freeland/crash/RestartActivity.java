@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.transcendence.core.BuildConfig;
 import com.transcendence.core.base.activity.BaseAc;
@@ -19,7 +20,7 @@ import com.transcendence.freeland.main.ArouterAc;
  *    time   : 2020/11/29
  *    desc   : 重启应用
  */
-public class RestartActivity extends BaseAc {
+public class RestartActivity extends AppCompatActivity {
 
     public static void start(Context context) {
         Intent intent = new Intent(context, RestartActivity.class);

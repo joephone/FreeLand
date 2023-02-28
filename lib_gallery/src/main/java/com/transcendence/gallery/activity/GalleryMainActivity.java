@@ -11,29 +11,32 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.gallery.R;
 
+/**
+ * 学习案例：
+ * https://github.com/boycy815/PinchImageView
+ * https://github.com/bm-x/PhotoView
+ * https://github.com/ongakuer/PhotoDraweeView
+ https://github.com/panpf/sketch
+ */
+
 @Route(path = RoutePath.Gallery.PAGER_MAIN)
-public class GalleryMainActivity extends BaseAc {
+public class GalleryMainActivity extends AppAc {
 
     private ImageView imageView;
     private TextView tv_5;
 
-    /**
-     * 学习案例：
-     * https://github.com/boycy815/PinchImageView
-     * https://github.com/bm-x/PhotoView
-     * https://github.com/ongakuer/PhotoDraweeView
-	 https://github.com/panpf/sketch
-     */
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_main_gallery;
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_gallery);
-
+    protected void initView() {
 
         imageView = findViewById(R.id.tv_1);
         tv_5 = findViewById(R.id.tv_5);
@@ -65,8 +68,6 @@ public class GalleryMainActivity extends BaseAc {
             }
         });
     }
-
-
 
 
 }

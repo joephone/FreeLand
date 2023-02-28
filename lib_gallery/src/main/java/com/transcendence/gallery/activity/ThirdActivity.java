@@ -15,7 +15,7 @@ import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.gallery.R;
 import com.ycbjie.zoomimagelib.view.ZoomImageView;
 
-public class ThirdActivity extends BaseAc {
+public class ThirdActivity extends AppCompatActivity {
 
     private ZoomImageView imageView;
 

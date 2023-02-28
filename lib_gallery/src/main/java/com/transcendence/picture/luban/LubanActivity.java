@@ -1,4 +1,4 @@
-package com.transcendence.freeland.main.image;
+package com.transcendence.picture.luban;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,12 +9,12 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.base.route.RoutePath;
-import com.transcendence.freeland.R;
+import com.transcendence.gallery.R;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -32,8 +32,8 @@ import me.shaohui.advancedluban.OnMultiCompressListener;
  * @date 2023/1/31
  * @desc
  */
-@Route(path = RoutePath.Image.PAGER_LUBAN)
-public class LubanActivity extends BaseAc {
+@Route(path = RoutePath.Gallery.PAGER_LUBAN)
+public class LubanActivity extends AppCompatActivity {
 
     private static final String TAG = "LubanExample";
 
@@ -55,7 +55,7 @@ public class LubanActivity extends BaseAc {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_image_luban);
+        setContentView(R.layout.activity_picture_luban);
 
         mFileList = new ArrayList<>();
 
@@ -89,36 +89,36 @@ public class LubanActivity extends BaseAc {
 
     private void compressImage() {
         int gear;
-        switch (mGearGroup.getCheckedRadioButtonId()) {
-            case R.id.custom_gear:
-                gear = Luban.THIRD_GEAR;
-                break;
-            case R.id.third_gear:
-                gear = Luban.THIRD_GEAR;
-                break;
-            case R.id.first_gear:
-                gear = Luban.FIRST_GEAR;
-                break;
-            default:
-                gear = Luban.THIRD_GEAR;
-        }
-        switch (mMethodGroup.getCheckedRadioButtonId()) {
-            case R.id.method_listener:
-                if (mFileList.size() == 1) {
-                    compressSingleListener(gear);
-                } else {
-                    compressMultiListener(gear);
-                }
-                break;
-            case R.id.method_rxjava:
-                if (mFileList.size() == 1) {
-                    compressSingleRxJava(gear);
-                } else {
-                    compressMultiRxJava(gear);
-                }
-                break;
-            default:
-        }
+//        switch (mGearGroup.getCheckedRadioButtonId()) {
+//            case R.id.custom_gear:
+//                gear = Luban.THIRD_GEAR;
+//                break;
+//            case R.id.third_gear:
+//                gear = Luban.THIRD_GEAR;
+//                break;
+//            case R.id.first_gear:
+//                gear = Luban.FIRST_GEAR;
+//                break;
+//            default:
+//                gear = Luban.THIRD_GEAR;
+//        }
+//        switch (mMethodGroup.getCheckedRadioButtonId()) {
+//            case R.id.method_listener:
+//                if (mFileList.size() == 1) {
+//                    compressSingleListener(gear);
+//                } else {
+//                    compressMultiListener(gear);
+//                }
+//                break;
+//            case R.id.method_rxjava:
+//                if (mFileList.size() == 1) {
+//                    compressSingleRxJava(gear);
+//                } else {
+//                    compressMultiRxJava(gear);
+//                }
+//                break;
+//            default:
+//        }
     }
 
 

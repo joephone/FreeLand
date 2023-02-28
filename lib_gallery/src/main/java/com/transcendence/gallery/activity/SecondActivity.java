@@ -13,7 +13,7 @@ import com.ycbjie.zoomimagelib.listener.OnZoomLongClickListener;
 import com.ycbjie.zoomimagelib.view.ZoomImageView;
 
 
-public class SecondActivity extends BaseAc {
+public class SecondActivity extends AppCompatActivity {
 
     private ZoomImageView imageView;
     private static final long ANIM_TIME = 200;

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.freeland.R;
 
-public class MainActivity extends BaseAc {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

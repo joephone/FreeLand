@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.core.base.route.RouteUtils;
@@ -14,8 +15,7 @@ import com.transcendence.core.widget.menugroup.CircleMenuAdapter;
 import com.transcendence.core.widget.menugroup.CircleMenuItem;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.databinding.ActivityArouterBinding;
-import com.transcendence.freeland.main.blankj.AcDevice;
-import com.transcendence.freeland.main.blankj.AcReadSMS;
+import com.transcendence.freeland.main.image.SaveImageActivity;
 
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ import java.util.List;
  * @date 2023/1/19
  * @desc
  */
-public class ArouterAc extends BaseAc {
+public class ArouterAc extends AppAc {
 
     ActivityArouterBinding activityBinding;
 
@@ -35,28 +35,24 @@ public class ArouterAc extends BaseAc {
     private int[] mItemImgs = new int[] { R.mipmap.ic_app_ten,
             R.mipmap.ic_app_green_star, R.mipmap.ic_app_music };
 
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        activityBinding = DataBindingUtil.setContentView(this, R.layout.activity_arouter);
 
-        initView();
+    @Override
+    protected int getLayoutId() {
+        return 0;
     }
 
-    private void initView() {
+    protected void initView() {
+        mIsBackVisible = false;
+        activityBinding = DataBindingUtil.setContentView(this, R.layout.activity_arouter);
         initData(mItemTexts, mItemImgs);
         //中心视图
         View centerView = LayoutInflater.from(this).inflate(R.layout.circle_menu_item_center,null,false);
 
         centerView.setOnClickListener(v ->  {
-//                showToast("you click centerView");
-//            SaveImageActivity.launch(this);
-//            LubanActivity.launch(this);
-//            RouteUtils.navigationActivity(RoutePath.Demo.PAGER_BLOCK_LIST);
-//            BlockListActivity.Companion.launch(ArouterAc.this);
+            SaveImageActivity.launch(this);
 //            startAc(SaveZfPicAc.class);
-//            AcDevice.launch(ArouterAc.this);
-            RouteUtils.navigationActivity(RoutePath.Gallery.PAGER_MAIN);
+
+
         });
 
         activityBinding.circleMenuGroup.setAdapter(new CircleMenuAdapter(mMenuItems));
@@ -65,13 +61,15 @@ public class ArouterAc extends BaseAc {
 //            showToast(mItemTexts[pos]);
             switch (pos){
                 case 1:
-                    RouteUtils.navigationActivity(RoutePath.GreenStar.PAGER_SPLASH);
+                    RouteUtils.navigationActivity(RoutePath.GreenStar.PAGER_MAIN);
                     break;
                 case 2:
-                    RouteUtils.navigationActivity(RoutePath.Music.PAGER_MAIN);
+                    RouteUtils.navigationActivity(RoutePath.Gallery.PAGER_MAIN);
+//                    RouteUtils.navigationActivity(RoutePath.Music.PAGER_MAIN);
                     break;
             }
         });
+        activityBinding.circleMenuGroup.autoCycle();
     }
 
     private void initData(String[] mItemTexts, int[] mItemImgs) {

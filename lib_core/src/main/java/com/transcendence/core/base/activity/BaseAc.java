@@ -28,30 +28,37 @@ public abstract class BaseAc extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = this;
-
-//        initStatusBar();
         NativeStatusBarUtils.with(mActivity).init();
+
+        init();
+    }
+
+    protected void init() {
+        initLayout();
+        initView();
     }
 
 
-    public void showToast(@NonNull String msg){
-        Toast.makeText(BaseAc.this,msg,Toast.LENGTH_SHORT).show();
+    /**
+     * 初始化布局
+     */
+    protected void initLayout() {
+        if (getLayoutId() > 0) {
+            setContentView(getLayoutId());
+        }
     }
 
+    /**
+     * 获取布局 ID
+     */
+    protected abstract int getLayoutId();
 
-    public void startAc(Class<?> cls) {
-        Intent intent = new Intent(this, cls);
-        startActivity(intent);
-    }
+    /**
+     * 初始化数据
+     */
+    protected abstract void initView();
 
-    public void startAc(Class<?> cls, Bundle bundle) {
-        Intent intent = new Intent(this, cls);
-        intent.putExtras(bundle);
-        startActivity(intent);
-    }
 
-    public void startAcForResult(Class<?> cls, int requestCode) {
-        Intent intent = new Intent(this, cls);
-        startActivityForResult(intent, requestCode);
-    }
+
+
 }

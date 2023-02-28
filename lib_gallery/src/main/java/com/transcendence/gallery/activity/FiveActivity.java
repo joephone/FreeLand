@@ -19,7 +19,7 @@ import com.transcendence.gallery.recyclerView.OnGalleryListener;
 import java.util.ArrayList;
 
 
-public class FiveActivity extends BaseAc {
+public class FiveActivity extends AppCompatActivity {
 
     private static final String TAG = "FiveActivity";
     private GalleryRecyclerView mRecyclerView;
