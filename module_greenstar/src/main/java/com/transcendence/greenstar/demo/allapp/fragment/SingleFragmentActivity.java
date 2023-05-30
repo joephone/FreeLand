@@ -2,11 +2,10 @@ package com.transcendence.greenstar.demo.allapp.fragment;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.transcendence.core.base.activity.BaseAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.greenstar.R;
 
 /**
@@ -17,7 +16,7 @@ import com.transcendence.greenstar.R;
  * @EditionHistory
  */
 
-public abstract class SingleFragmentActivity extends AppCompatActivity {
+public abstract class SingleFragmentActivity extends AppAc {
     //子类返回对应的Fragment对象
     protected abstract Fragment createFragment();
 

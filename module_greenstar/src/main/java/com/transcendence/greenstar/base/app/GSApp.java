@@ -5,6 +5,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.transcendence.core.base.app.MainApp;
+import com.transcendence.greenstar.demo.appinfo.oberser.DevObservableNotify;
 
 import java.util.HashMap;
 
@@ -14,6 +15,9 @@ import java.util.HashMap;
  * @desc
  */
 public class GSApp extends MainApp {
+
+    /** 全局观察者模式 */
+    public static final DevObservableNotify sDevObservableNotify = new DevObservableNotify();
 
     @SuppressLint("StaticFieldLeak")
     public static Context context;

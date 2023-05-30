@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.gallery.R;
 import com.transcendence.gallery.activity.adapter.SnapAdapter;
 import com.transcendence.gallery.recyclerView.GalleryRecyclerView;

@@ -4,9 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.alibaba.android.arouter.facade.annotation.Route;
-import com.transcendence.core.base.activity.BaseAc;
-import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.greenstar.R;
 
 

@@ -25,13 +25,12 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.transcendence.core.R;
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.permission.PermissionPool;
 import com.transcendence.core.utils.AppUtils;
-import com.transcendence.freeland.crash.action.ActivityAction;
-import com.transcendence.freeland.crash.action.BundleAction;
-import com.transcendence.freeland.crash.action.ClickAction;
-import com.transcendence.freeland.crash.action.HandlerAction;
+import com.transcendence.core.base.action.ActivityAction;
+import com.transcendence.core.base.action.BundleAction;
+import com.transcendence.core.base.action.ClickAction;
+import com.transcendence.core.base.action.HandlerAction;
 import com.transcendence.freeland.crash.threadpool.ThreadPoolManager;
 
 import java.io.PrintWriter;

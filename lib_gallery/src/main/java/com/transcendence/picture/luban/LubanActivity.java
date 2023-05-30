@@ -12,7 +12,6 @@ import android.widget.RadioGroup;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.gallery.R;
 

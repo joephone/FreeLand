@@ -14,6 +14,8 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
        android:name=".main.app.App"
         android:allowBackup="true"
@@ -24,6 +26,7 @@
         android:theme="@style/Theme.Freeland">
         <activity
             android:name=".main.MainActivity"
+
             android:exported="true">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
@@ -32,7 +35,9 @@
 <!--            </intent-filter>-->
         </activity>
 
-        <activity android:name=".main.ArouterAc"
+        <activity
+            android:name=".main.ArouterAc"
+
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,6 +45,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- index start -->
+        <activity
+            android:name=".main.index.AppIndexActivity" />
+        <activity
+            android:name=".main.index.SettingsIndexActivity" />
+        <activity
+            android:name=".basefun.settings.SysSettingsAc" />
+        <!-- index end -->
 
         <activity
             android:name=".crash.CrashActivity" />

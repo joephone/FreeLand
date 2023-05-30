@@ -1,18 +1,13 @@
 package com.transcendence.greenstar.main.index;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import androidx.annotation.Nullable;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.base.activity.BaseAc;
-import com.transcendence.core.base.activity.TitleBarAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.core.utils.StringUtils;
 import com.transcendence.greenstar.R;

@@ -38,4 +38,6 @@
     <color name="fab_bg_color">@color/white</color>
     <color name="fab_icon_color">@color/black</color>
     <color name="bnv_check_color">#666666</color>
+
+    <color name="colorRedBg">#fa5148</color>
 </resources>

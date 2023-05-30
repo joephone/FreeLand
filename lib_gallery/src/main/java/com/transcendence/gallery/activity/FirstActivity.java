@@ -3,18 +3,14 @@ package com.transcendence.gallery.activity;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.base.activity.BaseAc;
-import com.transcendence.core.base.activity.TitleBarAc;
 import com.transcendence.gallery.R;
 import com.transcendence.gallery.animations.EnterScreenAnimations;
 import com.transcendence.gallery.animations.ExitScreenAnimations;

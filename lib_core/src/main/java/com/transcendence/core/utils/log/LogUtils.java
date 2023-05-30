@@ -22,6 +22,7 @@ public class LogUtils {
     static String className;//类名
     static String methodName;//方法名
     static int lineNumber;//行数
+    public static boolean debug;
 
     /**
      * 判断是否可以调试

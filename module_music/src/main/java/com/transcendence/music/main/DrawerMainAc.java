@@ -1,7 +1,5 @@
 package com.transcendence.music.main;
 
-import android.app.Activity;
-import android.app.ActivityManager;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -15,11 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.core.ui.dialog.CardPickerDialog;
 import com.transcendence.core.utils.CommonUtils;
-import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.core.utils.statusbarview.StatusBarUtil;
 import com.transcendence.music.R;
 import com.transcendence.music.databinding.ActivityMainDrawerBinding;

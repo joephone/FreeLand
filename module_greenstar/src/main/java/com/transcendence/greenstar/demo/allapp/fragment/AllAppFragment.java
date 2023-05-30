@@ -39,7 +39,7 @@ public class AllAppFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_demo_all_app, container,false);
+        View view = inflater.inflate(R.layout.activity_demo_all_app_fragment, container,false);
         mRv  = view.findViewById(R.id.rv);
         mRv.setLayoutManager(new LinearLayoutManager(getContext()));
         setupAdapter();

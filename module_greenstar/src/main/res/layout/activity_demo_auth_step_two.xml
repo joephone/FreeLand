@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="@dimen/standard_padding"
+        android:text="请选择您的医生类型"
+        android:textColor="@color/text_33"
+        android:textSize="@dimen/standard_text" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/standard_padding"
+        android:paddingLeft="@dimen/standard_padding"
+        android:paddingRight="@dimen/standard_padding">
+
+        <LinearLayout
+            android:id="@+id/layout_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/demo_auth_doctor_common" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/standard_padding"
+                android:paddingRight="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="治疗医生"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/standard_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center|left"
+                    android:text="取得执业资格从事患者医疗问诊的医生"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/standard_text" />
+
+                <!-- 国家公共卫生项目中从事精神病防治管理的医生 -->
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/ivLeftSelected"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_selected" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        style="@style/Line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/standard_padding"
+        android:paddingLeft="@dimen/standard_padding"
+        android:paddingRight="@dimen/standard_padding">
+
+        <LinearLayout
+            android:id="@+id/layout_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/demo_auth_doctor_fine_control" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/standard_padding"
+                android:paddingRight="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="精防医生"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/standard_text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center|left"
+                    android:text="国家公共卫生项目中从事精神病防治管理的医生"
+                    android:textColor="@color/text_66"
+                    android:textSize="@dimen/standard_text" />
+
+                <!--  -->
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/ivRightSelected"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_unselected" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="290dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/water_effect_green_selector"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_18" />
+
+    </LinearLayout>
+
+</LinearLayout>

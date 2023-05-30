@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_public"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingLeft="@dimen/standard_padding"-->
+<!--        android:paddingRight="@dimen/standard_padding"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:paddingTop="10dp"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            android:text="@string/tip_avatar_1"-->
+<!--            android:textColor="@color/text_99"-->
+<!--            android:textSize="14sp" />-->
+<!--        <TextView-->
+<!--            android:id="@+id/tvViewExampleOne"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:paddingTop="10dp"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            android:text="@string/tip_avatar_2"-->
+<!--            android:textColor="@color/theme_color"-->
+<!--            android:textSize="14sp" />-->
+<!--    </LinearLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/doctor_image_rela"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="75dp"-->
+<!--        android:background="@color/white"-->
+<!--        android:paddingLeft="@dimen/standard_padding">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:text="@string/doctor_image"-->
+<!--            android:textColor="@color/text_33"-->
+<!--            android:textSize="14sp" />-->
+
+
+<!--        <ImageView-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:id="@+id/ivAvatar"-->
+<!--            android:layout_width="58dp"-->
+<!--            android:layout_height="58dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="30dp"-->
+<!--            android:layout_toLeftOf="@+id/ivRight"-->
+<!--            android:background="@drawable/icon_doctoravable_default" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivRight"-->
+<!--            android:layout_width="8dp"-->
+<!--            android:layout_height="15dp"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="@dimen/standard_padding"-->
+<!--            android:src="@drawable/ic_more" />-->
+
+<!--        <include layout="@layout/line" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/includeview_height"-->
+<!--        android:background="@color/white"-->
+<!--        android:paddingLeft="@dimen/standard_padding">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:text="@string/doctor_name"-->
+<!--            android:textColor="@color/text_33"-->
+<!--            android:textSize="14sp" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/etName"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="29dp"-->
+<!--            android:background="@null"-->
+<!--            android:maxLength="6"-->
+<!--            android:maxLines="1"-->
+<!--            android:hint="请输入真实姓名"-->
+<!--            android:gravity="right|center_vertical"-->
+<!--            tools:text="赵医生"-->
+<!--            android:textColor="@color/text_66"-->
+<!--            android:textSize="14sp" />-->
+
+<!--        <include layout="@layout/line" />-->
+<!--    </RelativeLayout>-->
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/includeview_height"-->
+<!--        android:background="@color/white"-->
+<!--        android:paddingLeft="@dimen/standard_padding">-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:text="性别"-->
+<!--            android:textColor="@color/text_33"-->
+<!--            android:textSize="@dimen/standard_text" />-->
+
+<!--        <RadioGroup-->
+<!--            android:id="@+id/rgSex"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginRight="29dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rbMale"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:onClick="sex"-->
+<!--                style="@style/standard_radio_button"-->
+<!--                android:textColor="@color/text_99"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="男" />-->
+
+<!--            <RadioButton-->
+<!--                android:id="@+id/rbFemale"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:onClick="sex"-->
+<!--                style="@style/standard_radio_button"-->
+<!--                android:textColor="@color/text_99"-->
+<!--                android:textSize="14sp"-->
+<!--                android:text="女" />-->
+<!--        </RadioGroup>-->
+
+<!--        <include layout="@layout/line" />-->
+<!--    </RelativeLayout>-->
+
+
+<!--    &lt;!&ndash; 4 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutArea"-->
+<!--        android:layout_marginTop="@dimen/standard_padding"-->
+<!--        style="@style/blank_layout">-->
+
+<!--        <TextView-->
+<!--            style="@style/add_follow_up_left_text"-->
+<!--            android:text="所在城市" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvCity"-->
+<!--            android:maxLength="15"-->
+<!--            android:hint="请选择"-->
+<!--            style="@style/table_right_edit" />-->
+
+<!--        <ImageView-->
+<!--            style="@style/right_arrow"-->
+<!--            android:layout_gravity="center_vertical" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <include layout="@layout/line" />-->
+
+<!--&lt;!&ndash; 5 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutHospital"-->
+<!--        style="@style/blank_layout">-->
+
+<!--        <TextView-->
+<!--            style="@style/add_follow_up_left_text"-->
+<!--            android:text="执业医院/机构" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvHospital"-->
+<!--            android:maxLength="15"-->
+<!--            style="@style/table_edit" />-->
+
+<!--        <ImageView-->
+<!--            style="@style/right_arrow"-->
+<!--            android:layout_gravity="center_vertical" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <include layout="@layout/line" />-->
+
+
+<!--    &lt;!&ndash; 6 &ndash;&gt;-->
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutDept"-->
+<!--        style="@style/blank_layout">-->
+
+<!--        <TextView-->
+<!--            style="@style/add_follow_up_left_text"-->
+<!--            android:text="科室名称" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvDept"-->
+<!--            android:maxLength="15"-->
+<!--            style="@style/table_edit" />-->
+
+<!--        <ImageView-->
+<!--            style="@style/right_arrow"-->
+<!--            android:layout_gravity="center_vertical" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <include layout="@layout/line" />-->
+
+<!--    &lt;!&ndash; 7 &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutJob"-->
+<!--        style="@style/blank_layout">-->
+
+<!--        <TextView-->
+<!--            style="@style/add_follow_up_left_text"-->
+<!--            android:text="医生职称" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvJob"-->
+<!--            style="@style/table_edit" />-->
+
+<!--        <ImageView-->
+<!--            style="@style/right_arrow"-->
+<!--            android:layout_gravity="center_vertical" />-->
+
+<!--    </LinearLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@drawable/water_effect_green_selector"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_18" />
+
+</LinearLayout>

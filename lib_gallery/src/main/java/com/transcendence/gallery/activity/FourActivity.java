@@ -5,9 +5,6 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.bumptech.glide.Glide;
-import com.transcendence.core.base.activity.BaseAc;
-import com.transcendence.core.utils.glide.GlideUtils;
 import com.transcendence.gallery.R;
 import com.transcendence.gallery.viewpager.MediaInfo;
 import com.transcendence.gallery.viewpager.ScrollGalleryView;

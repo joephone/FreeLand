@@ -24,7 +24,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.freeland.R;
 

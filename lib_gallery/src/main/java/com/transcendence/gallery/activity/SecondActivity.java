@@ -6,7 +6,6 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.gallery.R;
 import com.ycbjie.zoomimagelib.listener.OnZoomClickListener;
 import com.ycbjie.zoomimagelib.listener.OnZoomLongClickListener;

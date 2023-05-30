@@ -24,8 +24,17 @@ public class AllAppActivity extends SingleFragmentActivity {
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.activity_fragment_all_app;
+        return R.layout.activity_demo_all_app_ac;
     }
 
 
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_demo_all_app_ac;
+    }
+
+    @Override
+    protected void initView() {
+
+    }
 }

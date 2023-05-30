@@ -3,16 +3,11 @@ package com.transcendence.gallery.activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Build;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.gallery.R;
 

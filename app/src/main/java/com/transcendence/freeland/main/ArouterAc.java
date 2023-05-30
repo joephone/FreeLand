@@ -1,21 +1,18 @@
 package com.transcendence.freeland.main;
 
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
 import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.core.base.route.RouteUtils;
 import com.transcendence.core.widget.menugroup.CircleMenuAdapter;
 import com.transcendence.core.widget.menugroup.CircleMenuItem;
+import com.transcendence.core.widget.popup.PopupDrugDetail;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.databinding.ActivityArouterBinding;
-import com.transcendence.freeland.main.image.SaveImageActivity;
 
 
 import java.util.ArrayList;
@@ -38,7 +35,7 @@ public class ArouterAc extends AppAc {
 
     @Override
     protected int getLayoutId() {
-        return 0;
+        return R.layout.activity_arouter;
     }
 
     protected void initView() {
@@ -49,9 +46,9 @@ public class ArouterAc extends AppAc {
         View centerView = LayoutInflater.from(this).inflate(R.layout.circle_menu_item_center,null,false);
 
         centerView.setOnClickListener(v ->  {
-            SaveImageActivity.launch(this);
+//            SaveImageActivity.launch(this);
 //            startAc(SaveZfPicAc.class);
-
+            new PopupDrugDetail(ArouterAc.this).showPopup();
 
         });
 
@@ -60,6 +57,9 @@ public class ArouterAc extends AppAc {
         activityBinding.circleMenuGroup.setOnMenuItemClickListener((view, pos) ->  {
 //            showToast(mItemTexts[pos]);
             switch (pos){
+                case 0:
+                    RouteUtils.navigationActivity(RoutePath.App.PAGER_MAIN);
+                    break;
                 case 1:
                     RouteUtils.navigationActivity(RoutePath.GreenStar.PAGER_MAIN);
                     break;
@@ -69,7 +69,7 @@ public class ArouterAc extends AppAc {
                     break;
             }
         });
-        activityBinding.circleMenuGroup.autoCycle();
+        activityBinding.circleMenuGroup.startAutoCycle();//autoCycle();
     }
 
     private void initData(String[] mItemTexts, int[] mItemImgs) {

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_permission_alert">Permission Alert</string>
+    <string name="common_permission_fail_1">Get permission fail,Please give the app correct </string>
+    <string name="common_permission_fail_2">Get permission fail,Please give the app correct </string>
+    <string name="common_permission_fail_3">Get permission fail,Please give the app correct %s</string>
+    <string name="common_permission_fail_4">Has no permission,Please select "Always Access"</string>
+    <string name="common_permission_goto">Goto</string>
+
+    <string name="common_permission_calendar">permission calendar</string>
+    <string name="common_permission_camera">permission camera</string>
+    <string name="common_permission_contacts">permission contacts</string>
+    <string name="common_permission_location">permission location</string>
+    <string name="common_permission_location_background">permission location background</string>
+    <string name="common_permission_microphone">permission microphone</string>
+    <string name="common_permission_phone">permission phone</string>
+    <string name="common_permission_call_log">permission call log</string>
+    <string name="common_permission_sensors">permission sensors</string>
+    <string name="common_permission_activity_recognition">permission sport recognition</string>
+    <string name="common_permission_sms">permission sms</string>
+    <string name="common_permission_storage">permission storage</string>
+
+    <string name="common_permission_install">permission install</string>
+    <string name="common_permission_notification">permission notification</string>
+    <string name="common_permission_window">permission window</string>
+    <string name="common_permission_setting">permission setting</string>
+</resources>

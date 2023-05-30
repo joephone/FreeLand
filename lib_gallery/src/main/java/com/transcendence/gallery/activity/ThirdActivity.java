@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.gallery.R;
 import com.ycbjie.zoomimagelib.view.ZoomImageView;
 

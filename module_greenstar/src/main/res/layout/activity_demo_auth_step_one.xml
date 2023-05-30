@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_public"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/title" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/demo_auth_image" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/standard_padding"
+        android:layout_marginRight="@dimen/standard_padding"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="4dp"
+        android:text="@string/tip"
+        android:textColor="@color/text_66"
+        android:textSize="14sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tvNext"
+            android:layout_width="290dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/water_effect_green_selector"
+            android:gravity="center"
+            android:text="快速认证"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_18" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

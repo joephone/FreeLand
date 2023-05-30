@@ -1,10 +1,12 @@
 def config = rootProject.ext
 if (config.isGreenStarApplication) {
     apply plugin: 'com.android.application'
+    apply plugin: 'kotlin-android'
 //    id 'com.android.library'
 //    id 'kotlin-android'
 } else {
     apply plugin: 'com.android.library'
+    apply plugin: 'kotlin-android'
 }
 
 apply from: "../basic.gradle"
@@ -54,5 +56,15 @@ dependencies {
     api config.dependencies.constraintlayout
 
     implementation project(path: ':lib_core')
+    implementation project(path: ':lib_aop')
+    //sm2 sm4
+    api "org.bouncycastle:bcprov-jdk15on:1.69"
+    //
+    implementation 'pub.devrel:easypermissions:0.3.0'
+    //生物识别
+    implementation 'androidx.biometric:biometric:1.2.0-alpha01'
+//    // Kotlin
+//    implementation "androidx.biometric:biometric-ktx:1.2.0-alpha05"
+
 
 }

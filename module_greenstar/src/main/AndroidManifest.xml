@@ -11,14 +11,22 @@
     <!-- 外部存储 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+    <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>//震动
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>//传感器权限
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>//录音
+    <!-- 生物识别 -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
         android:name=".base.app.GSApp"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_app_green_star"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_config"
         android:roundIcon="@mipmap/ic_app_green_star"
+        android:requestLegacyExternalStorage="false"
         android:supportsRtl="true"
         android:theme="@style/Theme.Freeland">
 
@@ -29,6 +37,7 @@
 
         <activity
             android:name=".main.index.DemoIndexActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,19 +48,101 @@
 
 
         <activity
-            android:name=".demo.allapp.AllAppMainAc"
+            android:name=".main.index.PopupIndexKt"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             />
+
+        <!-- AppInfo信息提取器 -->
+        <activity
+            android:name=".demo.appinfo.act.AppInfoMainAc"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+        <!-- AppInfo信息提取器详情 -->
+        <activity
+            android:name=".demo.appinfo.act.AppInfoDetailsAc"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
+        <!-- 幸运转盘 -->
+        <activity
+            android:name=".demo.luckypanel.LuckyPanelAc"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
 
         <activity
             android:name=".demo.allapp.AllAppActivity"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             />
+        <activity
+            android:name=".demo.record.act.RecordMainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".demo.record.example.RecordExampleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".demo.dbnote.act.DBNoteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.biometric.BiometricActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.exportlog.ExportLogActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.auth.AuthOneAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.auth.AuthTwoAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.showPermissions.ShowPermissionAc"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".demo.wuwei.WuweiActivity"
             android:launchMode="singleTask"
-            tools:ignore="MissingClass" />
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.encryption.act.EncryptionMainAc"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.encryption.act.EncryptionAc"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.load.LoadAcKt"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <!--        <activity-->
+        <!--            android:name=".demo.load.LoadAcKt"-->
+        <!--            android:launchMode="singleTask" />-->
 
         <provider
             android:name="androidx.core.content.FileProvider"

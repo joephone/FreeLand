@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.transcendence.core.BuildConfig;
-import com.transcendence.core.base.activity.BaseAc;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.main.ArouterAc;
 

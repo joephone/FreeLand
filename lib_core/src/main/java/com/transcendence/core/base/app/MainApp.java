@@ -3,6 +3,7 @@ package com.transcendence.core.base.app;
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.tencent.mmkv.MMKV;
 import com.transcendence.core.BuildConfig;
 
 /**
@@ -16,7 +17,8 @@ public class MainApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        //mmkv初始化
+        MMKV.initialize(this);
         //路由初始化
         initARouter();
     }

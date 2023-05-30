@@ -7,4 +7,8 @@
         <attr name="radioPadding" format="float"/>
     </declare-styleable>
 
+    <declare-styleable name="LoadLayout">
+        <attr name="loadingView" format="reference" />
+    </declare-styleable>
+
 </resources>

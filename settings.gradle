@@ -9,6 +9,8 @@
 rootProject.name = "Freeland"
 include ':app'
 include ':lib_core'
+include ':lib_aop'
 include ':lib_gallery'
 include ':module_music'
 include ':module_greenstar'
+include ':module_map'

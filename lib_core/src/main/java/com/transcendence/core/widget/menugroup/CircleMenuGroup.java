@@ -350,11 +350,19 @@ public class CircleMenuGroup extends ViewGroup {
         anglePerSecond = Math.abs(anglePerSecond) > 900 ? 900 * mark : anglePerSecond;
         //最后滑动的速度，大于一定值判断为快速滑动
         if (mCurrentVelocity > 50 && !isFling) {
+            LogUtils.d("mCurrentVelocity > 50 && !isFling");
             // post一个任务，去自动滚动
             post(mFlingRunnable = new AutoFlingRunnable(anglePerSecond));
+        } else {
+            LogUtils.d("mCurrentVelocity <> 50 && isFling");
         }
+    }
 
-
+    public void startAutoCycle(){
+        float anglePerSecond = mTmpAngle * 1000
+                / (System.currentTimeMillis() - mDownTime);
+        post(mFlingRunnable = new AutoFlingRunnable(anglePerSecond));
+        mFlingRunnable.run();
     }
 
     @Override
@@ -413,6 +421,7 @@ public class CircleMenuGroup extends ViewGroup {
         }
 
         public void run() {
+            LogUtils.d("AutoFlingRunnable run");
             // 如果小于20,则停止
             if ((int) Math.abs(angelPerSecond) < 20) {
                 isFling = false;

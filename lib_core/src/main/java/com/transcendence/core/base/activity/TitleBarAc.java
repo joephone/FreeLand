@@ -2,7 +2,6 @@ package com.transcendence.core.base.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,14 +12,36 @@ import com.transcendence.core.R;
 
 /**
  * @author joephone
- * @date 2023/2/27
+ * @date 2023/5/27
  * @desc
  */
-public abstract class TitleBarAc extends BaseAc {
+public class TitleBarAc extends AbsBaseAc {
 
     protected boolean mIsBackVisible = true;
     protected boolean mHasTitle = true;
     protected LinearLayout mTopBar;
+    protected ImageView mIvRight;
+
+
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    public void setContentView(int layoutResID, boolean hasTitle) {
+        View content = getLayoutInflater().inflate(layoutResID, null);
+        prepareContentView(content, hasTitle);
+    }
+
+    private void prepareContentView(View content, boolean hasTitle) {
+
+    }
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,10 +50,14 @@ public abstract class TitleBarAc extends BaseAc {
         if(!mHasTitle){
             mTopBar.setVisibility(View.GONE);
         }else{
-            mTopBar.setVisibility(View.VISIBLE);
-            setBackVisibility();
+            if(mTopBar!=null){
+                mTopBar.setVisibility(View.VISIBLE);
+                setBackVisibility();
+            }
         }
     }
+
+
 
     private void clickBack(View view) {
         finish();
@@ -46,12 +71,18 @@ public abstract class TitleBarAc extends BaseAc {
 
     protected void setTitle(String title) {
         ((TextView) findViewById(R.id.tv_title)).setText(title);
+    }
 
+    protected void setRightImage(int res){
+        if(mIvRight==null){
+            mIvRight = findViewById(R.id.iv_right);
+        }
+        mIvRight.setImageResource(res);
     }
 
     protected void setBackVisibility() {
         ImageView iv_left = findViewById(R.id.iv_left);
-        ImageView iv_right = findViewById(R.id.iv_right);
+        mIvRight = findViewById(R.id.iv_right);
 //        ivRight2 = findViewById(R.id.iv_right2);
         if (mIsBackVisible) {
             iv_left.setVisibility(View.VISIBLE);

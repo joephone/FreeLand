@@ -10,7 +10,7 @@ public class RoutePath {
     /**
      * Main组件
      */
-    public static class Main {
+    public static class App {
         private static final String MAIN = "/module_main";
 
         /**
@@ -30,6 +30,12 @@ public class RoutePath {
 
     public static class GreenStar {
         private static final String MAIN = "/module_greenstar";
+        public static final String PAGER_MAIN = MAIN+"/Main";
+        public static final String PAGER_SPLASH = MAIN+"/Splash";
+    }
+
+    public static class Map {
+        private static final String MAIN = "/module_map";
         public static final String PAGER_MAIN = MAIN+"/Main";
         public static final String PAGER_SPLASH = MAIN+"/Splash";
     }

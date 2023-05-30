@@ -1,7 +1,9 @@
-plugins {
-    id 'com.android.library'
+//plugins {
+//    id 'com.android.library'
 //    id 'kotlin-android'
-}
+//}
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 apply from: "../basic.gradle"
 def config = rootProject.ext
 
@@ -32,6 +34,8 @@ dependencies {
 
     api config.dependencies.gson
     api config.dependencies.glide
+
+    api config.dependencies.mmkv
 
     api config.dependencies.blankUtils
 
