@@ -36,8 +36,9 @@
         </activity>
 
         <activity
-            android:name=".main.ArouterAc"
-
+            android:name=".main.guide.LauncherActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +46,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".main.guide.GuideActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+        <activity
+            android:name=".main.ArouterAc"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
 
         <!-- index start -->
         <activity
