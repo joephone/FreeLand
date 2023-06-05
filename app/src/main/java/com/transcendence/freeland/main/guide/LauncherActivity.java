@@ -7,7 +7,10 @@ import android.widget.ImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.global.Global;
+import com.transcendence.core.utils.mmkv.MMkvHelper;
 import com.transcendence.freeland.R;
+import com.transcendence.freeland.main.ArouterAc;
 
 /**
  * @author Joephone on 2019/5/8 10:45
@@ -19,7 +22,7 @@ public class LauncherActivity extends AppAc implements Animation.AnimationListen
 
     private ImageView ivLauncher;
     private ConstraintLayout clContainer;
-    private final int ANIM_DURATION_TIME = 100;
+    private final int ANIM_DURATION_TIME = 500;
 
 
     @Override
@@ -64,20 +67,18 @@ public class LauncherActivity extends AppAc implements Animation.AnimationListen
 
     @Override
     public void onAnimationEnd(Animation animation) {
-        startAc(GuideActivity.class);
-        finish();
-//        if(SPUtils.getInstance(Global.TAG).getBoolean(Global.SP_KEY.APP_FIRST_START,true)){
-//            SPUtils.getInstance(Global.TAG).put(Global.SP_KEY.APP_FIRST_START,false);
-//            startActivity(GuideActivity.class);
+
+        if(MMkvHelper.Companion.getInstance().decodeBooleanFirstStart(Global.SP_KEY.APP_FIRST_START)){
+            MMkvHelper.Companion.getInstance().encode(Global.SP_KEY.APP_FIRST_START,false);
+            startAc(GuideActivity.class);
+            finish();
+        }else {
+            // AppIndexActivity
+            startAc(ArouterAc.class);
+            finish();
+//            ARouter.getInstance().build("/wan/WanMainActivity").navigation();
 //            finish();
-//        }else {
-//            // AppIndexActivity
-//            startAc(AppIndexActivity.class);
-//            finish();
-////            ARouter.getInstance().build("/wan/WanMainActivity").navigation();
-////            finish();
-//
-//        }
+        }
 
     }
 

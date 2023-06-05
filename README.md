@@ -37,6 +37,7 @@ Do my want to do,All my want is free,But free is not free.
 6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
 
 #1.0.1     SDK升级30-》31    versionCode 2
+#1.0.2     SDK降级31-》30    versionCode 3
 
 
 

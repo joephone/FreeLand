@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.transcendence.core.BuildConfig;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.main.ArouterAc;
+import com.transcendence.freeland.main.guide.LauncherActivity;
 
 /**
  *    author : Android 轮子哥
@@ -44,7 +45,7 @@ public class RestartActivity extends AppCompatActivity {
         Intent intent;
         if (BuildConfig.DEBUG) {
             // 如果是未登录的情况下跳转到闪屏页
-            intent = new Intent(context, ArouterAc.class);  //SplashActivity SplashActivity
+            intent = new Intent(context, LauncherActivity.class);  //SplashActivity SplashActivity
         } else {
             // 如果是已登录的情况下跳转到首页
             intent = new Intent(context, ArouterAc.class);

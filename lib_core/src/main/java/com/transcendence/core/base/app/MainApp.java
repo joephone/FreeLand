@@ -3,8 +3,10 @@ package com.transcendence.core.base.app;
 import android.app.Application;
 
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.tencent.bugly.crashreport.CrashReport;
 import com.tencent.mmkv.MMKV;
 import com.transcendence.core.BuildConfig;
+import com.transcendence.core.base.global.Global;
 
 /**
  * @author joephone
@@ -29,6 +31,8 @@ public class MainApp extends Application {
             ARouter.openDebug();
         }
         ARouter.init(this);
+        // Bugly 异常捕捉
+        CrashReport.initCrashReport(this, Global.BUGLY_ID, BuildConfig.DEBUG);
     }
 
     /**

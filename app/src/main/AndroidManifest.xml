@@ -4,9 +4,16 @@
     package="com.transcendence.freeland">
 
     <!-- 网络相关 -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 检测 WLAN 状态的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 修改 WLAN 状态的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 检测移动网络状态的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 修改移动网络状态的权限 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
     <!-- 外部存储 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
@@ -15,6 +22,23 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+<!--    &lt;!&ndash;maxSdkVersion=30适配到Android11 &ndash;&gt;-->
+<!--    <uses-permission-->
+<!--        android:name="android.permission.BLUETOOTH"-->
+<!--        android:maxSdkVersion="30" />-->
+<!--    <uses-permission-->
+<!--        android:name="android.permission.BLUETOOTH_ADMIN"-->
+<!--        android:maxSdkVersion="30" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+<!--    &lt;!&ndash;Android12新增蓝牙权限 &ndash;&gt;-->
+<!--    &lt;!&ndash; Android 12在不申请定位权限时，必须加上android:usesPermissionFlags="neverForLocation"，否则搜不到设备 &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"-->
+<!--        android:usesPermissionFlags="neverForLocation"-->
+<!--        tools:targetApi="s" />-->
+<!--    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />-->
+<!--    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />-->
 
     <application
        android:name=".main.app.App"
@@ -64,8 +88,26 @@
             android:name=".main.index.SettingsIndexActivity" />
         <activity
             android:name=".basefun.settings.SysSettingsAc" />
+        <activity
+            android:name=".main.index.UIIndexActivity" />
+        <activity
+            android:name=".main.index.BleIndexActivity" />
         <!-- index end -->
 
+
+        <!-- basefun start -->
+        <activity
+            android:name=".basefun.bugly.BuglyKt" />
+        <!-- basefun start -->
+
+        <!-- ble start -->
+        <activity
+            android:name=".ble.test.BleTest" />
+        <activity
+            android:name=".ble.test2.BleTest3" />
+        <activity
+            android:name=".ble.test2.NetTest" />
+        <!-- ble end -->
         <activity
             android:name=".crash.CrashActivity" />
 

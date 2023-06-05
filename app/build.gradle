@@ -62,6 +62,7 @@ dependencies {
         implementation project(path: ':module_greenstar')
     }
 
-
+    implementation "androidx.activity:activity:1.2.0"
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
 
 }
