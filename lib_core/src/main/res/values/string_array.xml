@@ -26,10 +26,24 @@
 
 
     <string-array name="app_index_item">
+        <item>Base Fun</item>
+        <item>权请</item>
         <item>APP功能跳转（跳转手机各种功能页面，以及判断某系统功能是否打开）</item>
-        <item>Bugly测试</item>
         <item>UI序列</item>
         <item>BLE序列</item>
+    </string-array>
+
+    <string-array name="base_fun_index_item">
+        <item>Bugly测试</item>
+        <item>重启倒数</item>
+        <item>Alert</item>
+    </string-array>
+
+    <string-array name="permission_index_item">
+        <item>存储权请</item>
+        <item>定位权请</item>
+        <item>相机权请</item>
+        <item>电话权请</item>
     </string-array>
 
     <string-array name="settings_index_item">

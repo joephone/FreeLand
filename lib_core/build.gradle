@@ -37,6 +37,7 @@ dependencies {
 
     api config.dependencies.mmkv
 
+    api config.dependencies.XXPermissions
     api config.dependencies.blankUtils
 
 

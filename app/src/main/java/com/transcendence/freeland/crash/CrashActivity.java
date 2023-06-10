@@ -167,7 +167,7 @@ public class CrashActivity extends AppCompatActivity implements ActivityAction, 
             List<String> permissions = Arrays.asList(packageInfo.requestedPermissions);
 
             if (permissions.contains(PermissionPool.MANAGE_EXTERNAL_STORAGE)) {
-                builder.append("\n存储权限：\t").append(ActivityCompat.checkSelfPermission(this, Manifest.permission.MANAGE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ? "已获得" : "未获得");
+                builder.append("\n存储权限：\t").append(ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED ? "已获得" : "未获得");
             }
 
             if (permissions.contains(PermissionPool.ACCESS_FINE_LOCATION) || permissions.contains(PermissionPool.ACCESS_COARSE_LOCATION)) {

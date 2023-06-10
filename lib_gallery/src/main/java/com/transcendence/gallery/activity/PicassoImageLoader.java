@@ -65,19 +65,19 @@ public class PicassoImageLoader implements IMediaLoader {
 
     @Override
     public void loadThumbnail(Context context, final ImageView thumbnailView, final IMediaLoader.SuccessCallback callback) {
-        if (type==LOCAL_IMAGE){
-            Glide.with(context)
-                    .load(image)
-                    .placeholder(R.drawable.placeholder_image)
-                    .centerInside()
-                    .into(thumbnailView);
-        } else {
-            Glide.with(context)
-                    .load(url)
-                    .placeholder(R.drawable.placeholder_image)
-                    .centerInside()
-                    .into(thumbnailView);
-        }
+//        if (type==LOCAL_IMAGE){
+//            Glide.with(context)
+//                    .load(image)
+//                    .placeholder(R.drawable.placeholder_image)
+//                    .centerInside()
+//                    .into(thumbnailView);
+//        } else {
+//            Glide.with(context)
+//                    .load(url)
+//                    .placeholder(R.drawable.placeholder_image)
+//                    .centerInside()
+//                    .into(thumbnailView);
+//        }
     }
 
 //    private static class ImageCallback implements Callback {

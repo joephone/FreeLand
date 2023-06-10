@@ -8,12 +8,12 @@ ext {
     kotlin_version = '1.4.31'
 
     android = [
-            compileSdkVersion: 30,
-            minSdkVersion    : 21,
-            targetSdkVersion : 30,
-            buildToolsVersion: "30.0.3",
-            versionCode      : 2,
-            versionName      : "1.0.1",    //-beta1
+            compileSdkVersion: 29,
+            minSdkVersion    : 23,
+            targetSdkVersion : 29,
+            buildToolsVersion: "29.0.2",
+            versionCode      : 3,
+            versionName      : "1.0.2",    //-beta1
     ]
 
     compileOptions = [
@@ -30,7 +30,7 @@ ext {
 //            gson                            : "2.5",
 //            eventbus                        : "3.1.1",
             retrofit_version                :"2.6.1",
-            glide                           :"4.9.0"
+            glide                           :"3.5.2"        //"""4.9.0"
     ]
 
     dependencies = [
@@ -59,6 +59,7 @@ ext {
             arouterApi                      : "com.alibaba:arouter-api:1.5.2",
             arouterCompiler                 : "com.alibaba:arouter-compiler:1.5.2",
 
+            XXPermissions                   : 'com.github.getActivity:XXPermissions:18.2',
             rxpermissions                   : "com.github.tbruyelle:rxpermissions:0.10.2",
             blankUtils                      : "com.blankj:utilcodex:1.30.1",
 

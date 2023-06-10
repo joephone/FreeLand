@@ -4,7 +4,9 @@ apply from: '../basic.gradle'
 def config = rootProject.ext
 
 android {
+
     defaultConfig {
+
         applicationId "com.transcendence.freeland"
 
         javaCompileOptions {
@@ -51,8 +53,9 @@ dependencies {
     api config.dependencies.material
     api config.dependencies.constraintlayout
 
+    api config.dependencies.okhttp
 
-
+    
     implementation project(path: ':lib_core')
     implementation project(path: ':lib_gallery')
     if(!config.isMusicApplication){

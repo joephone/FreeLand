@@ -32,6 +32,10 @@ public class Global {
         public static final String APP_BADGE = "appBadge";
     }
 
+    public final class INTENT_KEY {
+        public static final String BIG_IMAGE = "bigImage";
+    }
+
     public static final class PDF {
         public static String url = "http://hotelpodlipou.sk/uploads/files/sample.pdf";
         public static String url2 = "http://livedoor.4.blogimg.jp/nikoneko55-hogehoge/imgs/9/9/9937d147.gif";

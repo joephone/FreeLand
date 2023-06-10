@@ -1,14 +1,20 @@
 package com.transcendence.freeland.main.route;
 
 
+import com.transcendence.freeland.basefun.alert.AlertAc;
 import com.transcendence.freeland.basefun.bugly.BuglyKt;
+import com.transcendence.freeland.basefun.countdownrestart.CountDownRestartKt;
+import com.transcendence.freeland.basefun.permission.PermissionIndexActivity;
 import com.transcendence.freeland.basefun.settings.SysSettingsAc;
 import com.transcendence.freeland.ble.test.BleTest;
 import com.transcendence.freeland.ble.test2.BleTest3;
 import com.transcendence.freeland.ble.test2.NetTest;
+import com.transcendence.freeland.main.index.BasefunIndexActivity;
 import com.transcendence.freeland.main.index.BleIndexActivity;
 import com.transcendence.freeland.main.index.SettingsIndexActivity;
 import com.transcendence.freeland.main.index.UIIndexActivity;
+
+import java.util.concurrent.CountDownLatch;
 
 /**
  * @author joephone
@@ -18,12 +24,18 @@ import com.transcendence.freeland.main.index.UIIndexActivity;
 public interface AppConstantValue {
 
     Class[] appIndex = {
+            BasefunIndexActivity.class,
+            PermissionIndexActivity.class,
             SettingsIndexActivity.class,
-            BuglyKt.class,
             UIIndexActivity.class,
             BleIndexActivity.class,
     };
 
+    Class[] baseFunIndex = {
+            BuglyKt.class,
+            CountDownRestartKt.class,
+            AlertAc.class,
+    };
 
     Class[] uiIndex = {
 

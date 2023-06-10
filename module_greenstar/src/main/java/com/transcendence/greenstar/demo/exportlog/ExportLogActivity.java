@@ -77,27 +77,27 @@ public class ExportLogActivity extends AppAc {
     }
 
     private void checkPermission() {
-        if (Build.VERSION.SDK_INT >= 30) {
-            if (!Environment.isExternalStorageManager()) {
-                if (dialog != null) {
-                    dialog.dismiss();
-                    dialog = null;
-                }
-                dialog = new AlertDialog.Builder(this)
-                        .setTitle("提示")//设置标题
-                        .setMessage("请开启文件访问权限，否则无法正常使用本应用！")
-                        .setNegativeButton("取消", (dialog, i) -> dialog.dismiss())
-                        .setPositiveButton("确定", (dialog, which) -> {
-                            dialog.dismiss();
-                            Intent intent = new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
-                            startActivity(intent);
-                        }).create();
-                dialog.show();
-            } else {
-                havePermission = true;
-                LogUtils.d("Android 11以上，当前已有权限");
-            }
-        } else {
+//        if (Build.VERSION.SDK_INT >= 30) {
+//            if (!Environment.isExternalStorageManager()) {
+//                if (dialog != null) {
+//                    dialog.dismiss();
+//                    dialog = null;
+//                }
+//                dialog = new AlertDialog.Builder(this)
+//                        .setTitle("提示")//设置标题
+//                        .setMessage("请开启文件访问权限，否则无法正常使用本应用！")
+//                        .setNegativeButton("取消", (dialog, i) -> dialog.dismiss())
+//                        .setPositiveButton("确定", (dialog, which) -> {
+//                            dialog.dismiss();
+//                            Intent intent = new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+//                            startActivity(intent);
+//                        }).create();
+//                dialog.show();
+//            } else {
+//                havePermission = true;
+//                LogUtils.d("Android 11以上，当前已有权限");
+//            }
+//        } else {
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                     //申请权限
@@ -121,7 +121,7 @@ public class ExportLogActivity extends AppAc {
                 havePermission = true;
                 LogUtils.d("Android 6.0以下，已获取权限");
             }
-        }
+//        }
     }
 
     @Override

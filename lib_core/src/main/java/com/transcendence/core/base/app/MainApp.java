@@ -19,6 +19,7 @@ public class MainApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        instance = this;
         //mmkv初始化
         MMKV.initialize(this);
         //路由初始化

@@ -6,6 +6,7 @@
 
         >
 
+        <activity android:name=".image.BigImageActivity" />
 
     </application>
 </manifest>

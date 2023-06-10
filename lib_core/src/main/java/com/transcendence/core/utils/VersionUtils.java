@@ -204,7 +204,7 @@ public final class VersionUtils {
      * @return 是否在 11.0 版本及以上
      */
     public static boolean isR() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.R;
+        return Build.VERSION.SDK_INT >= 30;//Build.VERSION_CODES.R;
     }
 
     /**
