@@ -1,11 +1,8 @@
-package com.transcendence.greenstar.demo.exportlog;
+package com.transcendence.greenstar.demo.exportlog.export;
 
 import android.Manifest;
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.os.Environment;
-import android.provider.Settings;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -15,7 +12,7 @@ import androidx.core.app.ActivityCompat;
 import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;
-import com.transcendence.greenstar.demo.exportlog.zip.ZipUtil;
+import com.transcendence.greenstar.demo.exportlog.export.zip.ZipUtil;
 
 
 public class ExportLogActivity extends AppAc {

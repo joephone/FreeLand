@@ -7,7 +7,8 @@ import com.transcendence.greenstar.demo.bing.BingActivity;
 import com.transcendence.greenstar.demo.biometric.BiometricActivity;
 import com.transcendence.greenstar.demo.dbnote.act.DBNoteActivity;
 import com.transcendence.greenstar.demo.encryption.act.EncryptionMainAc;
-import com.transcendence.greenstar.demo.exportlog.ExportLogActivity;
+import com.transcendence.greenstar.demo.exportlog.export.ExportLogActivity;
+import com.transcendence.greenstar.demo.exportlog.logcat.LogcatKt;
 import com.transcendence.greenstar.demo.load.LoadAcKt;
 import com.transcendence.greenstar.demo.luckypanel.LuckyPanelAc;
 import com.transcendence.greenstar.demo.permissionx.PermissionxKt;
@@ -34,6 +35,7 @@ public interface GreenStarConstantValue {
             DBNoteActivity.class,
             BiometricActivity.class,
             ExportLogActivity.class,
+            LogcatKt.class,
             AuthOneAct.class,
             SplashActivity.class,
             ShowPermissionAc.class,

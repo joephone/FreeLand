@@ -1,4 +1,4 @@
-package com.transcendence.greenstar.demo.exportlog.zip;
+package com.transcendence.greenstar.demo.exportlog.export.zip;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,11 +1,10 @@
-package com.transcendence.greenstar.demo.exportlog.zip;
+package com.transcendence.greenstar.demo.exportlog.export.zip;
 
 
-import static com.transcendence.greenstar.demo.exportlog.zip.ExportLogUtils.betweenDays;
-import static com.transcendence.greenstar.demo.exportlog.zip.ExportLogUtils.getCopyDir;
-import static com.transcendence.greenstar.demo.exportlog.zip.ExportLogUtils.getLogDir;
-import static com.transcendence.greenstar.demo.exportlog.zip.ExportLogUtils.getZipDir;
-import static com.transcendence.greenstar.demo.exportlog.zip.FileUtil.deleteFolder;
+import static com.transcendence.greenstar.demo.exportlog.export.zip.ExportLogUtils.betweenDays;
+import static com.transcendence.greenstar.demo.exportlog.export.zip.ExportLogUtils.getCopyDir;
+import static com.transcendence.greenstar.demo.exportlog.export.zip.ExportLogUtils.getLogDir;
+import static com.transcendence.greenstar.demo.exportlog.export.zip.ExportLogUtils.getZipDir;
 
 import com.transcendence.core.utils.log.LogUtils;
 
@@ -17,14 +16,14 @@ public class ZipUtil {
     //压缩某一天的日志文件
     public static String zipOneDayLog(String date) {
         File file_copy = new File(getCopyDir());
-        if (deleteFolder(getCopyDir())) {
+        if (FileUtil.deleteFolder(getCopyDir())) {
             LogUtils.d("清空拷贝文件夹成功");
         } else {
             LogUtils.d("清空拷贝文件夹失败,路径为 : "+getCopyDir());
         }
         file_copy.mkdirs();
         File file_zip = new File(getZipDir());
-        if (deleteFolder(getZipDir())) {
+        if (FileUtil.deleteFolder(getZipDir())) {
             LogUtils.d("清空压缩文件夹成功");
         } else {
             LogUtils.d("清空压缩文件夹失败,路径为 : "+getZipDir());
@@ -58,14 +57,14 @@ public class ZipUtil {
     //压缩几天的日志文件
     public static String zipSomeDaysLog(String beginDate, String endDate) {
         File file_copy = new File(getCopyDir());
-        if (deleteFolder(getCopyDir())) {
+        if (FileUtil.deleteFolder(getCopyDir())) {
             LogUtils.d("清空拷贝文件夹成功");
         } else {
             LogUtils.d("清空拷贝文件夹失败,路径为 : "+getCopyDir());
         }
         file_copy.mkdirs();
         File file_zip = new File(getZipDir());
-        if (deleteFolder(getZipDir())) {
+        if (FileUtil.deleteFolder(getZipDir())) {
             LogUtils.d("清空压缩文件夹成功");
         } else {
             LogUtils.d("清空压缩文件夹失败,路径为 : "+getZipDir());

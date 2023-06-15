@@ -8,5 +8,18 @@ import com.transcendence.core.base.activity.BasePermissionsActivity
  * @desc
  */
 class SettingActivity : BasePermissionsActivity() {
+    /**
+     * 获取布局 ID
+     */
+    override fun getLayoutId(): Int {
+        TODO("Not yet implemented")
+    }
+
+    /**
+     * 初始化数据
+     */
+    override fun initView() {
+        TODO("Not yet implemented")
+    }
 
 }
