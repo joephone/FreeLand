@@ -37,6 +37,9 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--安装权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.REQUEST_INSTALL_PACKAGES.GET_TASKS" />
 
     <application
        android:name=".main.app.App"
@@ -78,6 +81,12 @@
 
         <activity
             android:name=".main.ArouterAc"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
+
+        <activity
+            android:name=".main.setting.SettingActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             />

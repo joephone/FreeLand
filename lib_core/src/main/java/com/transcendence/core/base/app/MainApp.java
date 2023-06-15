@@ -1,6 +1,7 @@
 package com.transcendence.core.base.app;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.tencent.bugly.crashreport.CrashReport;
@@ -15,11 +16,13 @@ import com.transcendence.core.base.global.Global;
  */
 public class MainApp extends Application {
     private static MainApp instance;
+    private static Context applicationContext;   //上下文
 
     @Override
     public void onCreate() {
         super.onCreate();
         instance = this;
+        applicationContext = getApplicationContext();
         //mmkv初始化
         MMKV.initialize(this);
         //路由初始化
@@ -45,5 +48,9 @@ public class MainApp extends Application {
                     "please inherit BaseApplication or call setApplication.");
         }
         return instance;
+    }
+
+    public static Context getAppContext() {
+        return applicationContext;
     }
 }

@@ -4,7 +4,7 @@
     android:background="@drawable/bg_alertview_alert"
     android:layout_height="wrap_content">
 
-    <include layout="@layout/include_alertheader"
+    <include layout="@layout/layout_alertview_include_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <ViewStub

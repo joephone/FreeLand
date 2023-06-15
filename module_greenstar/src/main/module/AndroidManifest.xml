@@ -115,6 +115,12 @@
             android:screenOrientation="portrait"/>
 
         <activity
+            android:name=".demo.permissionx.PermissionxKt"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="Instantiatable" />
+
+        <activity
             android:name=".demo.wuwei.WuweiActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
@@ -133,6 +139,12 @@
             android:name=".demo.load.LoadAcKt"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.splash.SplashActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>

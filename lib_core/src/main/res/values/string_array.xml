@@ -83,20 +83,22 @@
     </string-array>
 
     <string-array name="demo_index_item">
-        <item>APP信息提取器</item>
-        <item>幸运转盘</item>
-        <item>Encryption</item>
-        <item>必应每日一图</item>
-        <item>Record</item>
-        <item>仿微信语音聊天音量大小显示控件</item>
-        <item>DB Note</item>
-        <item>生物识别</item>
-        <item>导出日志</item>
-        <item>身份认证</item>
-        <item>showPermissions</item>
-        <item>All App</item>
-        <item>Wuwei</item>
-        <item>Loading</item>
+        <item>1.APP信息提取器</item>
+        <item>2.幸运转盘</item>
+        <item>3.Encryption</item>
+        <item>4.必应每日一图</item>
+        <item>5.Record</item>
+        <item>6.仿微信语音聊天音量大小显示控件</item>
+        <item>7.DB Note</item>
+        <item>8.生物识别</item>
+        <item>9.导出日志</item>
+        <item>10.Xinyu身份认证</item>
+        <item>11.启动页隐私协议</item>
+        <item>12.show权限库X</item>
+        <item>12.1 权限库px</item>
+        <item>13.All App</item>
+        <item>14.Wuwei</item>
+        <item>15.Loading</item>
     </string-array>
 
     <string-array name="spinner_bing_resolution">

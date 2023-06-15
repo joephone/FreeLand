@@ -8,5 +8,7 @@
 
         <activity android:name=".image.BigImageActivity" />
 
+        <activity android:name=".ui.webview.MLWebviewActivity" />
+
     </application>
 </manifest>

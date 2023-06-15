@@ -66,9 +66,6 @@ public class PermissionIndexActivity extends AppAc implements AdapterView.OnItem
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//        Intent intent = new Intent();
-////        intent.setClass(mActivity, AppConstantValue.baseFunIndex[position]);
-//        startActivity(intent);
         switch (position){
             case 0:
                 mPermissionHelper.requestStoragePermissions(new PermissionHelper.PermissionCallback() {

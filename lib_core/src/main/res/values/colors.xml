@@ -8,6 +8,7 @@
     <color name="theme_tudor_red">#E71B64</color>
     <color name="theme_tudor_red_press">#E95B64</color>
     <color name="theme_tudor_white">#FFFFF0</color>
+    <color name="theme_main">@color/main</color>
     <color name="main">@color/colorGitHubBlack</color>
     <color name="tint">@color/colorGitHubGreen</color>
 

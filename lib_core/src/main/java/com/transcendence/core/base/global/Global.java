@@ -30,6 +30,7 @@ public class Global {
     public final class SP_KEY {
         public static final String APP_FIRST_START = "appFirstStart";
         public static final String APP_BADGE = "appBadge";
+        public static final String HAS_AGREE = "hasAgree";
     }
 
     public final class INTENT_KEY {
@@ -54,4 +55,15 @@ public class Global {
     public static int standardZoom(){
         return MAP.SMALL_ZOOM;
     }
+
+    public static String BASE_URL_DF = "https://app-m.dfpv.com.cn";
+    /**
+     * 隐私协议
+     */
+    public static String PRIVACY_CLAUSE = "/webh5/PrivacyClause/index.html";
+    /**
+     * 用户协议
+     */
+    public static String USER_AGREEMENT = "/webh5/UserAgreement/index.html";
+
 }
