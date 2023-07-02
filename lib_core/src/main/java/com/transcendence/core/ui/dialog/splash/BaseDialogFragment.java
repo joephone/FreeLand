@@ -5,7 +5,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -18,9 +17,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.transcendence.core.R;
-import com.transcendence.core.base.app.MainApp;
-import com.transcendence.core.base.global.Global;
-import com.transcendence.core.utils.mmkv.MMkvHelper;
+import com.transcendence.core.base.app.CoreApp;
 
 /**
  * @author joephone
@@ -56,7 +53,7 @@ public abstract class BaseDialogFragment extends DialogFragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (null == mContext){
-            mContext = MainApp.getInstance().getApplicationContext();
+            mContext = CoreApp.getInstance().getApplicationContext();
         }
         mInflater = LayoutInflater.from(mContext);
         Bundle bundle = getArguments();

@@ -16,7 +16,7 @@
 //import com.bumptech.glide.request.RequestOptions;
 //import com.bumptech.glide.request.target.Target;
 //import com.transcendence.core.R;
-//import com.transcendence.core.base.app.MainApp;
+//import com.transcendence.core.base.app.CoreApp;
 //import com.transcendence.core.base.app.MainApplication;
 //
 ///**
@@ -40,7 +40,7 @@
 //    }
 //
 //    public void loadImageFromUrl(String imagePath, ImageView imageView){
-//        Glide.with(MainApp.getInstance())
+//        Glide.with(CoreApp.getInstance())
 //                .load(imagePath).listener(new RequestListener<Drawable>() {
 //            @Override
 //            public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
@@ -58,14 +58,14 @@
 //    }
 //
 //    public void loadImageFromDra(Drawable imagePath, ImageView imageView){
-//        Glide.with(MainApp.getInstance())
+//        Glide.with(CoreApp.getInstance())
 //                .load(imagePath)
 //                .apply(options)
 //                .into(imageView);
 //    }
 //
 //    public void loadImageFromUrl(int imagePath, ImageView imageView){
-//        Glide.with(MainApp.getInstance())
+//        Glide.with(CoreApp.getInstance())
 //                .load(imagePath)
 //                .apply(options)
 //                .into(imageView);
@@ -76,7 +76,7 @@
 //            .error(R.drawable.ic_default_img);
 //
 //    private void showAnimation(View view) {
-//        Animation animation = AnimationUtils.loadAnimation(MainApp.getInstance(), R.anim.fade_in);
+//        Animation animation = AnimationUtils.loadAnimation(CoreApp.getInstance(), R.anim.fade_in);
 //        LinearInterpolator lin = new LinearInterpolator();//设置动画匀速运动
 //        animation.setInterpolator(lin);
 //        view.startAnimation(animation);

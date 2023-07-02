@@ -2,14 +2,11 @@ package com.transcendence.core.image;
 
 import android.net.Uri;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.transcendence.core.R;
 import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.base.global.Global;
-import com.transcendence.core.utils.glide.xinyu.GlideUtils;
+import com.transcendence.core.global.Global;
 
 /**
  * @author joephone

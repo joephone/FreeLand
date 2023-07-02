@@ -1,24 +1,18 @@
 package com.transcendence.core.utils;
 
 import android.app.Activity;
-import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.graphics.drawable.Drawable;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.SystemClock;
 import android.text.TextUtils;
 import android.view.inputmethod.InputMethodManager;
 
-import com.transcendence.core.base.app.MainApp;
-import com.transcendence.core.base.route.RoutePath;
+import com.transcendence.core.base.app.CoreApp;
 import com.transcendence.core.utils.log.LogUtils;
 
 import java.util.Random;
@@ -104,7 +98,7 @@ public class AppUtils {
      */
     public static String getPackageName() {
         try {
-            return MainApp.getInstance().getPackageName();
+            return CoreApp.getInstance().getPackageName();
         } catch (Exception e) {
             LogUtils.e("getPackageName"+e);
         }
@@ -174,7 +168,7 @@ public class AppUtils {
      * @return {@link PackageManager}
      */
     public static PackageManager getPackageManager() {
-        return getPackageManager(MainApp.getInstance());
+        return getPackageManager(CoreApp.getInstance());
     }
 
     /**
@@ -238,7 +232,7 @@ public class AppUtils {
             final int flags
     ) {
         try {
-            return MainApp.getInstance().getPackageManager()
+            return CoreApp.getInstance().getPackageManager()
                     .getPackageInfo(packageName, flags);
         } catch (Exception e) {
 //            LogUtils.e( "getPackageInfo %s", packageName);
@@ -252,7 +246,7 @@ public class AppUtils {
      */
     public static ApplicationInfo getApplicationInfo() {
         try {
-            return MainApp.getInstance().getApplicationInfo();
+            return CoreApp.getInstance().getApplicationInfo();
         } catch (Exception e) {
             LogUtils.e("getApplicationInfo"+e);
         }
@@ -270,7 +264,7 @@ public class AppUtils {
             final int flags
     ) {
         try {
-            return MainApp.getInstance().getPackageManager()
+            return CoreApp.getInstance().getPackageManager()
                     .getApplicationInfo(packageName, flags);
         } catch (Exception e) {
 //            LogUtils.e( e, "getApplicationInfo %s", packageName);

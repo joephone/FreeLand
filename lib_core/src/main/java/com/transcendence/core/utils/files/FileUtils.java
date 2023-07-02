@@ -1,4 +1,4 @@
-package com.transcendence.greenstar.demo.exportlog.export.zip;
+package com.transcendence.core.utils.files;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import java.nio.channels.FileChannel;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-public class FileUtil {
+public class FileUtils {
 
     /**
      * 判断文件是否存在

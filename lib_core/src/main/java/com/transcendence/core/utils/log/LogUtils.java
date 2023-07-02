@@ -3,6 +3,7 @@ package com.transcendence.core.utils.log;
 import android.util.Log;
 
 import com.transcendence.core.BuildConfig;
+import com.transcendence.core.global.Global;
 
 
 /**
@@ -18,7 +19,7 @@ import com.transcendence.core.BuildConfig;
  */
 
 public class LogUtils {
-    static String TAG = "Freeland";
+    static String TAG = Global.TAG;
     static String className;//类名
     static String methodName;//方法名
     static int lineNumber;//行数

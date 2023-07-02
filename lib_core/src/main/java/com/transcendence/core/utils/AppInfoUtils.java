@@ -3,7 +3,7 @@ package com.transcendence.core.utils;
 import android.content.Context;
 import android.content.pm.PackageManager;
 
-import com.transcendence.core.base.app.MainApp;
+import com.transcendence.core.base.app.CoreApp;
 import com.transcendence.core.utils.log.LogUtils;
 
 /**
@@ -18,7 +18,7 @@ public class AppInfoUtils {
      * @return {@link PackageManager}
      */
     public static PackageManager getPackageManager() {
-        return getPackageManager(MainApp.getInstance());
+        return getPackageManager(CoreApp.getInstance());
     }
 
     /**

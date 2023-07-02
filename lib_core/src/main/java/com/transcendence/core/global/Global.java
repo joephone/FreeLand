@@ -1,6 +1,12 @@
-package com.transcendence.core.base.global;
+package com.transcendence.core.global;
 
 import com.transcendence.core.R;
+import com.transcendence.core.base.app.CoreApp;
+
+import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 /**
  * @author joephone
@@ -13,6 +19,16 @@ public class Global {
 
     public static final String BUGLY_ID = "4b1e18351f";
     public static final String BUGLY_KEY = "41682c5c-d8d9-4577-b949-c268ad44c023";
+
+    //文件夹名称
+    public static final String FILE_TYPE = "FullLog";
+    public static final int DEFAULT_LOG_MAX_LIENS = 5;
+    //存在日期LAUNCH_TIME
+    public static final int FULL_LOG_MAX_KEEP_DAYS = 1;
+
+//    public static final File DIRECTORY_FULL_LOG =  CoreApp.getAppContext().getExternalFilesDir("FullLog");
+//    public static final File DIRECTORY_CRASH =  CoreApp.getAppContext().getExternalCacheDir();
+    public static final String FILE_PATH_FULL_LOG =  new SimpleDateFormat("yyyy_MM_dd", Locale.getDefault()).format(new Date()) + ".txt";
 
     public static int[] mBeautyIds = new int[]{
             R.drawable.beauty01,
@@ -31,6 +47,7 @@ public class Global {
         public static final String APP_FIRST_START = "appFirstStart";
         public static final String APP_BADGE = "appBadge";
         public static final String HAS_AGREE = "hasAgree";
+        public static final String LAUNCH_TIME = "launch_time";
     }
 
     public final class INTENT_KEY {
@@ -49,6 +66,11 @@ public class Global {
         public static final  int BIG_ZOOM =15;
         public static final  String DEFAULT_LAT ="defaultLan";
         public static final  String DEFAULT_LON ="defaultLon";
+    }
+
+    public static final class DIRECTORY {
+        public static final String FULL_LOG =  CoreApp.getAppContext().getExternalFilesDir(FILE_TYPE).getAbsolutePath(); //File directory = mAppContext.getExternalFilesDir("FullLog");
+        public static final String CRASH =  CoreApp.getAppContext().getExternalCacheDir().getAbsolutePath();
     }
 
 

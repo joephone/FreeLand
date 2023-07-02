@@ -38,7 +38,7 @@ import androidx.annotation.RawRes;
 import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 
-import com.transcendence.core.base.app.MainApp;
+import com.transcendence.core.base.app.CoreApp;
 import com.transcendence.core.utils.appinfo.DevFinal;
 import com.transcendence.core.utils.log.LogUtils;
 
@@ -171,7 +171,7 @@ public final class ResourceAssist {
      * @return {@link Resources}
      */
     public static Resources staticResources() {
-        return staticResources(MainApp.getInstance());
+        return staticResources(CoreApp.getInstance());
     }
 
     /**
@@ -198,7 +198,7 @@ public final class ResourceAssist {
      * @return {@link Resources.Theme}
      */
     public static Resources.Theme staticTheme() {
-        return staticTheme(MainApp.getInstance());
+        return staticTheme(CoreApp.getInstance());
     }
 
     /**
@@ -225,7 +225,7 @@ public final class ResourceAssist {
      * @return {@link ContentResolver}
      */
     public static ContentResolver staticContentResolver() {
-        return staticContentResolver(MainApp.getInstance());
+        return staticContentResolver(CoreApp.getInstance());
     }
 
     /**
@@ -870,7 +870,7 @@ public final class ResourceAssist {
      * @return {@link XmlResourceParser}
      */
     public Animation getAnimation(@AnimatorRes @AnimRes final int id) {
-        return getAnimation(id, MainApp.getInstance());
+        return getAnimation(id, CoreApp.getInstance());
     }
 
     /**

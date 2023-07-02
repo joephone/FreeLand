@@ -4,14 +4,16 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 
 import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;
+import com.transcendence.greenstar.demo.exportlog.export.log.MyLog;
+import com.transcendence.greenstar.demo.exportlog.export.zip.ExportLogUtils;
 import com.transcendence.greenstar.demo.exportlog.export.zip.ZipUtil;
 
 
@@ -35,34 +37,34 @@ public class ExportLogActivity extends AppAc {
 
     @Override
     protected void initView() {
-
         Button btnZipTodayLog = findViewById(R.id.btn_zip_today_log);
+        TextView tvProcess = findViewById(R.id.tv_process);
         btnZipTodayLog.setOnClickListener(view -> {
             if (!havePermission) {
-                LogUtils.d("当前设备无存储权限");
+                MyLog.d("当前设备无存储权限");
                 Toast.makeText(this, "当前设备无存储权限", Toast.LENGTH_SHORT).show();
                 return;
             }
-            String result = ZipUtil.zipOneDayLog("20230331");
+            String result = ZipUtil.zipOneDayLog();
             if (!"".equals(result)) {
-                Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+                tvProcess.setText(result);
             } else {
-                Toast.makeText(this, "压缩日志文件成功", Toast.LENGTH_SHORT).show();
+                tvProcess.setText("压缩日志文件成功");
             }
         });
 
         Button btnZipLogsInThePastThreeDays = findViewById(R.id.btn_zip_logs_in_the_past_three_days);
         btnZipLogsInThePastThreeDays.setOnClickListener(view -> {
             if (!havePermission) {
-                LogUtils.d("当前设备无存储权限");
+                MyLog.d("当前设备无存储权限");
                 Toast.makeText(this, "当前设备无存储权限", Toast.LENGTH_SHORT).show();
                 return;
             }
-            String result = ZipUtil.zipSomeDaysLog("20230329", "20230331");
+            String result = ZipUtil.zipSomeDaysLog("20230329", ExportLogUtils.getLogFileName());
             if (!"".equals(result)) {
-                Toast.makeText(this, result, Toast.LENGTH_SHORT).show();
+                tvProcess.setText(result);
             } else {
-                Toast.makeText(this, "压缩日志文件成功", Toast.LENGTH_SHORT).show();
+                tvProcess.setText("压缩日志文件成功");
             }
         });
     }
@@ -112,11 +114,11 @@ public class ExportLogActivity extends AppAc {
                     dialog.show();
                 } else {
                     havePermission = true;
-                    LogUtils.d("Android 6.0以上，11以下，当前已有权限");
+                    MyLog.d("Android 6.0以上，11以下，当前已有权限");
                 }
             } else {
                 havePermission = true;
-                LogUtils.d("Android 6.0以下，已获取权限");
+                MyLog.d("Android 6.0以下，已获取权限");
             }
 //        }
     }

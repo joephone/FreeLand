@@ -9,20 +9,17 @@ import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.core.content.FileProvider;
 
 import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.base.global.Global;
-import com.transcendence.core.image.BigImageActivity;
+import com.transcendence.core.global.Global;
+import com.transcendence.core.image.BigImageKt;
 import com.transcendence.core.permission.PermissionHelper;
 import com.transcendence.core.utils.StringUtils;
 import com.transcendence.core.utils.files.AppFolderHelper;
 import com.transcendence.core.utils.log.LogUtils;
-import com.transcendence.freeland.main.route.AppConstantValue;
 import com.transcendence.greenstar.R;
 
 import java.io.File;
@@ -176,7 +173,7 @@ public class PermissionIndexActivity extends AppAc implements AdapterView.OnItem
 //                Toast.makeText(this, "发生错误", Toast.LENGTH_SHORT).show();
 //            }
 //            iv.setImageURI(imageUri);
-                startActivity(new Intent(mActivity, BigImageActivity.class).putExtra(Global.INTENT_KEY.BIG_IMAGE,imageUri.toString()));
+                startActivity(new Intent(mActivity, BigImageKt.class).putExtra(Global.INTENT_KEY.BIG_IMAGE,imageUri.toString()));
         }
 
     }

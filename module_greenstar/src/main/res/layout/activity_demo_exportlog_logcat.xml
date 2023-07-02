@@ -13,20 +13,26 @@
         android:gravity="center"
         android:orientation="vertical">
 
+
         <TextView
-            android:id="@+id/btn_export"
+            android:id="@+id/tv_show_run_log"
             style="@style/standardGreenButton"
             android:layout_margin="20dp"
-            android:text="Export" />
+            android:text="Show Run Log" />
 
+        <ToggleButton
+            android:id="@+id/tbtn_logcat_toggle"
+            style="@style/standardGreenButton"
+            android:layout_margin="20dp"
+            android:textOn="@string/enable_logcat"
+            android:textOff="@string/disable_logcat"/>
 
-        <TextView
-            android:id="@+id/tv_process"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginLeft="20dp" />
-
+        <ToggleButton
+            android:id="@+id/tbtn_log_toggle"
+            style="@style/standardGreenButton"
+            android:layout_margin="20dp"
+            android:textOn="@string/add_log"
+            android:textOff="@string/stop_add_log"/>
 
     </LinearLayout>
 

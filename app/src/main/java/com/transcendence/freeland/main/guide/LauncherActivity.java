@@ -7,10 +7,17 @@ import android.widget.ImageView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.base.global.Global;
+import com.transcendence.core.global.Global;
+import com.transcendence.core.utils.DateUtils;
+import com.transcendence.core.utils.files.FileUtils;
+import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.core.utils.mmkv.MMkvHelper;
+import com.transcendence.core.utils.sp.SPUtils;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.main.ArouterAc;
+import com.transcendence.logcat.Logcat;
+import com.transcendence.logcat.SharedPrefHelper;
+import com.transcendence.logcat.manager.LogManager;
 
 /**
  * @author Joephone on 2019/5/8 10:45
@@ -24,7 +31,6 @@ public class LauncherActivity extends AppAc implements Animation.AnimationListen
     private ConstraintLayout clContainer;
     private final int ANIM_DURATION_TIME = 500;
 
-
     @Override
     protected int getLayoutId() {
         return R.layout.activity_launcher;
@@ -32,6 +38,7 @@ public class LauncherActivity extends AppAc implements Animation.AnimationListen
 
     @Override
     protected void initView() {
+        LogManager.getInstance().startInit(mActivity);
         ivLauncher = findViewById(R.id.ivLauncher);
         clContainer = findViewById(R.id.clContainer);
 //        int [] ids = Global.mLauncherIds;
@@ -86,4 +93,5 @@ public class LauncherActivity extends AppAc implements Animation.AnimationListen
     public void onAnimationRepeat(Animation animation) {
 
     }
+
 }

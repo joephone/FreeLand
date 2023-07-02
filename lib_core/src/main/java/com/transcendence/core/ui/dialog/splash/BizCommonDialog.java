@@ -14,7 +14,7 @@ import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 
 import com.transcendence.core.R;
-import com.transcendence.core.base.global.Global;
+import com.transcendence.core.global.Global;
 import com.transcendence.core.ui.webview.MLWebviewActivity;
 import com.transcendence.core.utils.mmkv.MMkvHelper;
 

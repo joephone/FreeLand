@@ -7,15 +7,15 @@ import com.alibaba.android.arouter.launcher.ARouter;
 import com.tencent.bugly.crashreport.CrashReport;
 import com.tencent.mmkv.MMKV;
 import com.transcendence.core.BuildConfig;
-import com.transcendence.core.base.global.Global;
+import com.transcendence.core.global.Global;
 
 /**
  * @author joephone
  * @date 2023/1/23
  * @desc
  */
-public class MainApp extends Application {
-    private static MainApp instance;
+public class CoreApp extends Application {
+    private static CoreApp instance;
     private static Context applicationContext;   //上下文
 
     @Override
@@ -42,7 +42,7 @@ public class MainApp extends Application {
     /**
      * 获得当前app运行的Application
      */
-    public static MainApp getInstance() {
+    public static CoreApp getInstance() {
         if (instance == null) {
             throw new NullPointerException(
                     "please inherit BaseApplication or call setApplication.");

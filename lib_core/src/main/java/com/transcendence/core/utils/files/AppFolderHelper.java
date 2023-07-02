@@ -3,7 +3,7 @@ package com.transcendence.core.utils.files;
 import android.os.Environment;
 
 
-import com.transcendence.core.base.app.MainApp;
+import com.transcendence.core.base.app.CoreApp;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.core.utils.storage.StorageUtil;
 
@@ -28,8 +28,8 @@ public class AppFolderHelper {
 
 
     private static File appExternalDirectory = new File(Environment.getExternalStorageDirectory(), APP_FOLDER);
-    private static File appFileDirectory = MainApp.getInstance().getFilesDir();
-    private static File appCacheDirectory = MainApp.getInstance().getCacheDir();
+    private static File appFileDirectory = CoreApp.getInstance().getFilesDir();
+    private static File appCacheDirectory = CoreApp.getInstance().getCacheDir();
     private static File hybridDirectory = new File(appFileDirectory, HYBRID_DIR);
     private static File reactDirectory = new File(appFileDirectory, REACT_DIR);
     private static File innerImagesDirectory = new File(appCacheDirectory, PIC_DIR);

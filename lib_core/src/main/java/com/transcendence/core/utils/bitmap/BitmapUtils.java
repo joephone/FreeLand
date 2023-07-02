@@ -2,7 +2,6 @@ package com.transcendence.core.utils.bitmap;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -11,16 +10,14 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.ParcelFileDescriptor;
 import android.provider.MediaStore;
-import android.text.TextUtils;
 
 import androidx.annotation.Nullable;
 
-import com.transcendence.core.base.app.MainApp;
+import com.transcendence.core.base.app.CoreApp;
 
 import java.io.File;
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -78,7 +75,7 @@ public class BitmapUtils {
             File file = new File(dir, picName);
             contentValues.put(MediaStore.MediaColumns.DATA, file.getPath());
         }
-        Uri insertUri = MainApp.getInstance()
+        Uri insertUri = CoreApp.getInstance()
                 .getContentResolver()
                 .insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, contentValues);
         if (insertUri == null) {
@@ -86,7 +83,7 @@ public class BitmapUtils {
         }
         OutputStream outputStream = null;
         try {
-            outputStream = MainApp.getInstance()
+            outputStream = CoreApp.getInstance()
                     .getContentResolver()
                     .openOutputStream(insertUri);
             bmp.compress(Bitmap.CompressFormat.JPEG, 100, outputStream);

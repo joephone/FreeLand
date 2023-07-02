@@ -71,27 +71,7 @@ public class PermissionHelper {
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE,
         };
-        XXPermissions.with(mActivity)
-                .permission(permissions)
-                .request(new OnPermissionCallback() {
-
-                    @Override
-                    public void onGranted(@NonNull List<String> permissions, boolean allGranted) {
-                        LogUtils.d("onGranted");
-                        permissionCallback.onPermissionComplete(allGranted);
-                    }
-
-                    @Override
-                    public void onDenied(@NonNull List<String> permissions, boolean doNotAskAgain) {
-                        LogUtils.d("onDenied doNotAskAgain--"+doNotAskAgain);
-                        if (doNotAskAgain) {
-                            XXPermissions.startPermissionActivity(mActivity, permissions);
-                        } else {
-                            permissionCallback.onPermissionComplete(false);
-                        }
-                    }
-                });
-
+        requestAllPermissions(permissions,permissionCallback);
     }
 
     /**

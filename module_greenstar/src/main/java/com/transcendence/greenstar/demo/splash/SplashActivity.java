@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.os.Handler;
 
 import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.base.global.Global;
 import com.transcendence.core.ui.dialog.splash.BizCommonDialog;
 import com.transcendence.core.utils.log.LogUtils;
-import com.transcendence.core.utils.mmkv.MMkvHelper;
 import com.transcendence.greenstar.R;
 
 /**

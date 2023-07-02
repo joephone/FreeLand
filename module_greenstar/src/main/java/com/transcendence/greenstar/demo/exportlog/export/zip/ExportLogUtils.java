@@ -3,10 +3,9 @@ package com.transcendence.greenstar.demo.exportlog.export.zip;
 import android.os.Environment;
 
 
-import com.transcendence.core.base.global.Global;
+import com.transcendence.core.base.app.CoreApp;
 import com.transcendence.core.utils.AppUtils;
 import com.transcendence.core.utils.log.LogUtils;
-import com.transcendence.greenstar.BuildConfig;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,11 +16,11 @@ import java.util.List;
 public class ExportLogUtils {
     public static SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
     //日志保存路径
-    public static final String LOG_DIR = "/"+Global.TAG+ "/logs/";
+    public static final String LOG_DIR = "logs";//"/"+Global.TAG+ "/logs/";
     //日志拷贝路径
-    public static final String COPY_DIR = "/"+Global.TAG+"/copy/";
+    public static final String COPY_DIR = "copy";//"/"+Global.TAG+"/copy/";
     //日志压缩路径
-    public static final String ZIP_DIR = "/"+Global.TAG+"/upload/";
+    public static final String ZIP_DIR = "upload";//"/"+Global.TAG+"/upload/";
 //    private static final String packageName = "com.hjly.exportlogdemo";
 
     private static boolean isSdcardMounted() {
@@ -30,7 +29,8 @@ public class ExportLogUtils {
 
     public static String getLogDir() {
         if (isSdcardMounted()) {
-            return Environment.getExternalStorageDirectory() + LOG_DIR;
+            LogUtils.d("Environment.getExternalStorageDirectory() + LOG_DIR---"+Environment.getExternalStorageDirectory() + LOG_DIR);
+            return CoreApp.getAppContext().getExternalFilesDir(LOG_DIR).getAbsolutePath(); //Environment.getExternalStorageDirectory() + LOG_DIR;
         } else {
             return "/data/data/" + AppUtils.getPackageName() + LOG_DIR;
         }
@@ -38,7 +38,8 @@ public class ExportLogUtils {
 
     public static String getCopyDir() {
         if (isSdcardMounted()) {
-            return Environment.getExternalStorageDirectory() + COPY_DIR;
+            LogUtils.d("Environment.getExternalStorageDirectory() + COPY_DIR---"+Environment.getExternalStorageDirectory() + COPY_DIR);
+            return CoreApp.getAppContext().getExternalFilesDir(COPY_DIR).getAbsolutePath(); //Environment.getExternalStorageDirectory() + COPY_DIR;
         } else {
             return "/data/data/" + AppUtils.getPackageName() + COPY_DIR;
         }
@@ -46,7 +47,8 @@ public class ExportLogUtils {
 
     public static String getZipDir() {
         if (isSdcardMounted()) {
-            return Environment.getExternalStorageDirectory() + ZIP_DIR;
+            LogUtils.d("Environment.getExternalStorageDirectory() + ZIP_DIR---"+Environment.getExternalStorageDirectory() + ZIP_DIR);
+            return CoreApp.getAppContext().getExternalFilesDir(ZIP_DIR).getAbsolutePath();//Environment.getExternalStorageDirectory() + ZIP_DIR;
         } else {
             return "/data/data/" + AppUtils.getPackageName() + ZIP_DIR;
         }

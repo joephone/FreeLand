@@ -2,19 +2,16 @@ package com.transcendence.greenstar.base.app;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 
-import com.transcendence.core.base.app.MainApp;
+import com.transcendence.core.base.app.CoreApp;
 import com.transcendence.greenstar.demo.appinfo.oberser.DevObservableNotify;
-
-import java.util.HashMap;
 
 /**
  * @author joephone
  * @date 2023/2/4
  * @desc
  */
-public class GSApp extends MainApp {
+public class GSApp extends CoreApp {
 
     /** 全局观察者模式 */
     public static final DevObservableNotify sDevObservableNotify = new DevObservableNotify();

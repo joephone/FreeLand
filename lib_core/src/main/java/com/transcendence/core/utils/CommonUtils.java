@@ -7,7 +7,7 @@ import android.graphics.drawable.Drawable;
 
 import androidx.core.content.ContextCompat;
 
-import com.transcendence.core.base.app.MainApp;
+import com.transcendence.core.base.app.CoreApp;
 
 import java.util.Random;
 
@@ -38,7 +38,7 @@ public class CommonUtils {
     }
 
     public static Resources getResources() {
-        return MainApp.getInstance().getResources();
+        return CoreApp.getInstance().getResources();
     }
 
     public static String getString(int resId) {

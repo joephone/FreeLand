@@ -104,11 +104,6 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
-        <service
-            android:name=".demo.exportlog.logcat.LogcatService"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity
             android:name=".demo.auth.AuthOneAct"
             android:launchMode="singleTask"

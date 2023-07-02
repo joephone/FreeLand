@@ -2,7 +2,7 @@ package com.transcendence.core.utils;
 
 import android.content.Context;
 
-import com.transcendence.core.base.app.MainApp;
+import com.transcendence.core.base.app.CoreApp;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ public class StringUtils {
      */
     public static String getString(int id) {
         try {
-            return MainApp.getInstance().getApplicationContext().getString(id);
+            return CoreApp.getInstance().getApplicationContext().getString(id);
         } catch (Exception e) {
             // TODO: handle exception
         }

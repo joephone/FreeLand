@@ -37,6 +37,7 @@
         <item>Bugly测试</item>
         <item>重启倒数</item>
         <item>Alert</item>
+        <item>Android存储目录及方法详解</item>
     </string-array>
 
     <string-array name="permission_index_item">

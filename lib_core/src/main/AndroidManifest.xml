@@ -8,6 +8,8 @@
 
         <activity android:name=".image.BigImageActivity" />
 
+        <activity android:name=".image.BigImageKt" />
+
         <activity android:name=".ui.webview.MLWebviewActivity" />
 
     </application>

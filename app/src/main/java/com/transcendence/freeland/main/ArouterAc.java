@@ -5,12 +5,13 @@ import android.view.View;
 
 import androidx.databinding.DataBindingUtil;
 
+import com.transcendence.logcat.Logcat;
+import com.transcendence.logcat.SharedPrefHelper;
 import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.core.base.route.RouteUtils;
 import com.transcendence.core.widget.menugroup.CircleMenuAdapter;
 import com.transcendence.core.widget.menugroup.CircleMenuItem;
-import com.transcendence.core.widget.popup.PopupDrugDetail;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.databinding.ActivityArouterBinding;
 
@@ -26,9 +27,8 @@ import java.util.List;
 public class ArouterAc extends AppAc {
 
     ActivityArouterBinding activityBinding;
-
     private List<CircleMenuItem> mMenuItems = new ArrayList<>();
-    private String[] mItemTexts = new String[] { "App ", "GreenStar", "Music" };
+    private String[] mItemTexts = new String[] { "MainApp ", "GreenStar", "Music" };
     private int[] mItemImgs = new int[] { R.mipmap.ic_app_ten,
             R.mipmap.ic_app_green_star, R.mipmap.ic_app_music };
 
@@ -41,15 +41,17 @@ public class ArouterAc extends AppAc {
     protected void initView() {
         mIsBackVisible = false;
         activityBinding = DataBindingUtil.setContentView(this, R.layout.activity_arouter);
+
         initData(mItemTexts, mItemImgs);
         //中心视图
         View centerView = LayoutInflater.from(this).inflate(R.layout.circle_menu_item_center,null,false);
 
         centerView.setOnClickListener(v ->  {
-//            SaveImageActivity.launch(this);
-//            startAc(SaveZfPicAc.class);
-            new PopupDrugDetail(ArouterAc.this).showPopup();
+////            SaveImageActivity.launch(this);
+////            startAc(SaveZfPicAc.class);
+//            new PopupDrugDetail(ArouterAc.this).showPopup();
 
+//            Logcat.enableLogcat(this);
         });
 
         activityBinding.circleMenuGroup.setAdapter(new CircleMenuAdapter(mMenuItems));
@@ -71,6 +73,8 @@ public class ArouterAc extends AppAc {
         });
         activityBinding.circleMenuGroup.startAutoCycle();//autoCycle();
     }
+
+
 
     private void initData(String[] mItemTexts, int[] mItemImgs) {
         if (mItemImgs==null && mItemTexts==null){

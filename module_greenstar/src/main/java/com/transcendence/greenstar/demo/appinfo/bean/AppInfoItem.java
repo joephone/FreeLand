@@ -7,7 +7,7 @@ import android.text.format.Formatter;
 import androidx.annotation.Keep;
 
 import com.blankj.utilcode.util.FileUtils;
-import com.transcendence.core.base.app.MainApp;
+import com.transcendence.core.base.app.CoreApp;
 import com.transcendence.core.utils.SignaturesUtils;
 import com.transcendence.core.utils.VersionUtils;
 import com.transcendence.core.utils.appinfo.ConvertUtils;
@@ -91,7 +91,7 @@ public final class AppInfoItem {
      */
     private AppInfoItem(final PackageInfo packageInfo) {
         // 获取 Context
-        Context context = MainApp.getInstance();
+        Context context = CoreApp.getInstance();
         // 格式化日期
         SimpleDateFormat sdf = DateUtils.getDefaultFormat();
         // =
@@ -112,7 +112,7 @@ public final class AppInfoItem {
         targetSdkVersion = packageInfo.applicationInfo.targetSdkVersion;
         // APP 安装包大小
         apkLength = Formatter.formatFileSize(
-                MainApp.getInstance(),
+                CoreApp.getInstance(),
                 FileUtils.getFileLength(appInfoBean.getSourceDir())
         );
         // 证书对象

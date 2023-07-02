@@ -7,9 +7,8 @@ import android.widget.Toast;
 
 import com.hjq.permissions.OnPermissionCallback;
 import com.hjq.permissions.Permission;
-import com.hjq.permissions.XXPermissions;
 import com.transcendence.aop.R;
-import com.transcendence.core.base.app.MainApp;
+import com.transcendence.core.base.app.CoreApp;
 import com.transcendence.core.base.manager.ActivityManager;
 
 import java.util.ArrayList;
@@ -31,15 +30,15 @@ public abstract class PermissionCallback implements OnPermissionCallback {
         }
 
         if (permissions.size() == 1 && Permission.ACCESS_BACKGROUND_LOCATION.equals(permissions.get(0))) {
-            showMsg(MainApp.getInstance().getString(R.string.common_permission_fail_4));
+            showMsg(CoreApp.getInstance().getString(R.string.common_permission_fail_4));
             return;
         }
 
-        showMsg(MainApp.getInstance().getString(R.string.common_permission_fail_1));
+        showMsg(CoreApp.getInstance().getString(R.string.common_permission_fail_1));
     }
 
     protected void showMsg(CharSequence msg) {
-        Toast.makeText(MainApp.getInstance(), msg, Toast.LENGTH_SHORT).show();
+        Toast.makeText(CoreApp.getInstance(), msg, Toast.LENGTH_SHORT).show();
     }
 
     /**
