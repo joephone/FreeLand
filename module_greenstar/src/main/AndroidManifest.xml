@@ -43,11 +43,11 @@
             android:name=".main.index.DemoIndexActivity"
             android:screenOrientation="portrait"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
 
 
@@ -93,6 +93,12 @@
             android:screenOrientation="portrait"/>
 
         <activity
+            android:name=".demo.wearecord.WeaRecordMainKt"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
             android:name=".demo.record.act.RecordMainActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
@@ -114,19 +120,10 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".demo.exportlog.export.ExportLogActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-
-        <activity
             android:name=".demo.exportlog.logcat.LogcatKt"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
-        <service
-            android:name=".demo.exportlog.logcat.LogcatService"
-            android:enabled="true"
-            android:exported="true" />
 
         <activity
             android:name=".demo.auth.AuthOneAct"
@@ -135,6 +132,11 @@
 
         <activity
             android:name=".demo.auth.AuthTwoAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.shoppingcart.ShoppingCartActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 

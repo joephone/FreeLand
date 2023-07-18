@@ -47,7 +47,7 @@ public class LogManager {
         long lastLaunchTime = SPUtils.getInstance().getLong(Global.SP_KEY.LAUNCH_TIME);
         long currentTime = System.currentTimeMillis();
         long days = DateUtils.day(currentTime - lastLaunchTime);
-        LogUtils.d("lastLaunchTime--"+lastLaunchTime);
+        LogUtils.d("lastLaunchTime--"+DateUtils.getInstance().formatLong2Date(lastLaunchTime));
         LogUtils.d("上次启动天数"+days);
         SPUtils.getInstance().save(Global.SP_KEY.LAUNCH_TIME,currentTime);
 

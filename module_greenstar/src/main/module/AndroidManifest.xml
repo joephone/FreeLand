@@ -67,12 +67,18 @@
             android:screenOrientation="portrait"
             />
 
-
         <activity
             android:name=".demo.allapp.AllAppActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             />
+
+        <activity
+            android:name=".demo.wearecord.WeaRecordMainKt"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
         <activity
             android:name=".demo.record.act.RecordMainActivity"
             android:launchMode="singleTask"
@@ -94,10 +100,6 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
-        <activity
-            android:name=".demo.exportlog.export.ExportLogActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".demo.exportlog.logcat.LogcatKt"
@@ -111,6 +113,11 @@
 
         <activity
             android:name=".demo.auth.AuthTwoAct"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".demo.shoppingcart.ShoppingCartActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 

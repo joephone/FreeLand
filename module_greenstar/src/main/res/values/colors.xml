@@ -40,4 +40,7 @@
     <color name="bnv_check_color">#666666</color>
 
     <color name="colorRedBg">#fa5148</color>
+
+    <color name="deep_gray">#afaeae</color>
+    <color name="deep_gray_2">#636262</color>
 </resources>

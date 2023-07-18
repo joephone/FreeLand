@@ -42,11 +42,6 @@ class LogcatKt :AppAc() {
         tBtnLogcatToggle?.setOnCheckedChangeListener(mOnCheckedChangeListener)
 
 //        LogManager.getInstance().startInit(mActivity)
-        mTvShowRunLog = findViewById(R.id.tv_show_run_log)
-        mTvShowRunLog?.setOnClickListener {
-            mSharedPrefHelper?.saveBoolean("logcat_enabled", true)
-            Logcat.enableLogcat(this)
-        }
     }
 
     private val mOnCheckedChangeListener =
@@ -73,9 +68,9 @@ class LogcatKt :AppAc() {
 
     override fun onStart() {
         super.onStart()
-        if (mSharedPrefHelper!!.getBoolean("logcat_enabled", false)) {
-            Logcat.enableLogcat(this)
-        }
+//        if (mSharedPrefHelper!!.getBoolean("logcat_enabled", false)) {
+//            Logcat.enableLogcat(this)
+//        }
     }
 
     override fun onDestroy() {

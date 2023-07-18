@@ -1,5 +1,5 @@
 def config = rootProject.ext
-if (config.isWechatApplication) {
+if (config.isMapApplication) {
     apply plugin: 'com.android.application'
     apply plugin: 'kotlin-android'
 } else {
@@ -11,8 +11,8 @@ apply from: "../basic.gradle"
 android {
 
     defaultConfig {
-        if (config.isWechatApplication){
-            applicationId "com.transcendence.wechat"
+        if (config.isMapApplication){
+            applicationId "com.transcendence.map"
         }
 
         javaCompileOptions {
@@ -24,7 +24,7 @@ android {
 
     sourceSets {
         main {
-            if (config.isWechatApplication) {
+            if (config.isMapApplication) {
                 manifest.srcFile 'src/main/AndroidManifest.xml'
             } else {
                 manifest.srcFile 'src/main/module/AndroidManifest.xml'

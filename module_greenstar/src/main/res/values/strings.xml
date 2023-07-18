@@ -360,4 +360,11 @@
     <string name="RECORD_VIDEO">录制视频</string>
     <string name="SEND_DOWNLOAD_COMPLETED_INTENTS">发送下载完成通知</string>
     <!-- showPermissions  start -->
+
+    <!-- shopcart  start -->
+    <string name="menu_name">菜单</string>
+    <string name="dish_name">菜名</string>
+    <string name="shopcart">购物车</string>
+    <string name="clear">清空</string>
+    <!-- shopcart  end -->
 </resources>

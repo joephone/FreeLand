@@ -10,9 +10,9 @@ if (config.isMusicApplication) {
 apply from: "../basic.gradle"
 
 android {
-//    if (config.isMusicApplication){
-//        applicationId "com.transcendence.music"
-//    }
+    if (config.isMusicApplication){
+        applicationId "com.transcendence.music"
+    }
 
     defaultConfig {
         javaCompileOptions {

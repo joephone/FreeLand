@@ -92,15 +92,15 @@
         <item>6.仿微信语音聊天音量大小显示控件</item>
         <item>7.DB Note</item>
         <item>8.生物识别</item>
-        <item>9.导出日志</item>
-        <item>9.1 导出日志 Logcat</item>
+        <item>9.导出日志 Logcat</item>
         <item>10.Xinyu身份认证</item>
-        <item>11.启动页隐私协议</item>
-        <item>12.show权限库X</item>
-        <item>12.1 权限库px</item>
-        <item>13.All App</item>
-        <item>14.Wuwei</item>
-        <item>15.Loading</item>
+        <item>11.购物车</item>
+        <item>12.启动页隐私协议</item>
+        <item>13.show权限库X</item>
+        <item>13.1 权限库px</item>
+        <item>14.All App</item>
+        <item>15.Wuwei</item>
+        <item>16.Loading</item>
     </string-array>
 
     <string-array name="spinner_bing_resolution">

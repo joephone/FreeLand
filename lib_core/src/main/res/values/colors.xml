@@ -65,6 +65,7 @@
     <color name="transparent_black_95">#0d000000</color>
 
     <color name="grey">#ebebeb</color>
+    <color name="gray">#ebebeb</color>
     <color name="black">#000000</color>
     <color name="darkgrey">#999999</color>
     <color name="white">#FFFFFF</color>

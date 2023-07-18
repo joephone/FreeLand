@@ -71,6 +71,7 @@ public class Global {
     public static final class DIRECTORY {
         public static final String FULL_LOG =  CoreApp.getAppContext().getExternalFilesDir(FILE_TYPE).getAbsolutePath(); //File directory = mAppContext.getExternalFilesDir("FullLog");
         public static final String CRASH =  CoreApp.getAppContext().getExternalCacheDir().getAbsolutePath();
+        public static final String RECORD =  CoreApp.getAppContext().getExternalFilesDir("Record").getAbsolutePath();
     }
 
 
