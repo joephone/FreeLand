@@ -56,7 +56,7 @@ public class Global {
 
     public static final class PDF {
         public static String url = "http://hotelpodlipou.sk/uploads/files/sample.pdf";
-        public static String url2 = "http://livedoor.4.blogimg.jp/nikoneko55-hogehoge/imgs/9/9/9937d147.gif";
+        public static String url2 = "https://test-jpfile1.oss-cn-shenzhen.aliyuncs.com//Bom/bom/2022/1/19/2022011911370824626513.pdf";
     }
 
     public final class MAP {

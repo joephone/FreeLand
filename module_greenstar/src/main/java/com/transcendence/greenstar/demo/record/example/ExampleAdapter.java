@@ -56,7 +56,7 @@ public class ExampleAdapter extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         ViewHolder viewHolder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.activity_demo_record_item_example_activity, null);
+            convertView = LayoutInflater.from(mContext).inflate(R.layout.activity_demo_record_example_item, null);
             viewHolder = new ViewHolder();
             viewHolder.ieaHeadImg = (ImageView) convertView.findViewById(R.id.iea_headImg);
             viewHolder.ieaIvVoiceLine = (ImageView) convertView.findViewById(R.id.iea_iv_voiceLine);

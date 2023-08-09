@@ -55,9 +55,18 @@ dependencies {
     api config.dependencies.material
     api config.dependencies.constraintlayout
 
+    api config.dependencies.smartRefreshLayout
+    api config.dependencies.smartRefreshHeader
+
+    api config.dependencies.okhttp
+    api config.dependencies.retrofit
+    api config.dependencies.rxJava
+    api config.dependencies.retrofitConvertGson
+
     implementation project(path: ':lib_core')
     implementation project(path: ':lib_aop')
     implementation project(path: ':lib_logcat')
+    implementation project(path: ':lib_zxing')
     //sm2 sm4
     api "org.bouncycastle:bcprov-jdk15on:1.69"
     //
@@ -70,4 +79,11 @@ dependencies {
     //exportlog
     implementation files('libs\\android-logging-log4j-1.0.3.jar')
     implementation files('libs\\log4j-1.2.17.jar')
+
+    // AndroidX 版本
+//    implementation 'com.github.jenly1314:zxing-lite:2.4.0'
+
+    //pdf
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.tencent.tbs:tbssdk:44153'
 }

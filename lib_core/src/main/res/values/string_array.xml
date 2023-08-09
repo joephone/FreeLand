@@ -38,6 +38,7 @@
         <item>重启倒数</item>
         <item>Alert</item>
         <item>Android存储目录及方法详解</item>
+        <item>不通过startActivity将activity置为栈顶</item>
     </string-array>
 
     <string-array name="permission_index_item">
@@ -101,6 +102,9 @@
         <item>14.All App</item>
         <item>15.Wuwei</item>
         <item>16.Loading</item>
+        <item>17.Zxing</item>
+        <item>18.PDF file display</item>
+        <item>19.蓝牙</item>
     </string-array>
 
     <string-array name="spinner_bing_resolution">

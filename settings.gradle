@@ -16,3 +16,4 @@ include ':module_music'
 include ':module_greenstar'
 include ':module_map'
 
+include ':lib_zxing'

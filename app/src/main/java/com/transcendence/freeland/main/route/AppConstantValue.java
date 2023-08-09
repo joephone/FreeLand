@@ -5,6 +5,7 @@ import com.transcendence.freeland.basefun.alert.AlertAc;
 import com.transcendence.freeland.basefun.bugly.BuglyKt;
 import com.transcendence.freeland.basefun.countdownrestart.CountDownRestartKt;
 import com.transcendence.freeland.basefun.directory.AndroidDirectoryKt;
+import com.transcendence.freeland.basefun.nostart.NoStartA;
 import com.transcendence.freeland.basefun.permission.PermissionIndexActivity;
 import com.transcendence.freeland.basefun.settings.SysSettingsAc;
 import com.transcendence.freeland.ble.test.BleTest;
@@ -37,6 +38,7 @@ public interface AppConstantValue {
             CountDownRestartKt.class,
             AlertAc.class,
             AndroidDirectoryKt.class,
+            NoStartA.class,
     };
 
     Class[] uiIndex = {
