@@ -5,7 +5,7 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
-import com.transcendence.core.base.activity.AppAc
+import com.transcendence.core.base.common.activity.AppAc
 import com.transcendence.greenstar.R
 import com.transcendence.greenstar.demo.encryption.lib.AES.AESUtil
 import com.transcendence.greenstar.demo.encryption.lib.BASE64.Base64Util

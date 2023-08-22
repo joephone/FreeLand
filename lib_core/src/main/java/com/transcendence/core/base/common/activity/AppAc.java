@@ -1,7 +1,6 @@
-package com.transcendence.core.base.activity;
+package com.transcendence.core.base.common.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;

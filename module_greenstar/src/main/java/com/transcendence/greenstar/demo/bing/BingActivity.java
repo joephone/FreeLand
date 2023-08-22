@@ -5,7 +5,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.widget.AppCompatSpinner;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.greenstar.R;
 
 public class BingActivity extends AppAc {

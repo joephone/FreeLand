@@ -1,6 +1,6 @@
 package com.transcendence.freeland.main.setting
 
-import com.transcendence.core.base.activity.BasePermissionsActivity
+import com.transcendence.core.base.common.activity.BasePermissionsActivity
 
 /**
  * @author joephone

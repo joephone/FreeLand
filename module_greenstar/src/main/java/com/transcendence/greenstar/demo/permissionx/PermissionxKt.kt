@@ -2,7 +2,7 @@ package com.transcendence.greenstar.demo.permissionx
 
 import android.os.Bundle
 import android.view.View
-import com.transcendence.core.base.activity.BasePermissionsActivity
+import com.transcendence.core.base.common.activity.BasePermissionsActivity
 import com.transcendence.core.utils.log.LogUtils
 import com.transcendence.greenstar.R
 

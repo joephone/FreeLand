@@ -2,7 +2,7 @@ package com.transcendence.greenstar.demo.encryption.act
 
 import android.content.Intent
 import android.view.View
-import com.transcendence.core.base.activity.AppAc
+import com.transcendence.core.base.common.activity.AppAc
 import com.transcendence.greenstar.R
 
 /**

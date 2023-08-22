@@ -3,15 +3,9 @@ package com.transcendence.greenstar.demo.shoppingcart;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.graphics.PointF;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.AccelerateInterpolator;
@@ -22,11 +16,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.demo.shoppingcart.adapter.LeftMenuAdapter;

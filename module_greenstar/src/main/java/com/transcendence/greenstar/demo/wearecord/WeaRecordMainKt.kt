@@ -1,7 +1,6 @@
 package com.transcendence.greenstar.demo.wearecord
 
-import android.view.View
-import com.transcendence.core.base.activity.AppAc
+import com.transcendence.core.base.common.activity.AppAc
 import com.transcendence.greenstar.R
 
 /**
@@ -9,7 +8,7 @@ import com.transcendence.greenstar.R
  * @date 2023/7/18
  * @desc
  */
-class WeaRecordMainKt :AppAc(){
+class WeaRecordMainKt : AppAc(){
 
     var recordButton: RecordButton? = null
 

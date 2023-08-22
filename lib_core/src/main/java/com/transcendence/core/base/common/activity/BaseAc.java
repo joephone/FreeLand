@@ -1,4 +1,4 @@
-package com.transcendence.core.base.activity;
+package com.transcendence.core.base.common.activity;
 
 import android.os.Bundle;
 

@@ -3,7 +3,7 @@ package com.transcendence.greenstar.demo.pdf.act;
 import android.os.Environment;
 import android.text.TextUtils;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.global.Global;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;
@@ -16,9 +16,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 /**

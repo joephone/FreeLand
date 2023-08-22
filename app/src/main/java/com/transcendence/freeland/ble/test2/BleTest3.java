@@ -2,11 +2,6 @@ package com.transcendence.freeland.ble.test2;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.admin.DeviceAdminReceiver;
-import android.app.admin.DevicePolicyManager;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothManager;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,40 +11,29 @@ import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.NetworkRequest;
 import android.net.Uri;
-import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.os.Handler;
-import android.os.StrictMode;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
-import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.loader.content.AsyncTaskLoader;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.ble.test2.utils.BaiduDns;
 import com.transcendence.freeland.ble.test2.utils.ForceMobileNetworkInterceptor;
 import com.transcendence.freeland.ble.test2.utils.ForceUsingMobileDataSocketFactory;
-import com.transcendence.freeland.ble.test2.utils.ForceUsingMobileDns;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
 import okhttp3.Call;
 import okhttp3.Callback;
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;

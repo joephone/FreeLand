@@ -1,6 +1,6 @@
 package com.transcendence.greenstar.demo.auth;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.greenstar.R;
 
 /**

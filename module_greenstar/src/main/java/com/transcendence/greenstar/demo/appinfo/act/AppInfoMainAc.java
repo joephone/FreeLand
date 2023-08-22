@@ -21,8 +21,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-import com.transcendence.core.base.activity.AppAc;
-import com.transcendence.core.base.fragment.BaseFragment;
+import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.common.fragment.BaseFragment;
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.base.app.GSApp;
 import com.transcendence.greenstar.demo.appinfo.bean.AppInfoBean;

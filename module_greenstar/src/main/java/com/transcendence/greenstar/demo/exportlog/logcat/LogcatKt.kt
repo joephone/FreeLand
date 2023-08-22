@@ -7,18 +7,17 @@ import android.view.View
 import android.widget.CompoundButton
 import android.widget.TextView
 import android.widget.ToggleButton
-import com.transcendence.core.base.activity.AppAc
+import com.transcendence.core.base.common.activity.AppAc
 import com.transcendence.greenstar.R
 import com.transcendence.logcat.Logcat
 import com.transcendence.logcat.SharedPrefHelper
-import com.transcendence.logcat.manager.LogManager
 
 /**
  * @author joephone
  * @date 2023/6/15
  * @desc 导出日志
  */
-class LogcatKt :AppAc() {
+class LogcatKt : AppAc() {
     var mTvShowRunLog : TextView? =null
     var mSharedPrefHelper: SharedPrefHelper? = null
     var tBtnLogcatToggle: ToggleButton?=null

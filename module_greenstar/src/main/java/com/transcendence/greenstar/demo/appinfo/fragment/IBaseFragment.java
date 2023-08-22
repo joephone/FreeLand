@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
 
-import com.transcendence.core.base.fragment.BaseFragment;
+import com.transcendence.core.base.common.fragment.BaseFragment;
 import com.transcendence.core.utils.log.LogUtils;
 
 /**

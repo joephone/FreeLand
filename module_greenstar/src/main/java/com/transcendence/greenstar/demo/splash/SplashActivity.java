@@ -3,7 +3,7 @@ package com.transcendence.greenstar.demo.splash;
 import android.app.Activity;
 import android.os.Handler;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.ui.dialog.splash.BizCommonDialog;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;

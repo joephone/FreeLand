@@ -5,7 +5,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import com.transcendence.core.base.activity.AppAc
+import com.transcendence.core.base.common.activity.AppAc
 import com.transcendence.core.utils.StringUtils
 import com.transcendence.greenstar.R
 import com.transcendence.greenstar.base.route.GreenStarConstantValue

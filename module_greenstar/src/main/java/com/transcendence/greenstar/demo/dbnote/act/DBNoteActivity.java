@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.demo.dbnote.adapter.NotesAdapter;
 import com.transcendence.greenstar.demo.dbnote.bean.Note;

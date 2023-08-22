@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.demo.showPermissions.networkmanager.NetworkUtils;

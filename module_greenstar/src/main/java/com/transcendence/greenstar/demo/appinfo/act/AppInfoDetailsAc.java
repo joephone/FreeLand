@@ -1,6 +1,6 @@
 package com.transcendence.greenstar.demo.appinfo.act;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.demo.appinfo.bean.AppInfoItem;
 

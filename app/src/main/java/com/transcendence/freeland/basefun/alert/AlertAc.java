@@ -1,6 +1,5 @@
 package com.transcendence.freeland.basefun.alert;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -11,7 +10,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.ui.alertview.AlertView;
 import com.transcendence.core.ui.alertview.OnDismissListener;
 import com.transcendence.core.ui.alertview.OnItemClickListener;

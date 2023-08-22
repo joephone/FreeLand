@@ -6,17 +6,11 @@ import android.widget.ImageView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.global.Global;
-import com.transcendence.core.utils.DateUtils;
-import com.transcendence.core.utils.files.FileUtils;
-import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.core.utils.mmkv.MMkvHelper;
-import com.transcendence.core.utils.sp.SPUtils;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.main.ArouterAc;
-import com.transcendence.logcat.Logcat;
-import com.transcendence.logcat.SharedPrefHelper;
 import com.transcendence.logcat.manager.LogManager;
 
 /**

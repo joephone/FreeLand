@@ -5,9 +5,7 @@ import android.view.View;
 
 import androidx.databinding.DataBindingUtil;
 
-import com.transcendence.logcat.Logcat;
-import com.transcendence.logcat.SharedPrefHelper;
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.core.base.route.RouteUtils;
 import com.transcendence.core.widget.menugroup.CircleMenuAdapter;

@@ -2,8 +2,6 @@ package com.transcendence.greenstar.demo.appinfo.fragment;
 
 import android.view.View;
 
-import com.transcendence.core.base.fragment.BaseFragment;
-
 /**
  * @author joephone
  * @date 2023/4/26

@@ -7,12 +7,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.core.utils.StringUtils;
 import com.transcendence.freeland.main.route.AppConstantValue;
 import com.transcendence.greenstar.R;
-import com.transcendence.greenstar.base.route.GreenStarConstantValue;
 
 import java.util.List;
 

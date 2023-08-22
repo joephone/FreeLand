@@ -11,13 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.TextView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.transcendence.core.R;
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 
 import java.util.List;
 

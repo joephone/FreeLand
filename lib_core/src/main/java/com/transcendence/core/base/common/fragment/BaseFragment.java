@@ -1,4 +1,4 @@
-package com.transcendence.core.base.fragment;
+package com.transcendence.core.base.common.fragment;
 
 import androidx.fragment.app.Fragment;
 

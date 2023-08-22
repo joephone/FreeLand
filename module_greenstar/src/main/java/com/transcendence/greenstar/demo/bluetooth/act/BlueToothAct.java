@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.transcendence.core.base.activity.AppAc;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.demo.bluetooth.adapter.ViewPagerAdapter;
 import com.transcendence.greenstar.demo.bluetooth.fragment.BlueToothFragment;

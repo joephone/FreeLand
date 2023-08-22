@@ -58,7 +58,7 @@ dependencies {
 
     api config.dependencies.okhttp
 
-    
+//    implementation 'com.github.joephone:Core:v0.0.1'
     implementation project(path: ':lib_core')
     implementation project(path: ':lib_gallery')
     implementation project(path: ':lib_logcat')
