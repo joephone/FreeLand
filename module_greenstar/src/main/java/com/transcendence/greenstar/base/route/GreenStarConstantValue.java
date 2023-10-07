@@ -17,7 +17,7 @@ import com.transcendence.greenstar.demo.record.example.RecordExampleActivity;
 import com.transcendence.greenstar.demo.shoppingcart.ShoppingCartActivity;
 import com.transcendence.greenstar.demo.showPermissions.ShowPermissionAc;
 import com.transcendence.greenstar.demo.splash.SplashActivity;
-import com.transcendence.greenstar.demo.wearecord.WeaRecordMainKt;
+//import com.transcendence.greenstar.demo.wearecord.WeaRecordMainKt;
 import com.transcendence.greenstar.demo.wuwei.WuweiActivity;
 import com.transcendence.greenstar.demo.zxing.ZxingMain;
 
@@ -33,7 +33,7 @@ public interface GreenStarConstantValue {
             LuckyPanelAc.class,
             EncryptionMainAc.class,
             BingActivity.class,
-            WeaRecordMainKt.class,//RecordMainActivity.class,
+      //      WeaRecordMainKt.class,//RecordMainActivity.class,
             RecordExampleActivity.class,
             DBNoteActivity.class,
             BiometricActivity.class,

@@ -63,7 +63,7 @@ dependencies {
     api config.dependencies.rxJava
     api config.dependencies.retrofitConvertGson
 
-//    implementation project(path: ':lib_core')
+    implementation project(path: ':lib_core')
     implementation project(path: ':lib_aop')
     implementation project(path: ':lib_logcat')
     implementation project(path: ':lib_zxing')
@@ -87,5 +87,5 @@ dependencies {
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
     implementation 'com.tencent.tbs:tbssdk:44153'
 
-    implementation 'com.github.joephone:Core:v0.0.5'
+//    implementation 'com.github.joephone:Core:v0.0.5'
 }
