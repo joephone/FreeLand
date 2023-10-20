@@ -5,6 +5,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.transcendence.core.utils.log.LogUtils;
+
 /**
  * @author joephone
  * @date 2023/2/20
@@ -19,6 +21,7 @@ public abstract class AppAc extends AbsTitleBarAc {
 
 
     public void startAc(Class<?> cls) {
+        LogUtils.d("startAc:"+cls.getName());
         Intent intent = new Intent(this, cls);
         startActivity(intent);
     }

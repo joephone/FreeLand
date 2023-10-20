@@ -141,7 +141,10 @@
             android:name=".ble.test2.NetTest" />
         <!-- ble end -->
         <activity
-            android:name=".crash.CrashActivity" />
+            android:name=".crash.CrashActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            />
 
         <activity
             android:name=".main.image.SaveImageActivity" />

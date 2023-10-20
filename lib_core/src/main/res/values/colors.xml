@@ -11,6 +11,7 @@
     <color name="theme_main">@color/main</color>
     <color name="main">@color/colorGitHubBlack</color>
     <color name="tint">@color/colorGitHubGreen</color>
+    <color name="theme">@color/colorGitHubBlack</color>
 
     <!-- github -->
     <color name="colorGitHubBlack">#24292E</color>

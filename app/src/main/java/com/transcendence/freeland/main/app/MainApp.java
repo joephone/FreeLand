@@ -14,7 +14,7 @@ public class MainApp extends CoreApp {
     public void onCreate() {
         super.onCreate();
 
-        CrashHandler.register(this);
+//        CrashHandler.register(this);
 
     }
 }

@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.transcendence.core.utils.statusbar.NativeStatusBarUtils;
+import com.transcendence.core.utils.statusbar.StatusBarUtils;
 
 
 /**
@@ -21,16 +21,15 @@ public abstract class AbsBaseAc extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = this;
-        NativeStatusBarUtils.with(mActivity).init();
-
+        StatusBarUtils.Companion.with(this).init();
         init();
     }
 
     protected void init() {
         initLayout();
         initView();
-    }
 
+    }
 
     /**
      * 初始化布局
@@ -47,9 +46,10 @@ public abstract class AbsBaseAc extends AppCompatActivity {
     protected abstract int getLayoutId();
 
     /**
-     * 初始化数据
+     * 初始化布局
      */
     protected abstract void initView();
+
 
 
 

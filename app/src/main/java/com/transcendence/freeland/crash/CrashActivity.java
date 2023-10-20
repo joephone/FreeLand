@@ -25,6 +25,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.transcendence.core.R;
+import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.permission.PermissionPool;
 import com.transcendence.core.utils.AppUtils;
 import com.transcendence.core.base.action.ActivityAction;
@@ -52,7 +53,7 @@ import java.util.regex.Pattern;
  * @Edition 1.0
  * @EditionHistory
  */
-public class CrashActivity extends AppCompatActivity implements ActivityAction, BundleAction, ClickAction, HandlerAction {
+public class CrashActivity extends AppAc implements ActivityAction, BundleAction, ClickAction, HandlerAction {
 
 
     /** 报错代码行数正则表达式 */
@@ -74,10 +75,14 @@ public class CrashActivity extends AppCompatActivity implements ActivityAction, 
     private TextView mMessageView;
     private String mStackTrace;
 
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crash);
+    protected int getLayoutId() {
+        return R.layout.activity_crash;
+    }
+
+    @Override
+    protected void initView() {
 
         mTitleView = findViewById(R.id.tv_crash_title);
         mDrawerLayout = findViewById(R.id.dl_crash_drawer);
@@ -221,6 +226,13 @@ public class CrashActivity extends AppCompatActivity implements ActivityAction, 
 
         } catch (PackageManager.NameNotFoundException ignored) {}
     }
+
+//    @Override
+//    protected void onCreate(@Nullable Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_crash);
+//
+//    }
 
 
 
