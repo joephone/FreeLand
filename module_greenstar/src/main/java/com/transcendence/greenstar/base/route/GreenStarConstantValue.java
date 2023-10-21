@@ -1,7 +1,6 @@
 package com.transcendence.greenstar.base.route;
 
 import com.transcendence.greenstar.demo.allapp.AllAppActivity;
-import com.transcendence.greenstar.demo.appinfo.act.AppInfoMainAc;
 import com.transcendence.greenstar.demo.auth.AuthOneAct;
 import com.transcendence.greenstar.demo.bing.BingActivity;
 import com.transcendence.greenstar.demo.biometric.BiometricActivity;
@@ -29,7 +28,6 @@ import com.transcendence.greenstar.demo.zxing.ZxingMain;
 public interface GreenStarConstantValue {
 
     Class[] demoIndex = {
-            AppInfoMainAc.class,
             LuckyPanelAc.class,
             EncryptionMainAc.class,
             BingActivity.class,

@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 
 import com.transcendence.core.base.app.CoreApp;
-import com.transcendence.greenstar.demo.appinfo.oberser.DevObservableNotify;
 
 /**
  * @author joephone
@@ -13,8 +12,6 @@ import com.transcendence.greenstar.demo.appinfo.oberser.DevObservableNotify;
  */
 public class GSApp extends CoreApp {
 
-    /** 全局观察者模式 */
-    public static final DevObservableNotify sDevObservableNotify = new DevObservableNotify();
 
     @SuppressLint("StaticFieldLeak")
     public static Context context;

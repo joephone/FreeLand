@@ -6,10 +6,13 @@ buildscript {
     apply from : 'config.gradle' //$kotlin_version
 
     repositories {
-        google()
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-        maven{ url 'https://maven.aliyun.com/nexus/content/groups/public/'}
+        maven { setUrl("https://maven.aliyun.com/repository/central") }
+        maven { setUrl("https://maven.aliyun.com/repository/jcenter") }
+        maven { setUrl("https://maven.aliyun.com/repository/google") }
+        maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
+        maven { setUrl("https://maven.aliyun.com/repository/public") }
+        maven { url "https://jitpack.io" }
+        maven { url "https://developer.huawei.com/repo/"}
     }
 
     dependencies {
@@ -27,12 +30,13 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        jcenter()
-        maven {
-            url "https://jitpack.io"
-        }
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { setUrl("https://maven.aliyun.com/repository/central") }
+        maven { setUrl("https://maven.aliyun.com/repository/jcenter") }
+        maven { setUrl("https://maven.aliyun.com/repository/google") }
+        maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
+        maven { setUrl("https://maven.aliyun.com/repository/public") }
+        maven { url "https://jitpack.io" }
+        maven { url "https://developer.huawei.com/repo/"}
 
     }
 }

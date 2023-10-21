@@ -63,19 +63,6 @@
             android:screenOrientation="portrait"
             />
 
-        <!-- AppInfo信息提取器 -->
-        <activity
-            android:name=".demo.appinfo.act.AppInfoMainAc"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
-        <!-- AppInfo信息提取器详情 -->
-        <activity
-            android:name=".demo.appinfo.act.AppInfoDetailsAc"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
-
         <!-- 幸运转盘 -->
         <activity
             android:name=".demo.luckypanel.LuckyPanelAc"
@@ -98,11 +85,11 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
-        <activity
-            android:name=".demo.wearecord.WeaRecordMainKt"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
+<!--        <activity-->
+<!--            android:name=".demo.wearecord.WeaRecordMainKt"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            />-->
 
         <activity
             android:name=".demo.record.act.RecordMainActivity"

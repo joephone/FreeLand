@@ -85,7 +85,6 @@
     </string-array>
 
     <string-array name="demo_index_item">
-        <item>1.APP信息提取器</item>
         <item>2.幸运转盘</item>
         <item>3.Encryption</item>
         <item>4.必应每日一图</item>

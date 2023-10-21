@@ -10,7 +10,7 @@ import com.transcendence.core.utils.statusbar.StatusBarUtils;
 
 /**
  * @author joephone
- * @date 2023/1/19
+ * @date 2023/9/16
  * @desc
  */
 public abstract class AbsBaseAc extends AppCompatActivity {
@@ -28,7 +28,7 @@ public abstract class AbsBaseAc extends AppCompatActivity {
     protected void init() {
         initLayout();
         initView();
-
+//        loadData();
     }
 
     /**
@@ -50,8 +50,8 @@ public abstract class AbsBaseAc extends AppCompatActivity {
      */
     protected abstract void initView();
 
-
-
-
-
+//    /**
+//     * 初始化数据
+//     */
+//    protected abstract void loadData();
 }

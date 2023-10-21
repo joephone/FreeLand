@@ -62,8 +62,8 @@ public class LuckyPanelAc extends AppAc {
 
     private void tryToStopPanel() {
         if(isSound){
-//            playSound(1,0,1);
-            openRawMusic();
+            playSound(1,0,1);
+//            openRawMusic();
         }
         int stayIndex = new Random().nextInt(8);
         Log.e("LuckyMonkeyPanelView", "====stay===" + stayIndex);
@@ -130,6 +130,8 @@ public class LuckyPanelAc extends AppAc {
     /*** 打开raw目录下的音乐mp3文件*/
     private void openRawMusic() {
         MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.nine_grid_lottery);
-        mediaPlayer.start();
+        if(mediaPlayer!=null){
+            mediaPlayer.start();
+        }
     }
 }
