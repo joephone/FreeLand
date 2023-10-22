@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.Button;
 
 import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.demo.luckypanel.view.LuckyMonkeyPanelView;
 
@@ -62,12 +63,13 @@ public class LuckyPanelAc extends AppAc {
 
     private void tryToStopPanel() {
         if(isSound){
-            playSound(1,0,1);
-//            openRawMusic();
+//            playSound(1,0,1);
+            openRawMusic();
         }
         int stayIndex = new Random().nextInt(8);
-        Log.e("LuckyMonkeyPanelView", "====stay===" + stayIndex);
+        LogUtils.d("====stay===" + stayIndex);
         lucky_panel.tryToStop(stayIndex);
+        stopSound2();
     }
 
     /**
