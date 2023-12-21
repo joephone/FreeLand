@@ -16,31 +16,16 @@
  *  limitations under the License.
  */
 
-apply plugin: 'com.android.library'
+package com.opensource.logcat;
 
-apply from: "../basic.gradle"
-def config = rootProject.ext
+import android.app.Application;
+import android.test.ApplicationTestCase;
 
-android {
-    defaultConfig {
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
-            }
-        }
+/**
+ * <a href="http://d.android.com/tools/testing/testing_android.html">Testing Fundamentals</a>
+ */
+public class ApplicationTest extends ApplicationTestCase<Application> {
+    public ApplicationTest() {
+        super(Application.class);
     }
-
-//    kotlinOptions {
-//        jvmTarget = '1.8'
-//    }
-
-    buildFeatures{
-        dataBinding = true
-    }
-
-}
-
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(path: ':lib_core')
 }

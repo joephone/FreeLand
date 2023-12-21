@@ -17,3 +17,4 @@ include ':module_greenstar'
 include ':module_map'
 
 include ':lib_zxing'
+include ':lib_updater'

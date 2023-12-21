@@ -3,7 +3,7 @@ apply plugin: 'com.alibaba.arouter'
 apply from : 'config.gradle'
 
 buildscript {
-    apply from : 'config.gradle' //$kotlin_version
+    ext.kotlin_version = "1.5.20"
 
     repositories {
         maven { setUrl("https://maven.aliyun.com/repository/central") }
