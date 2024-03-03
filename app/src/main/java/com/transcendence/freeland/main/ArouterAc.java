@@ -1,5 +1,9 @@
 package com.transcendence.freeland.main;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -8,6 +12,7 @@ import androidx.databinding.DataBindingUtil;
 import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.base.route.RoutePath;
 import com.transcendence.core.base.route.RouteUtils;
+import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.core.widget.menugroup.CircleMenuAdapter;
 import com.transcendence.core.widget.menugroup.CircleMenuItem;
 import com.transcendence.freeland.R;
@@ -49,7 +54,17 @@ public class ArouterAc extends AppAc {
 ////            startAc(SaveZfPicAc.class);
 //            new PopupDrugDetail(ArouterAc.this).showPopup();
 
-//            Logcat.enableLogcat(this);
+//            Logcat.enableLogcat(this);  jump.app/open?param=Tom&param2=Cat
+            PackageManager packageManager = getPackageManager();
+            Intent intent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("dffs_app://"));
+            List<ResolveInfo> activities =packageManager.queryIntentActivities(intent, 0);
+            boolean isValid = !activities.isEmpty();
+            if (isValid) {
+                startActivity(intent);
+            } else {
+                LogUtils.d("打开第三方APP失败");
+            }
         });
 
         activityBinding.circleMenuGroup.setAdapter(new CircleMenuAdapter(mMenuItems));

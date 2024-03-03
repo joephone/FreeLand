@@ -64,8 +64,13 @@
 <!--            </intent-filter>-->
         </activity>
 
+
         <activity
             android:name=".main.guide.LauncherActivity"
+            />
+
+        <activity
+            android:name=".other.JavaH5Activity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:exported="true">
@@ -73,6 +78,18 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".other.SchemeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="schemedemo"
+                    android:host="ihongqiqu.com"
+                    android:pathPrefix="/test/"
+                    />
             </intent-filter>
         </activity>
 
@@ -151,6 +168,8 @@
 
         <activity
             android:name=".main.image.SaveZfPicAc" />
+
+
 
 
         <!-- 适配 Android 7.0 文件意图
