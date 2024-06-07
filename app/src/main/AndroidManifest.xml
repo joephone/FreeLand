@@ -4,6 +4,10 @@
     package="com.transcendence.freeland">
 
     <!-- 网络相关 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 检测 WLAN 状态的权限 -->
@@ -67,10 +71,6 @@
 
         <activity
             android:name=".main.guide.LauncherActivity"
-            />
-
-        <activity
-            android:name=".other.JavaH5Activity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
             android:exported="true">

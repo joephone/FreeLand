@@ -62,6 +62,7 @@ dependencies {
     implementation project(path: ':lib_core')
     implementation project(path: ':lib_gallery')
     implementation project(path: ':lib_logcat')
+    implementation project(':lib_aop')
     if(!config.isMusicApplication){
         implementation project(path: ':module_music')
     }

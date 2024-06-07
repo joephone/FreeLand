@@ -16,7 +16,7 @@
     <uses-permission android:name="android.REQUEST_INSTALL_PACKAGES.GET_TASKS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.BODY_SENSORS"/>//传感器权限
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>//录音
     <!-- 生物识别 -->
     <uses-permission android:name="android.permission.USE_BIOMETRIC" />
@@ -58,18 +58,7 @@
             android:screenOrientation="portrait"
             />
 
-        <!-- AppInfo信息提取器 -->
-        <activity
-            android:name=".demo.appinfo.act.AppInfoMainAc"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
-        <!-- AppInfo信息提取器详情 -->
-        <activity
-            android:name=".demo.appinfo.act.AppInfoDetailsAc"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
+
 
         <!-- 幸运转盘 -->
         <activity
@@ -84,11 +73,6 @@
             android:screenOrientation="portrait"
             />
 
-        <activity
-            android:name=".demo.wearecord.WeaRecordMainKt"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
 
         <activity
             android:name=".demo.record.act.RecordMainActivity"

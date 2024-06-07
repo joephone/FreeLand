@@ -24,6 +24,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.transcendence.aop.singleton.SingleClick;
 import com.transcendence.core.R;
 import com.transcendence.core.base.common.activity.AppAc;
 import com.transcendence.core.permission.PermissionPool;
@@ -236,7 +237,7 @@ public class CrashActivity extends AppAc implements ActivityAction, BundleAction
 
 
 
-    //    @SingleClick
+    @SingleClick
     @Override
     public void onClick(View view) {
         int viewId = view.getId();

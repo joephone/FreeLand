@@ -11,12 +11,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 
-/**
- * FileName:
- * Created by zlx on 2020/9/21 9:27
- * Email: 1170762202@qq.com
- * Description:
- */
+
 @Aspect
 public class CheckLoginAspect {
 

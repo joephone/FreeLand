@@ -2,7 +2,6 @@ package com.transcendence.greenstar.base.route;
 
 import com.transcendence.greenstar.demo.allapp.AllAppActivity;
 import com.transcendence.greenstar.demo.auth.AuthOneAct;
-import com.transcendence.greenstar.demo.bing.BingActivity;
 import com.transcendence.greenstar.demo.biometric.BiometricActivity;
 import com.transcendence.greenstar.demo.bluetooth.act.BlueToothAct;
 import com.transcendence.greenstar.demo.dbnote.act.DBNoteActivity;
@@ -30,7 +29,6 @@ public interface GreenStarConstantValue {
     Class[] demoIndex = {
             LuckyPanelAc.class,
             EncryptionMainAc.class,
-            BingActivity.class,
       //      WeaRecordMainKt.class,//RecordMainActivity.class,
             RecordExampleActivity.class,
             DBNoteActivity.class,

@@ -85,6 +85,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
+
 <!--        <activity-->
 <!--            android:name=".demo.wearecord.WeaRecordMainKt"-->
 <!--            android:launchMode="singleTask"-->
