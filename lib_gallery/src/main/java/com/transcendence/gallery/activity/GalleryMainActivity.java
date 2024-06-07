@@ -62,6 +62,9 @@ public class GalleryMainActivity extends AppAc {
                         GalleryMainActivity.this, tv_5, "YangChong").toBundle());
             }
         });
+        findViewById(R.id.tv_6).setOnClickListener(v->{
+            startActivity(new Intent(this, FourActivity.class));
+        });
     }
 
 

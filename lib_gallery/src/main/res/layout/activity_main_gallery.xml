@@ -42,4 +42,12 @@
         android:transitionName="YangChong"
         android:text="画廊图片浏览，使用recyclerView实现，支持滑动"/>
 
+
+    <TextView
+        android:id="@+id/tv_6"
+        style="@style/standardGreenButton"
+        android:layout_marginTop="@dimen/standard_padding"
+        android:transitionName="YangChong"
+        android:text="Tab + Recycler"/>
+
 </LinearLayout>
