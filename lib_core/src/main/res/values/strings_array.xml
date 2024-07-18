@@ -75,7 +75,11 @@
 
 
     <string-array name="ui_index_item">
-        <item>J-Gallery</item>
+        <item>RV Index</item>
+    </string-array>
+
+    <string-array name="rv_index_item">
+        <item>RecyclerView嵌套ViewPager吸顶</item>
     </string-array>
 
     <string-array name="ble_index_item">

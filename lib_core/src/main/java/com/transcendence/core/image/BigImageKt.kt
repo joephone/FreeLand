@@ -29,7 +29,7 @@ class BigImageKt : AppAc() {
      */
     override fun initView() {
         imageView = findViewById(R.id.big_image)
-        val url = intent.getStringExtra(Global.INTENT_KEY.BIG_IMAGE)
+        val url = intent.getStringExtra(Global.PUBLIC_INTENT_KEY.BIG_IMAGE)
         if (TextUtils.isEmpty(url)) {
             return
         }

@@ -173,7 +173,7 @@ public class PermissionIndexActivity extends AppAc implements AdapterView.OnItem
 //                Toast.makeText(this, "发生错误", Toast.LENGTH_SHORT).show();
 //            }
 //            iv.setImageURI(imageUri);
-                startActivity(new Intent(mActivity, BigImageKt.class).putExtra(Global.INTENT_KEY.BIG_IMAGE,imageUri.toString()));
+                startActivity(new Intent(mActivity, BigImageKt.class).putExtra(Global.PUBLIC_INTENT_KEY.BIG_IMAGE,imageUri.toString()));
         }
 
     }

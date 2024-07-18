@@ -43,6 +43,21 @@ public class Global {
             R.drawable.beauty10,};
 
 
+
+    public final class PUBLIC_INTENT_KEY {
+        public static final String URL = "url";
+        public static final String TITLE = "title";
+        public static final String NAME = "name";
+        public static final String INDEX = "index";
+        public static final String ID = "id";
+        public static final String TYPE = "type";
+        public static final String SEARCHRESULT = "SearchResult";
+        public static final String DATA = "data";
+        public static final String LIST = "list";
+        public static final String BIG_IMAGE = "bigImage";
+    }
+
+
     public final class SP_KEY {
         public static final String APP_FIRST_START = "appFirstStart";
         public static final String APP_BADGE = "appBadge";
@@ -50,9 +65,6 @@ public class Global {
         public static final String LAUNCH_TIME = "launch_time";
     }
 
-    public final class INTENT_KEY {
-        public static final String BIG_IMAGE = "bigImage";
-    }
 
     public static final class PDF {
         public static String url = "http://hotelpodlipou.sk/uploads/files/sample.pdf";

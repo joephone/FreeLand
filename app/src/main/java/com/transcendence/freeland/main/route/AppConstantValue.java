@@ -13,8 +13,10 @@ import com.transcendence.freeland.ble.test2.BleTest3;
 import com.transcendence.freeland.ble.test2.NetTest;
 import com.transcendence.freeland.main.index.BasefunIndexActivity;
 import com.transcendence.freeland.main.index.BleIndexActivity;
+import com.transcendence.freeland.main.index.RvIndexActivity;
 import com.transcendence.freeland.main.index.SettingsIndexActivity;
 import com.transcendence.freeland.main.index.UIIndexActivity;
+import com.transcendence.freeland.ui.rv.vp.act.RvVpMainActivity;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -42,7 +44,11 @@ public interface AppConstantValue {
     };
 
     Class[] uiIndex = {
+            RvIndexActivity.class,
+    };
 
+    Class[] rvIndex = {
+            RvVpMainActivity.class
     };
 
     Class[] bleIndex = {

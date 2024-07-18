@@ -123,6 +123,8 @@
         <activity
             android:name=".main.index.UIIndexActivity" />
         <activity
+            android:name=".main.index.RvIndexActivity" />
+        <activity
             android:name=".main.index.BleIndexActivity" />
         <!-- index end -->
 
@@ -170,6 +172,8 @@
             android:name=".main.image.SaveZfPicAc" />
 
 
+        <activity
+            android:name=".ui.rv.vp.act.RvVpMainActivity" />
 
 
         <!-- 适配 Android 7.0 文件意图
