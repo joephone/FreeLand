@@ -11,7 +11,7 @@ import com.transcendence.freeland.R
 class FragmentAdapter(var context: Context) : RecyclerView.Adapter<FragmentAdapter.Holder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val inflate = LayoutInflater.from(context).inflate(R.layout.activity_ui_rv_vp_rc_item, parent, false)
+        val inflate = LayoutInflater.from(context).inflate(R.layout.activity_ui_rv_vp_rv_item, parent, false)
         return Holder(inflate)
     }
 

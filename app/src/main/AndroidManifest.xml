@@ -171,10 +171,13 @@
         <activity
             android:name=".main.image.SaveZfPicAc" />
 
-
+        <!--Rv start -->
         <activity
             android:name=".ui.rv.vp.act.RvVpMainActivity" />
-
+            <!-- 仿蘑菇街-->
+        <activity
+            android:name=".ui.rv.mogu.act.MoguMainActivity" />
+        <!--Rv end -->
 
         <!-- 适配 Android 7.0 文件意图
             authorities：app的包名.fileProvider
