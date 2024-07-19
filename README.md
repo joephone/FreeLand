@@ -1,7 +1,7 @@
 # Freeland
 
 #### 介绍
-Do my want to do,All my want is free,But free is not free.
+Do what I want to do,All my want is free,But free is not free.
 
 #### 软件架构
 软件架构说明
