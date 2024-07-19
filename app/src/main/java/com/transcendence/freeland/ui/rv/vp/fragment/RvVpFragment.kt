@@ -10,14 +10,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.transcendence.freeland.R
-import com.transcendence.freeland.ui.rv.vp.adapter.RcAdapter
+import com.transcendence.freeland.ui.rv.vp.adapter.FragmentAdapter
 
 private const val ARG_PARAM1 = "param1"
 
 /**
  * Fragment
  */
-class TestFragment : Fragment() {
+class RvVpFragment : Fragment() {
     private var param1: String? = null
     lateinit var inflate: View
     lateinit var activity: Activity
@@ -50,7 +50,7 @@ class TestFragment : Fragment() {
     private fun initView() {
         //recyclerView layoutManager
         rv.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-        rv.adapter = RcAdapter(activity)
+        rv.adapter = FragmentAdapter(activity)
     }
 
     private fun initData() {
@@ -65,7 +65,7 @@ class TestFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(param1: String) =
-            TestFragment().apply {
+            RvVpFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                 }

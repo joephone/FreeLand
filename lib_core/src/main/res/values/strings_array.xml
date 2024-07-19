@@ -89,24 +89,23 @@
     </string-array>
 
     <string-array name="demo_index_item">
-        <item>2.幸运转盘</item>
-        <item>3.Encryption</item>
-        <item>5.Record</item>
-        <item>6.仿微信语音聊天音量大小显示控件</item>
-        <item>7.DB Note</item>
-        <item>8.生物识别</item>
-        <item>9.导出日志 Logcat</item>
-        <item>10.Xinyu身份认证</item>
-        <item>11.购物车</item>
-        <item>12.启动页隐私协议</item>
-        <item>13.show权限库X</item>
-        <item>13.1 权限库px</item>
-        <item>14.All App</item>
-        <item>15.Wuwei</item>
-        <item>16.Loading</item>
-        <item>17.Zxing</item>
-        <item>18.PDF file display</item>
-        <item>19.蓝牙</item>
+        <item>幸运转盘</item>
+        <item>Encryption</item>
+        <item>Record 仿微信语音聊天音量大小显示控件</item>
+        <item>DB Note</item>
+        <item>生物识别</item>
+        <item>导出日志 Logcat</item>
+        <item>Xinyu身份认证</item>
+        <item>购物车</item>
+        <item>启动页隐私协议</item>
+        <item>show权限库X</item>
+        <item>权限库px</item>
+        <item>All App</item>
+        <item>Wuwei</item>
+        <item>Loading</item>
+        <item>Zxing</item>
+        <item>PDF file display</item>
+        <item>蓝牙</item>
     </string-array>
 
     <string-array name="spinner_bing_resolution">

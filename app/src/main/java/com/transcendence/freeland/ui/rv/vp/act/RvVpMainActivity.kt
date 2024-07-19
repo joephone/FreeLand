@@ -14,7 +14,7 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.transcendence.freeland.R
 import com.transcendence.freeland.ui.rv.vp.adapter.ViewPagerAdapter
-import com.transcendence.freeland.ui.rv.vp.fragment.TestFragment
+import com.transcendence.freeland.ui.rv.vp.fragment.RvVpFragment
 import com.transcendence.freeland.ui.rv.vp.ui.CoordinatorScrollview
 import com.transcendence.freeland.ui.rv.vp.utils.StatusBarUtil
 
@@ -25,7 +25,7 @@ class RvVpMainActivity : AppCompatActivity() {
     lateinit var tabLayout: TabLayout
     lateinit var coordinatorScrollView : CoordinatorScrollview
     lateinit var titleBar : LinearLayout
-    lateinit var titleLinerLayout : LinearLayout
+    lateinit var topLayout : LinearLayout
 
     //屏幕宽
     var screenWidth = 0
@@ -34,7 +34,7 @@ class RvVpMainActivity : AppCompatActivity() {
     var screenHeight = 0
 
     //tabLayout的文本和图片
-    private val tabTextData = arrayOf("常用药品", "夜间送药", "隐形眼镜", "成人用品", "医疗器械", "全部商家")
+    private val tabLayoutData = arrayOf("常用药品", "夜间送药", "隐形眼镜", "成人用品", "医疗器械", "全部商家")
     private val tabIconData = arrayOf(
         R.mipmap.activity_ui_rv_vp_tab_icon,
         R.mipmap.activity_ui_rv_vp_tab_icon,
@@ -55,11 +55,11 @@ class RvVpMainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-        viewPager = findViewById(R.id.viewPager)
-        tabLayout = findViewById(R.id.tabLayout)
-        coordinatorScrollView = findViewById(R.id.coordinatorScrollView)
+        viewPager = findViewById(R.id.vp)
+        tabLayout = findViewById(R.id.tab_layout)
+        coordinatorScrollView = findViewById(R.id.sv_coordinator)
         titleBar = findViewById(R.id.ll_top_bar)
-        titleLinerLayout = findViewById(R.id.titleLinerLayout)
+        topLayout = findViewById(R.id.ll_top)
         //获取屏幕宽高
         val resources: Resources = this.resources
         val dm: DisplayMetrics = resources.displayMetrics
@@ -90,33 +90,33 @@ class RvVpMainActivity : AppCompatActivity() {
         //我模拟在头部动态添加三个布局，就用图片代替了，要设置的图片高度都是我提前算好的，根据屏幕的比例来计算的
         val titleView1 = getTitleView(screenWidth * 0.42F, R.mipmap.activity_ui_rv_vp_title1)
         val titleView2 = getTitleView(screenWidth * 0.262F, R.mipmap.activity_ui_rv_vp_title2)
-        titleLinerLayout.addView(titleView1)
-        titleLinerLayout.addView(titleView2)
+        topLayout.addView(titleView1)
+        topLayout.addView(titleView2)
 
         //设置最大滑动距离
-        titleLinerLayout.post {
-            coordinatorScrollView.setMaxScrollY(titleLinerLayout.height)
+        topLayout.post {
+            coordinatorScrollView.setMaxScrollY(topLayout.height)
         }
 
         //用于请求网络后动态添加子布局
         Handler().postDelayed({
             val titleView3 = getTitleView(screenWidth * 0.589F, R.mipmap.activity_ui_rv_vp_title3)
-            titleLinerLayout.addView(titleView3)
+            topLayout.addView(titleView3)
 
             //再次设置最大滑动距离
-            titleLinerLayout.post {
-                coordinatorScrollView.setMaxScrollY(titleLinerLayout.height)
+            topLayout.post {
+                coordinatorScrollView.setMaxScrollY(topLayout.height)
             }
 
         }, 200)
 
         //添加TabLayout
-        for (i in tabTextData.indices) {
+        for (i in tabLayoutData.indices) {
             tabLayout.addTab(tabLayout.newTab())
-            tabLayout.getTabAt(i)!!.setText(tabTextData[i]).setIcon(tabIconData[i])
+            tabLayout.getTabAt(i)!!.setText(tabLayoutData[i]).setIcon(tabIconData[i])
 
             //添加Fragment
-            fragmentData.add(TestFragment.newInstance(tabTextData[i]))
+            fragmentData.add(RvVpFragment.newInstance(tabLayoutData[i]))
         }
 
         //Fragment ViewPager
@@ -126,8 +126,8 @@ class RvVpMainActivity : AppCompatActivity() {
         tabLayout.setupWithViewPager(viewPager)
 
         //设置TabLayout数据
-        for (i in tabTextData.indices) {
-            tabLayout.getTabAt(i)!!.setText(tabTextData[i]).setIcon(tabIconData[i])
+        for (i in tabLayoutData.indices) {
+            tabLayout.getTabAt(i)!!.setText(tabLayoutData[i]).setIcon(tabIconData[i])
         }
     }
 

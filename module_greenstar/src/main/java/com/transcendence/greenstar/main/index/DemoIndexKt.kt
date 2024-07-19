@@ -28,7 +28,7 @@ class DemoIndexKt : AppAc(), AdapterView.OnItemClickListener {
         setTitle("其他序列")
         lvIndex = findViewById<ListView>(R.id.lvIndex)
 
-        val items = StringUtils.getStringList(mActivity, R.array.demo_index_item)
+        val items = StringUtils.getStringListAndIndex(mActivity, R.array.demo_index_item)
         adapter = ArrayAdapter(
             mActivity,
             android.R.layout.simple_list_item_1, items

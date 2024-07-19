@@ -29,7 +29,7 @@ class PopupIndexKt : AppAc(), AdapterView.OnItemClickListener {
     override fun initView() {
         lvIndex = findViewById(R.id.lvIndex)
 
-        val items = StringUtils.getStringList(mActivity, R.array.popup_index_item)
+        val items = StringUtils.getStringListAndIndex(mActivity, R.array.popup_index_item)
         adapter = ArrayAdapter(
             mActivity,
             android.R.layout.simple_list_item_1, items

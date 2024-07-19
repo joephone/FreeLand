@@ -37,7 +37,7 @@ public class BasefunIndexActivity extends AppAc implements AdapterView.OnItemCli
         setTitle("基本功能序列");
         lvIndex = findViewById(R.id.lvIndex);
 
-        List<String> items = StringUtils.getStringList(mActivity, R.array.base_fun_index_item);
+        List<String> items = StringUtils.getStringListAndIndex(mActivity, R.array.base_fun_index_item);
         adapter = new ArrayAdapter<>(mActivity,
                 android.R.layout.simple_list_item_1, items);
         lvIndex.setAdapter(adapter);

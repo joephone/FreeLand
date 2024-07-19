@@ -26,11 +26,26 @@ public class StringUtils {
         return "";
     }
 
-    public static List<String> getStringList(Context context, int name) {
+//    public static List<String> getStringList(Context context, int name) {
+//        List<String> list = new ArrayList<>();
+//        String[] array = context.getResources().getStringArray(name);
+//        for (int i = 0; i < array.length; i++) {
+//            list.add(array[i]);
+//        }
+//        return list;
+//    }
+
+    /**
+     *  自动添加序号
+     * @param context
+     * @param name
+     * @return
+     */
+    public static List<String> getStringListAndIndex(Context context, int name) {
         List<String> list = new ArrayList<>();
         String[] array = context.getResources().getStringArray(name);
         for (int i = 0; i < array.length; i++) {
-            list.add(array[i]);
+            list.add((i+1)+"."+array[i]);
         }
         return list;
     }

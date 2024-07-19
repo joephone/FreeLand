@@ -45,7 +45,7 @@
 
     <!--coordinatorScrollView-->
     <com.transcendence.freeland.ui.rv.vp.ui.CoordinatorScrollview
-        android:id="@+id/coordinatorScrollView"
+        android:id="@+id/sv_coordinator"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -56,14 +56,14 @@
 
             <!--相当于分析图中头部的LinearLayout，动态模拟添加情况-->
             <LinearLayout
-                android:id="@+id/titleLinerLayout"
+                android:id="@+id/ll_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
 
             <!--相当于分析图中红色标记处TabLayout-->
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabLayout"
+                android:id="@+id/tab_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:tabIndicatorFullWidth="false"
@@ -71,7 +71,7 @@
 
             <!--相当于分析图中绿色标记处ViewPager，代码中动态设置高度-->
             <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewPager"
+                android:id="@+id/vp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 

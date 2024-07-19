@@ -39,7 +39,7 @@ public class AppIndexActivity extends AppAc implements AdapterView.OnItemClickLi
         setTitle("APP序列");
         lvIndex = findViewById(R.id.lvIndex);
 
-        List<String> items = StringUtils.getStringList(mActivity, R.array.app_index_item);
+        List<String> items = StringUtils.getStringListAndIndex(mActivity, R.array.app_index_item);
         adapter = new ArrayAdapter<>(mActivity,
                 android.R.layout.simple_list_item_1, items);
         lvIndex.setAdapter(adapter);

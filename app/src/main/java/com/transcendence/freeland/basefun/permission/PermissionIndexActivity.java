@@ -51,7 +51,7 @@ public class PermissionIndexActivity extends AppAc implements AdapterView.OnItem
         setTitle("权请序列");
         lvIndex = findViewById(R.id.lvIndex);
 
-        List<String> items = StringUtils.getStringList(mActivity, R.array.permission_index_item);
+        List<String> items = StringUtils.getStringListAndIndex(mActivity, R.array.permission_index_item);
         adapter = new ArrayAdapter<>(mActivity,
                 android.R.layout.simple_list_item_1, items);
         lvIndex.setAdapter(adapter);
