@@ -81,6 +81,8 @@
     <string-array name="rv_index_item">
         <item>RecyclerView嵌套ViewPager吸顶</item>
         <item>仿蘑菇街</item>
+        <item>仿蘑菇街V2</item>
+        <item>瀑布流</item>
     </string-array>
 
     <string-array name="ble_index_item">

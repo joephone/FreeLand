@@ -10,12 +10,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.ui.rv.mogu.bean.ItemVO;
 import com.transcendence.freeland.ui.rv.mogu.fragment.ListFragment;
@@ -72,7 +71,7 @@ public class MoguMainActivity extends AppAc { //AppCompatActivity
             fragment.setArguments(bundle);
             fragmentList.add(fragment);
 
-            LinearLayout tabLayout = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_ui_rv_mogu_menu_item,null);
+            LinearLayout tabLayout = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_ui_rv_mogu_tab_item,null);
             final TextView textView = (TextView)tabLayout.findViewById(R.id.tv_tab);
             textView.setText(titles.get(i));
             final int id = i;

@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.freeland.R;
 import com.transcendence.freeland.main.ArouterAc;
 

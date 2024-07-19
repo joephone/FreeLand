@@ -14,7 +14,7 @@ import android.webkit.WebViewClient;
 
 
 import com.transcendence.core.R;
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 
 import java.util.List;
 

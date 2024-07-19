@@ -19,7 +19,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.demo.shoppingcart.adapter.LeftMenuAdapter;

@@ -3,7 +3,7 @@ package com.transcendence.greenstar.demo.pdf.act;
 import android.os.Environment;
 import android.text.TextUtils;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.global.Global;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;

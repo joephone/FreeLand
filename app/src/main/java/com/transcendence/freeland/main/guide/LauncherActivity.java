@@ -6,7 +6,7 @@ import android.widget.ImageView;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.global.Global;
 import com.transcendence.core.utils.mmkv.MMkvHelper;
 import com.transcendence.freeland.R;

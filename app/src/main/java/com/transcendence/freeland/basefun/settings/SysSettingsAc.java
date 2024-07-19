@@ -1,6 +1,6 @@
 package com.transcendence.freeland.basefun.settings;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 
 /**
  * @author joephone

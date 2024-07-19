@@ -1,10 +1,12 @@
 package com.transcendence.greenstar.demo.auth;
 
+import android.content.Context;
+import android.content.Intent;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.greenstar.R;
 
 /**
@@ -20,12 +22,12 @@ public class AuthTwoAct extends AppAc {
 
     private boolean isFineControl;
 
-
-
-
-    public void init() {
-        setTitle("选择医生类型");
+    public static void start(Context context){
+        Intent intent = new Intent(context,AuthTwoAct.class);
+        context.startActivity(intent);
     }
+
+
 
     @Override
     protected int getLayoutId() {
@@ -34,8 +36,12 @@ public class AuthTwoAct extends AppAc {
 
     @Override
     protected void initView() {
+        setTitle("选择医生类型");
         LinearLayout layoutLeft = findViewById(R.id.layout_left);
         LinearLayout layoutRight = findViewById(R.id.layout_right);
+        ivLeftSelected = findViewById(R.id.ivLeftSelected);
+        ivRightSelected = findViewById(R.id.ivRightSelected);
+
         TextView tvNext = findViewById(R.id.tv_next);
         layoutLeft.setOnClickListener(v -> {
             isFineControl = false;
@@ -75,8 +81,5 @@ public class AuthTwoAct extends AppAc {
         super.onResume();
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-    }
+
 }

@@ -17,6 +17,8 @@ import com.transcendence.freeland.main.index.RvIndexActivity;
 import com.transcendence.freeland.main.index.SettingsIndexActivity;
 import com.transcendence.freeland.main.index.UIIndexActivity;
 import com.transcendence.freeland.ui.rv.mogu.act.MoguMainActivity;
+import com.transcendence.freeland.ui.rv.mogu.act.MoguMainActivityV2;
+import com.transcendence.freeland.ui.rv.staggerd.act.StaggerdMainActivity;
 import com.transcendence.freeland.ui.rv.vp.act.RvVpMainActivity;
 
 import java.util.concurrent.CountDownLatch;
@@ -51,6 +53,8 @@ public interface AppConstantValue {
     Class[] rvIndex = {
             RvVpMainActivity.class,
             MoguMainActivity.class,
+            MoguMainActivityV2.class,
+            StaggerdMainActivity.class,
     };
 
     Class[] bleIndex = {

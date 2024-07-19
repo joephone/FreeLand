@@ -1,6 +1,6 @@
 package com.transcendence.greenstar.demo.load
 
-import com.transcendence.core.base.common.activity.AppAc
+import com.transcendence.core.base.activity.AppAc
 import com.transcendence.core.widget.loading.LoadingView
 import com.transcendence.greenstar.R
 

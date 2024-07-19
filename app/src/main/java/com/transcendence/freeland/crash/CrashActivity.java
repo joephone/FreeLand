@@ -18,15 +18,13 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.transcendence.aop.singleton.SingleClick;
 import com.transcendence.core.R;
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.permission.PermissionPool;
 import com.transcendence.core.utils.AppUtils;
 import com.transcendence.core.base.action.ActivityAction;

@@ -1,4 +1,4 @@
-package com.transcendence.core.base.common.activity;
+package com.transcendence.core.base.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -12,15 +12,36 @@ import com.transcendence.core.R;
 
 /**
  * @author joephone
- * @date 2023/2/27
+ * @date 2023/5/27
  * @desc
  */
-public abstract class AbsTitleBarAc extends AbsBaseAc {
+public class TitleBarAc extends AbsBaseAc {
 
     protected boolean mIsBackVisible = true;
     protected boolean mHasTitle = true;
     protected LinearLayout mTopBar;
     protected ImageView mIvRight;
+
+
+    @Override
+    protected int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    public void setContentView(int layoutResID, boolean hasTitle) {
+        View content = getLayoutInflater().inflate(layoutResID, null);
+        prepareContentView(content, hasTitle);
+    }
+
+    private void prepareContentView(View content, boolean hasTitle) {
+
+    }
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,6 +56,8 @@ public abstract class AbsTitleBarAc extends AbsBaseAc {
             }
         }
     }
+
+
 
     private void clickBack(View view) {
         finish();

@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.widget.TextView
-import com.transcendence.core.base.common.activity.AppAc
+import com.transcendence.core.base.activity.AppAc
 import com.transcendence.core.utils.log.LogUtils
 import com.transcendence.freeland.R
 import java.io.*

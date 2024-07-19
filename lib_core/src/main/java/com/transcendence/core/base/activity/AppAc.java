@@ -1,4 +1,4 @@
-package com.transcendence.core.base.common.activity;
+package com.transcendence.core.base.activity;
 
 import android.content.Intent;
 import android.widget.Toast;

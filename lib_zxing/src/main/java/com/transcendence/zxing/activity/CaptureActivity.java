@@ -20,7 +20,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatImageView;
 
 import com.google.zxing.Result;
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.zxing.R;
 import com.transcendence.zxing.camera.CameraManager;

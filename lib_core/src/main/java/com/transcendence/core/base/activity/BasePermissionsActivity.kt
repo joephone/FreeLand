@@ -1,4 +1,4 @@
-package com.transcendence.core.base.common.activity
+package com.transcendence.core.base.activity
 
 import android.Manifest
 import android.content.Intent

@@ -41,7 +41,7 @@ public class SaveImageActivity extends AppCompatActivity implements View.OnClick
     private TextView btn_saveImage;
     private ImageView iv;
 
-    public static void launch(Context context){
+    public static void start(Context context){
         Intent intent = new Intent(context,SaveImageActivity.class);
         context.startActivity(intent);
     }

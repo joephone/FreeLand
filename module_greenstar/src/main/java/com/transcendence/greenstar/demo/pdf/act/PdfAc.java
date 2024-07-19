@@ -3,7 +3,7 @@ package com.transcendence.greenstar.demo.pdf.act;
 import android.net.Uri;
 
 import com.github.barteksc.pdfviewer.PDFView;
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.greenstar.R;
 
 /**

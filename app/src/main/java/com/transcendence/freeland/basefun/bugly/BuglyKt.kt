@@ -1,7 +1,7 @@
 package com.transcendence.freeland.basefun.bugly
 
 import android.widget.TextView
-import com.transcendence.core.base.common.activity.AppAc
+import com.transcendence.core.base.activity.AppAc
 import com.transcendence.freeland.R
 
 /**

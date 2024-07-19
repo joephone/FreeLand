@@ -6,7 +6,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.transcendence.aop.permission.Permissions
-import com.transcendence.core.base.common.activity.AppAc
+import com.transcendence.core.base.activity.AppAc
 import com.transcendence.core.permission.PermissionPool
 import com.transcendence.core.utils.StringUtils
 import com.transcendence.greenstar.R

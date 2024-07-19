@@ -23,7 +23,7 @@ public class MoguLayout extends LinearLayout{
 
     private View topView;
     private View horizontalScrollView;
-    private AutoHorizontalScrollView menu;
+    private AutoHorizontalScrollView tabs;
     private ViewPager viewPager;
     private ListView listView;
 
@@ -56,14 +56,14 @@ public class MoguLayout extends LinearLayout{
         topView = findViewById(R.id.id_top_banner);
         horizontalScrollView = findViewById(R.id.id_horizontalview);
         viewPager = (ViewPager)findViewById(R.id.id_viewpager);
-        menu = (AutoHorizontalScrollView)findViewById(R.id.id_horizontalmenu);
+        tabs = (AutoHorizontalScrollView)findViewById(R.id.id_horizontalmenu);
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         ViewGroup.LayoutParams params = viewPager.getLayoutParams();
-        params.height = getMeasuredHeight() - menu.getMeasuredHeight();
+        params.height = getMeasuredHeight() - tabs.getMeasuredHeight();
     }
 
     @Override

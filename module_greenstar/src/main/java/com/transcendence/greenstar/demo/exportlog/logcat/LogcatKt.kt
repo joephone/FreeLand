@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.CompoundButton
 import android.widget.TextView
 import android.widget.ToggleButton
-import com.transcendence.core.base.common.activity.AppAc
+import com.transcendence.core.base.activity.AppAc
 import com.transcendence.greenstar.R
 import com.transcendence.logcat.Logcat
 import com.transcendence.logcat.SharedPrefHelper

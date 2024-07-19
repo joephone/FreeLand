@@ -1,6 +1,6 @@
 package com.transcendence.greenstar.demo.auth;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.greenstar.R;
 
 /**
@@ -19,5 +19,8 @@ public class AuthOneAct extends AppAc {
     @Override
     protected void initView() {
         setTitle("身份认证");
+        findViewById(R.id.tv_next).setOnClickListener(v -> {
+            AuthTwoAct.start(mActivity);
+        });
     }
 }

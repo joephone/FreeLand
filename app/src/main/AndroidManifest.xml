@@ -177,6 +177,10 @@
             <!-- 仿蘑菇街-->
         <activity
             android:name=".ui.rv.mogu.act.MoguMainActivity" />
+        <activity
+            android:name=".ui.rv.mogu.act.MoguMainActivityV2" />
+        <activity
+            android:name=".ui.rv.staggerd.act.StaggerdMainActivity" />
         <!--Rv end -->
 
         <!-- 适配 Android 7.0 文件意图

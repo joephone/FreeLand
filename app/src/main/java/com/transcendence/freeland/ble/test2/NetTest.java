@@ -2,7 +2,7 @@ package com.transcendence.freeland.ble.test2;
 
 import android.widget.Button;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.freeland.R;
 
 /**

@@ -5,7 +5,7 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.ImageView
 import com.transcendence.core.R
-import com.transcendence.core.base.common.activity.AppAc
+import com.transcendence.core.base.activity.AppAc
 import com.transcendence.core.global.Global
 
 /**

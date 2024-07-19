@@ -5,10 +5,9 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Handler;
-import android.util.Log;
 import android.widget.Button;
 
-import com.transcendence.core.base.common.activity.AppAc;
+import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.utils.log.LogUtils;
 import com.transcendence.greenstar.R;
 import com.transcendence.greenstar.demo.luckypanel.view.LuckyMonkeyPanelView;

@@ -1,4 +1,4 @@
-package com.transcendence.core.base.common.fragment;
+package com.transcendence.core.base.fragment;
 
 /**
  * @author joephone

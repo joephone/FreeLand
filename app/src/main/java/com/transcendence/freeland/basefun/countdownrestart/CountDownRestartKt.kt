@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.widget.TextView
 import com.transcendence.core.BuildConfig
-import com.transcendence.core.base.common.activity.AppAc
+import com.transcendence.core.base.activity.AppAc
 import com.transcendence.freeland.R
 import com.transcendence.freeland.main.ArouterAc
 import com.transcendence.freeland.main.guide.LauncherActivity
