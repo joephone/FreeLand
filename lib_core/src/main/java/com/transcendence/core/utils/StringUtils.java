@@ -11,8 +11,31 @@ import java.util.List;
  * @author joephone
  * @date 2023/2/27
  * @desc
+ * @edition 1.1 添加自动添加序号方法 + 单例化这个类
  */
 public class StringUtils {
+
+    /**
+     * 单例化这个类
+     */
+    private static StringUtils mInstance;
+
+    private StringUtils( ) {
+
+    }
+
+    public static StringUtils getInstance() {
+        if (mInstance == null) {
+            synchronized (StringUtils.class) {
+                if (mInstance == null) {
+                    mInstance = new StringUtils();
+
+                }
+            }
+        }
+        return mInstance;
+
+    }
 
     /**
      * 根据id 得到字符串

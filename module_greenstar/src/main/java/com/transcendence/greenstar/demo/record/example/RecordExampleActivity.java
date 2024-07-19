@@ -109,6 +109,7 @@ public class RecordExampleActivity extends AppAc {
     //直接把参数交给mHelper就行了
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         mHelper.handleRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
