@@ -16,33 +16,22 @@
         <RelativeLayout
             android:id="@id/id_top_banner"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:background="@color/pink">
+            android:layout_height="350dp"
+            android:background="@color/colorGitHubGreen"
+            android:scaleType="centerCrop"
+            android:orientation="vertical"
+            >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="20sp"
-                android:text="轮播图"
-                android:layout_centerInParent="true"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/height_avatar"
+                android:layout_height="@dimen/height_avatar"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_avatar_djt" />
 
         </RelativeLayout>
 
 
-<!--        <HorizontalScrollView-->
-<!--            android:id="@id/id_horizontalview"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="100dp"-->
-<!--            android:scrollbars="none">-->
-
-<!--            <LinearLayout-->
-<!--                android:id="@+id/id_horizontalview_layout"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:orientation="horizontal">-->
-
-<!--            </LinearLayout>-->
-<!--        </HorizontalScrollView>-->
 
 
         <com.transcendence.freeland.ui.rv.mogu.ui.AutoHorizontalScrollView
