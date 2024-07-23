@@ -183,6 +183,12 @@
             android:name=".ui.rv.staggerd.act.StaggerdMainActivity" />
         <!--Rv end -->
 
+        <!--Seekbar start -->
+        <activity
+            android:name=".ui.seekbar.StepSeekBarMainActivity" />
+        <!--Seekbar end -->
+
+
         <!-- 适配 Android 7.0 文件意图
             authorities：app的包名.fileProvider
             grantUriPermissions：必须是true，表示授予 URI 临时访问权限

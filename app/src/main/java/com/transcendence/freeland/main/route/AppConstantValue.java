@@ -20,6 +20,7 @@ import com.transcendence.freeland.ui.rv.mogu.act.MoguMainActivity;
 import com.transcendence.freeland.ui.rv.mogu.act.MoguMainActivityV2;
 import com.transcendence.freeland.ui.rv.staggerd.act.StaggerdMainActivity;
 import com.transcendence.freeland.ui.rv.vp.act.RvVpMainActivity;
+import com.transcendence.freeland.ui.seekbar.StepSeekBarMainActivity;
 
 import java.util.concurrent.CountDownLatch;
 
@@ -48,6 +49,7 @@ public interface AppConstantValue {
 
     Class[] uiIndex = {
             RvIndexActivity.class,
+            StepSeekBarMainActivity.class,
     };
 
     Class[] rvIndex = {
