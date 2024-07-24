@@ -181,6 +181,8 @@
             android:name=".ui.rv.mogu.act.MoguMainActivityV2" />
         <activity
             android:name=".ui.rv.staggerd.act.StaggerdMainActivity" />
+        <activity
+            android:name=".ui.rv.linkpage.LinkPageMainActivity" />
         <!--Rv end -->
 
         <!--Seekbar start -->

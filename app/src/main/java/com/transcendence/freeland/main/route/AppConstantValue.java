@@ -16,6 +16,7 @@ import com.transcendence.freeland.main.index.BleIndexActivity;
 import com.transcendence.freeland.main.index.RvIndexActivity;
 import com.transcendence.freeland.main.index.SettingsIndexActivity;
 import com.transcendence.freeland.main.index.UIIndexActivity;
+import com.transcendence.freeland.ui.rv.linkpage.LinkPageMainActivity;
 import com.transcendence.freeland.ui.rv.mogu.act.MoguMainActivity;
 import com.transcendence.freeland.ui.rv.mogu.act.MoguMainActivityV2;
 import com.transcendence.freeland.ui.rv.staggerd.act.StaggerdMainActivity;
@@ -57,6 +58,7 @@ public interface AppConstantValue {
             MoguMainActivity.class,
             MoguMainActivityV2.class,
             StaggerdMainActivity.class,
+            LinkPageMainActivity.class,
     };
 
     Class[] bleIndex = {

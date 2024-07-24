@@ -11,7 +11,7 @@
         <attr name="loadingView" format="reference" />
     </declare-styleable>
 
-
+    <!--RangeSeekBar  start-->
     <declare-styleable name="RangeSeekBar">
         <!--RangeSeekBar common attrs-->
 
@@ -132,5 +132,6 @@
         <attr name="rsb_step_drawable" format="reference"/>
 
     </declare-styleable>
+    <!--RangeSeekBar  end -->
 
 </resources>

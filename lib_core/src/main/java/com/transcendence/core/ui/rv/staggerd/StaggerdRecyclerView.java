@@ -53,7 +53,7 @@ public class StaggerdRecyclerView extends LinearLayout {
 
     private void initViews(Context c) {
         this.c = c;
-        root = inflate(c, R.layout.layout_stagged, this);
+        root = inflate(c, R.layout.ui_rv_stagged_layout, this);
 
     }
 
