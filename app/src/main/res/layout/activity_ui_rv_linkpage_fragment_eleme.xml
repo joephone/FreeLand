@@ -14,7 +14,7 @@
             android:id="@+id/linkage"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"></com.transcendence.core.ui.rv.linkage.LinkageRecyclerView>
+            android:layout_weight="1"/>
 
 
         <!--    <com.google.android.material.button.MaterialButton-->

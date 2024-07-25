@@ -85,6 +85,7 @@
         <item>仿蘑菇街V2</item>
         <item>瀑布流</item>
         <item>双表联动</item>
+        <item>双表联动2</item>
     </string-array>
 
     <string-array name="ble_index_item">

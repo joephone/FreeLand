@@ -7,7 +7,6 @@ import com.transcendence.freeland.basefun.countdownrestart.CountDownRestartKt;
 import com.transcendence.freeland.basefun.directory.AndroidDirectoryKt;
 import com.transcendence.freeland.basefun.nostart.NoStartA;
 import com.transcendence.freeland.basefun.permission.PermissionIndexActivity;
-import com.transcendence.freeland.basefun.settings.SysSettingsAc;
 import com.transcendence.freeland.ble.test.BleTest;
 import com.transcendence.freeland.ble.test2.BleTest3;
 import com.transcendence.freeland.ble.test2.NetTest;
@@ -16,14 +15,13 @@ import com.transcendence.freeland.main.index.BleIndexActivity;
 import com.transcendence.freeland.main.index.RvIndexActivity;
 import com.transcendence.freeland.main.index.SettingsIndexActivity;
 import com.transcendence.freeland.main.index.UIIndexActivity;
-import com.transcendence.freeland.ui.rv.linkpage.LinkPageMainActivity;
+import com.transcendence.freeland.ui.rv.linkpage.act.LinkPageMainActivity;
+import com.transcendence.freeland.ui.rv.linkpage.act.LinkPageMainV2Activity;
 import com.transcendence.freeland.ui.rv.mogu.act.MoguMainActivity;
 import com.transcendence.freeland.ui.rv.mogu.act.MoguMainActivityV2;
 import com.transcendence.freeland.ui.rv.staggerd.act.StaggerdMainActivity;
 import com.transcendence.freeland.ui.rv.vp.act.RvVpMainActivity;
 import com.transcendence.freeland.ui.seekbar.StepSeekBarMainActivity;
-
-import java.util.concurrent.CountDownLatch;
 
 /**
  * @author joephone
@@ -59,6 +57,7 @@ public interface AppConstantValue {
             MoguMainActivityV2.class,
             StaggerdMainActivity.class,
             LinkPageMainActivity.class,
+            LinkPageMainV2Activity.class,
     };
 
     Class[] bleIndex = {

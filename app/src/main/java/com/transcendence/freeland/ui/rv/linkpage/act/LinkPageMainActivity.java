@@ -1,10 +1,9 @@
-package com.transcendence.freeland.ui.rv.linkpage;
+package com.transcendence.freeland.ui.rv.linkpage.act;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 

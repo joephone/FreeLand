@@ -182,7 +182,9 @@
         <activity
             android:name=".ui.rv.staggerd.act.StaggerdMainActivity" />
         <activity
-            android:name=".ui.rv.linkpage.LinkPageMainActivity" />
+            android:name=".ui.rv.linkpage.act.LinkPageMainActivity" />
+        <activity
+            android:name=".ui.rv.linkpage.act.LinkPageMainV2Activity" />
         <!--Rv end -->
 
         <!--Seekbar start -->
