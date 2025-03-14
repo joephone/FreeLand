@@ -31,6 +31,7 @@
         <item>APP功能跳转（跳转手机各种功能页面，以及判断某系统功能是否打开）</item>
         <item>UI序列</item>
         <item>BLE序列</item>
+        <item>Fragment序列</item>
     </string-array>
 
     <string-array name="base_fun_index_item">
@@ -39,6 +40,7 @@
         <item>Alert</item>
         <item>Android存储目录及方法详解</item>
         <item>不通过startActivity将activity置为栈顶</item>
+        <item>事件分发机制</item>
     </string-array>
 
     <string-array name="permission_index_item">
@@ -79,7 +81,7 @@
         <item>Seek Bar</item>
     </string-array>
 
-    <string-array name="rv_index_item">
+    <string-array name="index_item_rv">
         <item>RecyclerView嵌套ViewPager吸顶</item>
         <item>仿蘑菇街</item>
         <item>仿蘑菇街V2</item>
@@ -92,6 +94,10 @@
         <item>Ble测试</item>
         <item>Ble3测试</item>
         <item>NetTest</item>
+    </string-array>
+
+    <string-array name="index_item_fragment">
+        <item>Fragment底部导航栏</item>
     </string-array>
 
     <string-array name="demo_index_item">

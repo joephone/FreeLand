@@ -15,7 +15,7 @@ import java.util.Locale;
  */
 public class Global {
 
-    public static final String TAG = "Freeland";
+    public static final String TAG = "wan";
 
     public static final String BUGLY_ID = "4b1e18351f";
     public static final String BUGLY_KEY = "41682c5c-d8d9-4577-b949-c268ad44c023";

@@ -4,7 +4,7 @@ import com.transcendence.freeland.basefun.bugly.BuglyKt
 import com.transcendence.freeland.ble.test.BleTest
 import com.transcendence.freeland.ble.test2.BleTest3
 import com.transcendence.freeland.ble.test2.NetTest
-import com.transcendence.freeland.main.index.BleIndexActivity
+import com.transcendence.freeland.main.index.IndexBle
 import com.transcendence.freeland.main.index.SettingsIndexActivity
 import com.transcendence.freeland.main.index.UIIndexActivity
 
@@ -20,7 +20,7 @@ interface AppConstantValueKt {
             SettingsIndexActivity::class.java,
             BuglyKt::class.java,
             UIIndexActivity::class.java,
-            BleIndexActivity::class.java
+            IndexBle::class.java
         )
         set(value) = TODO()
 

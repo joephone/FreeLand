@@ -5,7 +5,7 @@
 
     <dimen name="status_view_height">25dp</dimen>
     <dimen name="height_status">25dp</dimen>
-    <dimen name="height_title">45dp</dimen>
+    <dimen name="height_title">48dp</dimen>
     <dimen name="height_avatar">75dp</dimen>
     <dimen name="size_title">@dimen/size_18</dimen>
     <dimen name="button_radius">3dp</dimen>

@@ -14,14 +14,14 @@ import com.transcendence.freeland.main.route.AppConstantValue;
 import java.util.List;
 
 /**
- * @author Joephone on 2023/6/3 20:12
+ * @author Joephone on 2024/7/18 15:57
  * @E-Mail Address：joephonechen@gmail.com
- * @Desc Ble序列
+ * @Desc RV序列
  * @Edition 1.0
  * @EditionHistory
  */
 
-public class BleIndexActivity extends AppAc implements AdapterView.OnItemClickListener {
+public class IndexRv extends AppAc implements AdapterView.OnItemClickListener {
     private ArrayAdapter<String> adapter;
     private ListView lvIndex;
 
@@ -29,7 +29,7 @@ public class BleIndexActivity extends AppAc implements AdapterView.OnItemClickLi
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent();
-        intent.setClass(mActivity, AppConstantValue.bleIndex[position]);
+        intent.setClass(mActivity, AppConstantValue.rvIndex[position]);
         startActivity(intent);
     }
 
@@ -40,10 +40,10 @@ public class BleIndexActivity extends AppAc implements AdapterView.OnItemClickLi
 
     @Override
     protected void initView() {
-        setTitle("BLE序列");
+        setTitle("RV序列");
         lvIndex = findViewById(R.id.lvIndex);
 
-        List<String> items = StringUtils.getStringListAndIndex(mActivity,R.array.ble_index_item);
+        List<String> items = StringUtils.getStringListAndIndex(mActivity,R.array.index_item_rv);
         adapter = new ArrayAdapter<>(mActivity,
                 android.R.layout.simple_list_item_1, items);
         lvIndex.setAdapter(adapter);

@@ -5,14 +5,17 @@ import com.transcendence.freeland.basefun.alert.AlertAc;
 import com.transcendence.freeland.basefun.bugly.BuglyKt;
 import com.transcendence.freeland.basefun.countdownrestart.CountDownRestartKt;
 import com.transcendence.freeland.basefun.directory.AndroidDirectoryKt;
+import com.transcendence.freeland.basefun.dispatchtouchevent.act.DispatchTouchEventActivity;
 import com.transcendence.freeland.basefun.nostart.NoStartA;
 import com.transcendence.freeland.basefun.permission.PermissionIndexActivity;
 import com.transcendence.freeland.ble.test.BleTest;
 import com.transcendence.freeland.ble.test2.BleTest3;
 import com.transcendence.freeland.ble.test2.NetTest;
+import com.transcendence.freeland.frag.test02.act.FragmentTest02Act;
 import com.transcendence.freeland.main.index.BasefunIndexActivity;
-import com.transcendence.freeland.main.index.BleIndexActivity;
-import com.transcendence.freeland.main.index.RvIndexActivity;
+import com.transcendence.freeland.main.index.IndexBle;
+import com.transcendence.freeland.main.index.IndexFragAc;
+import com.transcendence.freeland.main.index.IndexRv;
 import com.transcendence.freeland.main.index.SettingsIndexActivity;
 import com.transcendence.freeland.main.index.UIIndexActivity;
 import com.transcendence.freeland.ui.rv.linkpage.act.LinkPageMainActivity;
@@ -35,7 +38,8 @@ public interface AppConstantValue {
             PermissionIndexActivity.class,
             SettingsIndexActivity.class,
             UIIndexActivity.class,
-            BleIndexActivity.class,
+            IndexBle.class,
+            IndexFragAc.class,
     };
 
     Class[] baseFunIndex = {
@@ -44,10 +48,11 @@ public interface AppConstantValue {
             AlertAc.class,
             AndroidDirectoryKt.class,
             NoStartA.class,
+            DispatchTouchEventActivity.class,
     };
 
     Class[] uiIndex = {
-            RvIndexActivity.class,
+            IndexRv.class,
             StepSeekBarMainActivity.class,
     };
 
@@ -64,6 +69,12 @@ public interface AppConstantValue {
             BleTest.class,
             BleTest3.class,
             NetTest.class
+    };
+
+
+
+    Class[] indexFragment = {
+            FragmentTest02Act.class,
     };
 
 
