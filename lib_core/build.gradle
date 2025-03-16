@@ -41,13 +41,12 @@ dependencies {
 
     api config.dependencies.mmkv
 
-    api config.dependencies.permissionx
     api config.dependencies.XXPermissions
     api config.dependencies.blankUtils
 
 
-    //状态栏
-    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+//    //状态栏
+//    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 
     // Bugly 异常捕捉：https://bugly.qq.com/docs/user-guide/instruction-manual-android/?v=20190418140644
     api 'com.tencent.bugly:crashreport:3.4.4'

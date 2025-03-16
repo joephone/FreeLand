@@ -1,7 +1,18 @@
 package com.transcendence.greenstar.demo.pdf.act;
 
+import android.Manifest;
+import android.content.ContentValues;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.transcendence.core.base.activity.AppAc;
 import com.transcendence.core.global.Global;
@@ -15,6 +26,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 
 import okhttp3.ResponseBody;
 
@@ -28,7 +40,7 @@ public class FileDisplayActivity extends AppAc {
     private SuperFileView2 mSuperFileView;
     private String filePath;
     private String pdfUrl;
-
+    private static final int REQUEST_CODE_STORAGE_PERMISSION = 100;
 
     @Override
     protected int getLayoutId() {
@@ -37,6 +49,7 @@ public class FileDisplayActivity extends AppAc {
 
     @Override
     protected void initView() {
+        setTitle("PDF");
         mSuperFileView = findViewById(R.id.pdfView);
         mSuperFileView.setOnGetFilePathListener(new SuperFileView2.OnGetFilePathListener() {
             @Override
@@ -45,14 +58,16 @@ public class FileDisplayActivity extends AppAc {
             }
         });
 
-//        Intent intent = this.getIntent();
-        pdfUrl = Global.PDF.url2;// getIntent().getStringExtra(Global.PUBLIC_INTENT_KEY.PDF_URL); //(String) intent.getSerializableExtra("path");
-
-        if (!TextUtils.isEmpty(pdfUrl)) {
-            LogUtils.d("文件path:" + pdfUrl);
-            setFilePath(pdfUrl);
+        // 检查是否已经授予权限
+        if (checkStoragePermission()) {
+            // 已经有权限，执行相关操作
+            performStorageOperation();
+        } else {
+            // 请求权限
+            requestStoragePermission();
         }
-        mSuperFileView.show();
+
+
     }
 
     private void getFilePathAndShowFile(SuperFileView2 fileView) {
@@ -71,71 +86,58 @@ public class FileDisplayActivity extends AppAc {
         return filePath;
     }
 
-    private void downLoadFromNet(final String url,final SuperFileView2 mSuperFileView2) {
+    private void downLoadFromNet(final String url, final SuperFileView2 mSuperFileView2) {
         LogUtils.d("downLoadFromNet");
-        //1.网络下载、存储路径、
         File cacheFile = getCacheFile(url);
         if (cacheFile.exists()) {
             if (cacheFile.length() <= 0) {
-                LogUtils.d( "删除空文件！！");
+                LogUtils.d("删除空文件！！");
                 cacheFile.delete();
                 return;
             }
         }
 
-
         LoadFileModel.loadPdfFile(url, new retrofit2.Callback<ResponseBody>() {
             @Override
             public void onResponse(retrofit2.Call<ResponseBody> call, retrofit2.Response<ResponseBody> response) {
                 LogUtils.d("下载文件-->onResponse");
-                boolean flag;
                 InputStream is = null;
-                byte[] buf = new byte[2048];
-                int len = 0;
-                FileOutputStream fos = null;
+                OutputStream fos = null;
                 try {
                     ResponseBody responseBody = response.body();
                     is = responseBody.byteStream();
-                    long total = responseBody.contentLength();
 
-                    File file1 = getCacheDir(url);
-                    if (!file1.exists()) {
-                        file1.mkdirs();
-                        LogUtils.d("创建缓存目录： " + file1.toString());
+                    // 使用 MediaStore API 保存文件到 Downloads 目录
+                    ContentValues values = new ContentValues();
+                    values.put(MediaStore.Downloads.DISPLAY_NAME, getFileName(url));
+                    values.put(MediaStore.Downloads.MIME_TYPE, "application/pdf");
+                    values.put(MediaStore.Downloads.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS);
+
+                    Uri uri = null;
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+                        uri = getContentResolver().insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, values);
                     }
-
-
-                    //fileN : /storage/emulated/0/pdf/kauibao20170821040512.pdf
-                    File fileN = getCacheFile(url);//new File(getCacheDir(url), getFileName(url))
-
-                    LogUtils.d("创建缓存文件： " + fileN.toString());
-                    if (!fileN.exists()) {
-                        boolean mkdir = fileN.createNewFile();
+                    if (uri != null) {
+                        fos = getContentResolver().openOutputStream(uri);
+                        if (fos != null) {
+                            byte[] buf = new byte[2048];
+                            int len;
+                            while ((len = is.read(buf)) != -1) {
+                                fos.write(buf, 0, len);
+                            }
+                            fos.flush();
+                            LogUtils.d("文件下载成功,准备展示文件。");
+                            mSuperFileView2.displayFile(new File(getRealPathFromUri(uri)));
+                        }
                     }
-                    fos = new FileOutputStream(fileN);
-                    long sum = 0;
-                    while ((len = is.read(buf)) != -1) {
-                        fos.write(buf, 0, len);
-                        sum += len;
-                        int progress = (int) (sum * 1.0f / total * 100);
-//                        LogUtils.d("写入缓存文件" + fileN.getName() + "进度: " + progress);
-                    }
-                    fos.flush();
-                    LogUtils.d("文件下载成功,准备展示文件。");
-                    //2.ACache记录文件的有效期
-                    mSuperFileView2.displayFile(fileN);
                 } catch (Exception e) {
                     LogUtils.d("文件下载异常 = " + e.toString());
                 } finally {
                     try {
-                        if (is != null)
-                            is.close();
+                        if (is != null) is.close();
+                        if (fos != null) fos.close();
                     } catch (IOException e) {
-                    }
-                    try {
-                        if (fos != null)
-                            fos.close();
-                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
                 }
             }
@@ -150,8 +152,20 @@ public class FileDisplayActivity extends AppAc {
                 }
             }
         });
+    }
 
-
+    // 获取文件的真实路径
+    private String getRealPathFromUri(Uri uri) {
+        String[] projection = {MediaStore.Downloads.DATA};
+        Cursor cursor = getContentResolver().query(uri, projection, null, null, null);
+        if (cursor != null) {
+            int columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Downloads.DATA);
+            cursor.moveToFirst();
+            String path = cursor.getString(columnIndex);
+            cursor.close();
+            return path;
+        }
+        return null;
     }
 
     /***
@@ -211,5 +225,57 @@ public class FileDisplayActivity extends AppAc {
         str = paramString.substring(i + 1);
         LogUtils.d("paramString.substring(i + 1)------>"+str);
         return str;
+    }
+
+    // 检查是否已经授予读写权限
+    private boolean checkStoragePermission() {
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED &&
+                ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    // 请求读写权限
+    private void requestStoragePermission() {
+        ActivityCompat.requestPermissions(
+                this,
+                new String[]{
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE
+                },
+                REQUEST_CODE_STORAGE_PERMISSION
+        );
+    }
+
+    // 处理权限请求结果
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_CODE_STORAGE_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // 权限被授予，执行相关操作
+                performStorageOperation();
+            } else {
+                // 权限被拒绝，提示用户
+                showPermissionDeniedMessage();
+            }
+        }
+    }
+
+    // 执行需要权限的操作
+    private void performStorageOperation() {
+        // 例如：读取或写入文件
+        //        Intent intent = this.getIntent();
+        pdfUrl = Global.PDF.url2;// getIntent().getStringExtra(Global.PUBLIC_INTENT_KEY.PDF_URL); //(String) intent.getSerializableExtra("path");
+
+        if (!TextUtils.isEmpty(pdfUrl)) {
+            LogUtils.d("文件path:" + pdfUrl);
+            setFilePath(pdfUrl);
+        }
+        mSuperFileView.show();
+    }
+
+    // 提示用户权限被拒绝
+    private void showPermissionDeniedMessage() {
+        // 可以显示一个Toast或对话框
+        Toast.makeText(this, "用户权限被拒绝", Toast.LENGTH_SHORT).show();
     }
 }

@@ -80,8 +80,6 @@ dependencies {
     implementation files('libs\\android-logging-log4j-1.0.3.jar')
     implementation files('libs\\log4j-1.2.17.jar')
 
-    // AndroidX 版本
-//    implementation 'com.github.jenly1314:zxing-lite:2.4.0'
 
     //pdf
     implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'

@@ -70,11 +70,7 @@
             android:screenOrientation="portrait"
             />
 
-        <activity
-            android:name=".demo.bing.BingActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
+
         <activity
             android:name=".demo.encryption.act.EncryptionMainAc"
             android:launchMode="singleTask"
@@ -120,70 +116,38 @@
 
 
         <activity
-            android:name=".demo.auth.AuthOneAct"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-
-        <activity
-            android:name=".demo.auth.AuthTwoAct"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-
-        <activity
-            android:name=".demo.shoppingcart.ShoppingCartActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-
-        <activity
             android:name=".demo.showPermissions.ShowPermissionAc"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
-        <activity
-            android:name=".demo.permissionx.PermissionxKt"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            tools:ignore="Instantiatable" />
+
 
         <activity
             android:name=".demo.splash.SplashActivity"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
 
-        <activity
-            android:name=".demo.allapp.AllAppActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"
-            />
-        <activity
-            android:name=".demo.wuwei.WuweiActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
+
 
         <activity
             android:name=".demo.load.LoadAcKt"
-            android:launchMode="singleTask"
             android:screenOrientation="portrait"/>
-
-        <activity
-            android:name=".demo.zxing.ZxingMain"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-
-        <activity
-            android:name=".demo.pdf.act.FileDisplayActivity"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-
-        <activity
-            android:name=".demo.bluetooth.act.BlueToothAct"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
-
-
         <!--        <activity-->
         <!--            android:name=".demo.load.LoadAcKt"-->
         <!--            android:launchMode="singleTask" />-->
+
+        <activity
+            android:name=".demo.pdf.act.FileDisplayActivity"
+            android:screenOrientation="portrait"/>
+
+
+        <activity
+            android:name="com.transcendence.greenstar.demo.tabvprv.act.TabVpRvActivity"
+            android:screenOrientation="portrait"/>
+
+
+
+
 
         <provider
             android:name="androidx.core.content.FileProvider"

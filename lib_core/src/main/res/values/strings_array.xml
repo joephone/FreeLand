@@ -107,17 +107,11 @@
         <item>DB Note</item>
         <item>生物识别</item>
         <item>导出日志 Logcat</item>
-        <item>Xinyu身份认证</item>
-        <item>购物车</item>
         <item>启动页隐私协议</item>
-        <item>show权限库X</item>
         <item>权限库px</item>
-        <item>All App</item>
-        <item>Wuwei</item>
         <item>Loading</item>
-        <item>Zxing</item>
         <item>PDF file display</item>
-        <item>蓝牙</item>
+        <item>tablayout + viewpager + rv</item>
     </string-array>
 
     <string-array name="spinner_bing_resolution">
