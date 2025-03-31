@@ -106,11 +106,7 @@
             android:launchMode="singleTask"
             />
 
-        <activity
-            android:name=".main.setting.SettingActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTask"
-            />
+
 
         <!-- index start -->
         <activity
@@ -156,6 +152,8 @@
         <activity
             android:name=".basefun.dispatchtouchevent.act.DispatchTouchEventActivity"
             android:launchMode="singleTask"/>
+
+        <activity android:name=".basefun.reflection.ReflectionActivity" />
         <!-- basefun start -->
 
         <!-- ble start -->
@@ -203,6 +201,7 @@
         <!--Seekbar start -->
         <activity
             android:name=".ui.seekbar.StepSeekBarMainActivity" />
+
         <!--Seekbar end -->
 
 

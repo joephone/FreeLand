@@ -8,6 +8,7 @@ import com.transcendence.freeland.basefun.directory.AndroidDirectoryKt;
 import com.transcendence.freeland.basefun.dispatchtouchevent.act.DispatchTouchEventActivity;
 import com.transcendence.freeland.basefun.nostart.NoStartA;
 import com.transcendence.freeland.basefun.permission.PermissionIndexActivity;
+import com.transcendence.freeland.basefun.reflection.ReflectionActivity;
 import com.transcendence.freeland.ble.test.BleTest;
 import com.transcendence.freeland.ble.test2.BleTest3;
 import com.transcendence.freeland.ble.test2.NetTest;
@@ -49,6 +50,7 @@ public interface AppConstantValue {
             AndroidDirectoryKt.class,
             NoStartA.class,
             DispatchTouchEventActivity.class,
+            ReflectionActivity.class,
     };
 
     Class[] uiIndex = {
